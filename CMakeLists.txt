@@ -4,10 +4,9 @@ set(CMAKE_CXX_STANDARD 17)
 
 include_directories(src)
 add_executable(345Project
+        MapGeneration.cpp
+        MapGeneration.h
 )
 
 add_executable(TestExecutable
 )
-
-add_subdirectory(external/catch2)
-target_link_libraries(TestExecutable PRIVATE Catch2::Catch2WithMain)
