@@ -3,7 +3,8 @@
 
 #include "../Static/Functions.h"
 #include "../Static/Dice.h"
-#include "../Components/ItemBag.h"
+#include "ItemBag.h"
+#include "Equipment.h"
 
 
 #include <stdexcept>
@@ -17,26 +18,29 @@ public:
 
     void initScores();
     int initScorePriority(const std::string& toInit, std::string& style);
-    void initHitPoints();
+    void initHP();
 
     // MUTATORS ==================================================
     int takeDamage(int damageTaken);
     void levelUp();
-    int gainExperience(int experienceGained);
+    int gainXP(int experienceGained);
+    void setEquipment(Equipment& equipmentParam);
 
     // SIMPLE ACCESSORS ======================================
     std::string getStyle() const;
-    int getHitPoints() const;
+    int getHP() const;
     int getLevel() const;
-    int getExperience() const;
-    virtual int getScore(std::string scoreName) const;
+    int getXP() const;
+    int getScore(std::string scoreName) const;
 
     // COMPUTED ACCESSORS ======================================
     int getModifier(std::string modifierType) const;
-    virtual int getArmorClass() const;
-    virtual int getAttackBonus() const;
-    virtual int getDamageBonus() const;
+    int getArmorClass() const;
+    int getAttackBonus() const;
+    int getDamageBonus() const;
     int getProficiencyBonus() const;
+
+
 
     // OTHER ==================================================
     void printCharacter() const;
@@ -54,11 +58,11 @@ private:
 
     //Levels
     int level;
-    int experience;
+    int xp;
     //Hit Points
-    int hitPoints;
+    int hp;
     //Inventory (TO ADD) to hold both equipped and unequipped items. We'll know which are equipped due to Decorator EquippedCharacter (TODO)
-    //ItemBag inventory;
+    Equipment equipment;
 };
 
 #endif

@@ -13,6 +13,11 @@ add_executable(345Project
         src/Static/Functions.cpp
         src/Static/Dice.cpp
         src/Components/Character.cpp
+        src/Components/Item.cpp
+        src/Components/Weapon.cpp
+        src/Components/Armor.cpp
+        src/Components/ItemBag.cpp
+        src/Components/Equipment.cpp
         
 
 )

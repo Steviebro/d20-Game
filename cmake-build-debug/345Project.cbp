@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="345Project"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/mateb/Desktop/345Project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/mateb/Desktop/345Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/mateb/Desktop/345Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/mateb/Desktop/345Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/mateb/Desktop/345Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="345Project">
+				<Option output="/Users/mateb/Desktop/345Project/cmake-build-debug/345Project" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mateb/Desktop/345Project/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mateb/Desktop/345Project/src"/>
+					<Add directory="/Users/mateb/Desktop/345Project/catchTests"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/mateb/Desktop/345Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 345Project"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/mateb/Desktop/345Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/mateb/Desktop/345Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/mateb/Desktop/345Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="345Project/fast">
+				<Option output="/Users/mateb/Desktop/345Project/cmake-build-debug/345Project" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mateb/Desktop/345Project/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/mateb/Desktop/345Project/src"/>
+					<Add directory="/Users/mateb/Desktop/345Project/catchTests"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/mateb/Desktop/345Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 345Project/fast"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/mateb/Desktop/345Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/mateb/Desktop/345Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/mateb/Desktop/345Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/mateb/Desktop/345Project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/mateb/Desktop/345Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/mateb/Desktop/345Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/mateb/Desktop/345Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/mateb/Desktop/345Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/mateb/Desktop/345Project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/mateb/Desktop/345Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/mateb/Desktop/345Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/mateb/Desktop/345Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/mateb/Desktop/345Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/mateb/Desktop/345Project/src/Components/Armor.cpp">
+			<Option target="345Project"/>
+		</Unit>
+		<Unit filename="/Users/mateb/Desktop/345Project/src/Components/Character.cpp">
+			<Option target="345Project"/>
+		</Unit>
+		<Unit filename="/Users/mateb/Desktop/345Project/src/Components/Equipment.cpp">
+			<Option target="345Project"/>
+		</Unit>
+		<Unit filename="/Users/mateb/Desktop/345Project/src/Components/Item.cpp">
+			<Option target="345Project"/>
+		</Unit>
+		<Unit filename="/Users/mateb/Desktop/345Project/src/Components/ItemBag.cpp">
+			<Option target="345Project"/>
+		</Unit>
+		<Unit filename="/Users/mateb/Desktop/345Project/src/Components/Weapon.cpp">
+			<Option target="345Project"/>
+		</Unit>
+		<Unit filename="/Users/mateb/Desktop/345Project/src/Static/Dice.cpp">
+			<Option target="345Project"/>
+		</Unit>
+		<Unit filename="/Users/mateb/Desktop/345Project/src/Static/Functions.cpp">
+			<Option target="345Project"/>
+		</Unit>
+		<Unit filename="/Users/mateb/Desktop/345Project/src/main.cpp">
+			<Option target="345Project"/>
+		</Unit>
+		<Unit filename="/Users/mateb/Desktop/345Project/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
