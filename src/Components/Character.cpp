@@ -1,12 +1,10 @@
 #include "../../include/Components/Character.h"
-
-
-
+#include "../../include/Components/Weapon.h"
 
 #include <iostream>
 
 Character::Character(int levelParam, std::string styleParam)
-: level(levelParam), style(Functions::convertToUpper(styleParam)), experience(0),
+: level(levelParam), style(Functions::convertToUpper(styleParam)), xp(0),
 STR(initScorePriority("STR", styleParam)), DEX(initScorePriority("DEX", styleParam)), CON(initScorePriority("CON", styleParam))
 {
     //Validate style
@@ -22,7 +20,7 @@ STR(initScorePriority("STR", styleParam)), DEX(initScorePriority("DEX", stylePar
     initScores();
 
     //Initialize Hit Points
-    initHitPoints();
+    initHP();
 }
 
 void Character::initScores()
@@ -61,9 +59,9 @@ int Character::initScorePriority(const std::string& toInit, std::string& style)
     throw std::invalid_argument("Function Character::initIndex() failed, either style "+style+" or toInit "+toInit+" not found in method.\n");
 }
 
-void Character::initHitPoints()
+void Character::initHP()
 {
-    hitPoints = 10 + getModifier("CON");
+    hp = 10 + getModifier("CON");
 
     int levelUps = level - 1;
     level = 1;
@@ -77,43 +75,43 @@ void Character::initHitPoints()
 int Character::takeDamage(int damageTaken)
 {
     if (damageTaken > 0) {
-        hitPoints -= damageTaken;
+        hp -= damageTaken;
     }
-    return hitPoints;
+    return hp;
 }
 
 void Character::levelUp()
 {
     if (level < 20) {
-        hitPoints += (Dice::rollDice("1d10") + getModifier("CON"));
+        hp += (Dice::rollDice("1d10") + getModifier("CON"));
         level++;
     }
     
 }
 
-int Character::gainExperience(int experienceGained)
+int Character::gainXP(int xpGained)
 {
     //Ensure parameter > 0 and level < 20
-    if (experienceGained <= 0 || level >= 20) {
-        return experience;
+    if (xpGained <= 0 || level >= 20) {
+        return xp;
     }
-    experience += experienceGained;
+    xp += xpGained;
 
     //Check for levelUp(s) required
-    int experienceRequiredForLevelUp = level * 100;
+    int xpRequiredForLevelUp = level * 100;
 
-    while (experience >= experienceRequiredForLevelUp && level < 20) {
-        experience -= experienceRequiredForLevelUp;
+    while (xp >= xpRequiredForLevelUp && level < 20) {
+        xp -= xpRequiredForLevelUp;
         levelUp();
-        experienceRequiredForLevelUp = level * 100;
+        xpRequiredForLevelUp = level * 100;
     }
 
     //Set experience to 0 if max level reached
     if (level == 20) {
-        experience = 0;
+        xp = 0;
     }
 
-    return experience;
+    return xp;
 }
 
 std::string Character::getStyle() const
@@ -121,9 +119,9 @@ std::string Character::getStyle() const
     return style;
 }
 
-int Character::getHitPoints() const
+int Character::getHP() const
 {
-    return hitPoints;
+    return hp;
 }
 
 int Character::getLevel() const
@@ -131,9 +129,9 @@ int Character::getLevel() const
     return level;
 }
 
-int Character::getExperience() const
+int Character::getXP() const
 {
-    return experience;
+    return xp;
 }
 
 int Character::getScore(std::string scoreName) const
@@ -159,26 +157,33 @@ int Character::getScore(std::string scoreName) const
 int Character::getModifier(std::string modifierType) const
 {
     Functions::convertToUpper(modifierType);
-    return static_cast<int>(std::floor((getScore(modifierType) - 10)/2.0));
+    return std::min(static_cast<int>(std::floor((getScore(modifierType) - 10)/2.0)),10);
 }
 
+void Character::setEquipment(Equipment& equipmentParam) {
+  equipment = equipmentParam;
+}
 int Character::getArmorClass() const
 {
-    return 10 + getModifier("DEX");
+    return getModifier("DEX") + equipment.sumEnchants("ARMOR_CLASS")+ equipment.getArmor().getBaseArmorAC();
 }
 
 int Character::getAttackBonus() const
 {
     if (style == "BULLY") {
-        return level + getModifier("STR");
+        return getProficiencyBonus() + getModifier("STR") + equipment.sumEnchants("ATTACK_BONUS");
     } else {
-        return level + getModifier("DEX");
+        return getProficiencyBonus() + getModifier("DEX") + equipment.sumEnchants("ATTACK_BONUS");
     }
 }
 
 int Character::getDamageBonus() const
 {
+  if (style == "BULLY") {
     return getModifier("STR");
+  } else {
+    return getModifier("DEX");
+  }
 }
 
 int Character::getProficiencyBonus() const
@@ -191,8 +196,8 @@ void Character::printCharacter() const
     std::cout << "\nCHARACTER: ==========================================="
     << "\nSTYLE: " << style
     << "\nLEVEL: " << level
-    << "\nEXPERIENCE: " << experience << "/" << level * 1000
-    << "\nHIT POINTS: " << hitPoints
+    << "\nEXPERIENCE: " << xp << "/" << level * 1000
+    << "\nHIT POINTS: " << hp
     << "\nSTR: " << getScore("STR") << " | STR MOD: " << getModifier("STR")
     << "\nDEX: " << getScore("DEX") << " | DEX MOD: " << getModifier("DEX")
     << "\nCON: " << getScore("CON") << " | CON MOD: " << getModifier("CON")
