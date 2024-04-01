@@ -175,7 +175,7 @@ int Character::getArmorClass()
 
     Armor* equippedArmorPtr = equipment.getArmor();
     if (equippedArmorPtr != nullptr) {
-        result += equipment.getArmor()->getBaseArmorAC();
+        result += equippedArmorPtr->getBaseArmorAC();
     }
     return result;
 }
@@ -194,9 +194,9 @@ int Character::getAttackBonus()
 int Character::getDamageBonus()
 {
   if (style == "BULLY") {
-    return getModifier("STR");
+    return getModifier("STR") + equipment.getEquipped().sumEnchants("DAMAGE_BONUS");
   } else {
-    return getModifier("DEX");
+    return getModifier("DEX") + equipment.getEquipped().sumEnchants("DAMAGE_BONUS");
   }
 }
 

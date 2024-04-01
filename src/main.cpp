@@ -6,7 +6,7 @@
 int main() {
   //Some sample items that we will bring in from files
   Armor leather_armor("leather_armor", "armor", "armor_class", 3, "light", 11);
-  Weapon str_sword("str_sword", "weapon", "attack_bonus", 2, "str", 5, "1d6");
+  Weapon str_sword("str_sword", "weapon", "damage_bonus", 2, "str", 5, "1d6");
   Item ring1("ring1", "ring", "constitution", 4);
   //Same here, sample itembag to bring in from file
   ItemBag starterItems("STARTER_ITEMS");

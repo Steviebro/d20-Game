@@ -49,19 +49,9 @@ Item* ItemBag::getOrRemove(std::string targetItemNameOrType, bool removeItem, bo
 
   for (auto it = storage.begin() ; it != storage.end() ; it++) {
     if ((!searchByType && (*it)->getItemName() == targetItemNameOrType) || (searchByType && (*it)->getItemType() == targetItemNameOrType)) {
-      if ((*it)->getItemType() == "ARMOR") {
-        Armor* armorResult = dynamic_cast<Armor*>(*it);
-        if (removeItem) { storage.erase(it); }
-        return armorResult;
-      } else if ((*it)->getItemType() == "WEAPON") {
-        Weapon* weaponResult = dynamic_cast<Weapon*>(*it);
-        if (removeItem) { storage.erase(it); }
-        return weaponResult;
-      } else {
-        auto& itemResult = *it;
-        if (removeItem) { storage.erase(it); }
-        return itemResult;
-      }
+      Item* itemResult = *it;
+      if (removeItem) { storage.erase(it); }
+      return itemResult;
     }
   }
   return nullptr;
