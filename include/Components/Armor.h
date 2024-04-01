@@ -12,18 +12,19 @@
 
 /**
  * @class Armor
- * @brief this class is used for creating the weapon object according to
+ * @brief this class is used for creating the armor object according to
  * the d20 rules.
  * It inherits from the item object.
  */
 class Armor : public Item {
  public:
   Armor(std::string itemNameParam, std::string itemTypeParam, std::string enchantTypeParam, int enchantLevelParam, std::string armorTypeParam, int baseArmorACParam) : Item(itemNameParam, itemTypeParam, enchantTypeParam, enchantLevelParam), armorType(Functions::convertToUpper(armorTypeParam)), baseArmorAC(baseArmorACParam){};
-  Armor() : Item(), baseArmorAC(0) {};
+  Armor() : Item(), armorType("-"), baseArmorAC(0) {};
   // ACCESSORS =====================================
   std::string getArmorType();
   int getBaseArmorAC();
 
+  std::string toString() const;
  private:
   std::string armorType;
   int baseArmorAC;

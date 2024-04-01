@@ -9,6 +9,8 @@
 #ifndef INC_345PROJECT_INCLUDE_COMPONENTS_ITEMBAG_H_
 #define INC_345PROJECT_INCLUDE_COMPONENTS_ITEMBAG_H_
 #include "Item.h"
+#include "Armor.h"
+#include "Weapon.h"
 
 /**
  *@class ItemBag
@@ -20,19 +22,27 @@ public:
   ItemBag(std::string bagNameParam) : bagName(Functions::convertToUpper(bagNameParam)) {};
 
   ItemBag() : bagName("DEFAULT_BAG") {};
+  // ACCESSOR =======================================
+  std::string getBagName() const;
 
-  bool hasItemType(std::string itemType);
+  // INSERTION =======================================
   void put(Item& toPut);
-  Item& get(std::string itemName);
-  Item& getByType(std::string itemType);
-  Item& remove(std::string itemName);
-  Item& removeByType(std::string itemTypeToRemove);
+  int putMany(ItemBag& bagToPut, bool emptyContents);
 
+  // RETREIVAL AND REMOVAL =================================================
+  Item* getOrRemove(std::string targetItemNameOrType, bool removeItem, bool searchByType);
+  
+  // OTHER GAME FUNCTIONS =======================================
+  bool hasItemType(std::string itemType);
   int sumEnchants(std::string enchant) const;
+
+  // FILE I/O & PRINTING =======================================
+  std::string toString() const;
+  void printBag() const;
 
 private:
   std::string bagName;
-  std::vector<Item> storage;
+  std::vector<Item*> storage;
 };
 
 

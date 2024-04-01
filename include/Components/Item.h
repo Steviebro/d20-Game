@@ -8,6 +8,9 @@
 #define INC_345PROJECT_INCLUDE_COMPONENTS_ITEM_H_
 
 #include <string>
+#include <vector>
+#include <stdexcept>
+#include <iostream>
 
 #include "../Static/Functions.h"
 /**
@@ -22,7 +25,7 @@ class Item{
     initPossibleEnchants();
     setEnchant(enchantTypeParam, enchantLevelParam);
   };
-  Item() : itemName("INVALID_ITEM"), enchantLevel(0) {};
+  Item() : itemName("INVALID_ITEM"), itemType("-"), enchantType("-"), enchantLevel(0) {};
   // ACCESSORS ===============================
   std::string getItemName() const;
   std::string getItemType() const;
@@ -33,6 +36,8 @@ class Item{
   void setEnchant(std::string enchantTypeParam, int enchantLevelParam);
   void setEnchantLevel(int enchantLevelParam);
   int incrementEnchantLevel(int levelsToAdd);
+
+  virtual std::string toString() const;
 
  private:
   std::string itemName;

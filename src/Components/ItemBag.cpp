@@ -7,6 +7,66 @@
  */
 #include "../../include/Components/ItemBag.h"
 
+std::string ItemBag::getBagName() const
+{
+  return bagName;
+}
+
+/**
+ * @brief method that adds a specific item to the item bag.
+ * @param toPut item that needs to be added
+ */
+void ItemBag::put(Item& itemToPut)
+{
+  storage.emplace_back(&itemToPut);
+}
+
+int ItemBag::putMany(ItemBag& bagToPut, bool emptyContents)
+{
+  int putCount = 0;
+  for (auto& itemPtr : bagToPut.storage) {
+    if (itemPtr != nullptr) {
+      put(*itemPtr);
+      putCount++;
+    }
+  }
+  if (emptyContents) {
+    bagToPut.storage.clear();
+  }
+  return putCount;
+}
+
+/**
+ * @brief method that searches for an item by name or type then gets or removes the item from the item bag and returns it
+ * @param targetItemNameOrType a string of the name or type of the target item
+ * @param removeItem a bool specifying whether the Item should be removed from the ItemBag
+ * @param searchByType a bool specifying if the target string is an itemType (true) or an itemName (false)
+ * @return Item& that was specified.
+ */
+Item* ItemBag::getOrRemove(std::string targetItemNameOrType, bool removeItem, bool searchByType)
+{
+  Functions::convertToUpper(targetItemNameOrType);
+
+  for (auto it = storage.begin() ; it != storage.end() ; it++) {
+    if ((!searchByType && (*it)->getItemName() == targetItemNameOrType) || (searchByType && (*it)->getItemType() == targetItemNameOrType)) {
+      if ((*it)->getItemType() == "ARMOR") {
+        Armor* armorResult = dynamic_cast<Armor*>(*it);
+        if (removeItem) { storage.erase(it); }
+        return armorResult;
+      } else if ((*it)->getItemType() == "WEAPON") {
+        Weapon* weaponResult = dynamic_cast<Weapon*>(*it);
+        if (removeItem) { storage.erase(it); }
+        return weaponResult;
+      } else {
+        auto& itemResult = *it;
+        if (removeItem) { storage.erase(it); }
+        return itemResult;
+      }
+    }
+  }
+  return nullptr;
+}
+
 /**
  * @brief method that checks if it has a specific item type
  * @param itemType type of the item that we are checking for
@@ -16,58 +76,12 @@ bool ItemBag::hasItemType(std::string itemType)
 {
   Functions::convertToUpper(itemType);
 
-  for (auto& item : storage) {
-    if (item.getItemType() == itemType) {
+  for (auto itemPtr : storage) {
+    if (itemPtr->getItemType() == itemType) {
       return true;
     }
   }
   return false;
-}
-
-/**
- * @brief method that adds a specific item to the item bag.
- * @param toPut item that needs to be added
- */
-void ItemBag::put(Item& toPut)
-{
-  storage.emplace_back(toPut);
-}
-
-/**
- * @brief method that gets the specified item from the item bag thats being looked for.
- * @param itemNameToGet name of item to get
- * @return specified item
- */
-Item& ItemBag::get(std::string itemNameToGet)
-{
-  Functions::convertToUpper(itemNameToGet);
-
-  for (auto& item : storage) {
-    if (item.getItemName() == itemNameToGet) {
-      return item;
-    }
-  }
-  Item result;
-  return result;
-}
-
-/**
- * @brief method that removes the item from the item bag and returns it
- * @param itemNameToRemove name of item to remove
- * @return item that was specified.
- */
-Item& ItemBag::remove(std::string itemNameToRemove)
-{
-  Functions::convertToUpper(itemNameToRemove);
-
-  for (auto it = storage.begin() ; it != storage.end() ; it++) {
-    if (it->getItemName() == itemNameToRemove) {
-      Item result = *it;
-      storage.erase(it);
-      return result;
-    }
-  }
-
 }
 
 /**
@@ -78,46 +92,34 @@ Item& ItemBag::remove(std::string itemNameToRemove)
 int ItemBag::sumEnchants(std::string enchant) const {
   Functions::convertToUpper(enchant);
   int sum = 0;
-  for(auto& item : storage){
-    if (item.getEnchantType() == enchant) {
-      sum += item.getEnchantLevel();
+  for(auto itemPtr : storage){
+    if (itemPtr->getEnchantType() == enchant) {
+      sum += itemPtr->getEnchantLevel();
     }
   }
   return sum;
 }
 
-/**
- * @brief method that gets by the type of the item
- * @param itemTypeToGet type of item to get
- * @return item returned by the type search
- */
-Item& ItemBag::getByType(std::string itemTypeToGet){
-  Functions::convertToUpper(itemTypeToGet);
-
-  for (auto& item : storage) {
-    if (item.getItemType() == itemTypeToGet) {
-      return item;
-    }
+//might need to change this
+std::string ItemBag::toString() const
+{
+  std::string result = bagName;
+  for (auto itemPtr : storage) {
+    result += " ";
+    result += itemPtr->getItemName();
   }
-  Item result;
   return result;
 }
 
-/**
- * @brief method that removes the item from the item bag and returns it
- * @param itemNameToRemove name of item to remove
- * @return item that was specified.
- */
-Item& ItemBag::removeByType(std::string itemTypeToRemove)
+void ItemBag::printBag() const
 {
-  Functions::convertToUpper(itemTypeToRemove);
-
-  for (auto it = storage.begin() ; it != storage.end() ; it++) {
-    if (it->getItemType() == itemTypeToRemove) {
-      Item result = *it;
-      storage.erase(it);
-      return result;
+  std::string result = "\nITEMBAG:==========================\nName: " + bagName + "\n";
+  for (auto itemPtr : storage) {
+    if (itemPtr != nullptr) {
+      result += itemPtr->toString();
+      result += "\n";
     }
   }
-
+  result += "===================================================\n";
+  std::cout << result;
 }

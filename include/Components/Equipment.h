@@ -19,25 +19,29 @@
  */
 class Equipment {
 public:
-  Equipment(Armor& armorParam, Weapon& weaponParam, ItemBag& otherEquippedParam, ItemBag& inventoryParam) : armor(armorParam), weapon(weaponParam),
-                                                                                                        otherEquipped(otherEquippedParam), inventory(inventoryParam) {};
+  Equipment(ItemBag& equippedParam, ItemBag& inventoryParam) : equipped(equippedParam), inventory(inventoryParam) {};
 
-  Equipment() {};
-  Armor getArmor() const;
-  Weapon getWeapon() const;
+  Equipment() : equipped("EQUIPPED_ITEMS"), inventory("INVENTORY_ITEMS") {};
+  // ACCESSORS =============================================
+  ItemBag& getEquipped();
+  ItemBag& getInventory();
+  Item* getEquippedItem(std::string itemType);
+  Armor* getArmor();
+  Weapon* getWeapon();
 
+  // MUTATORS ==============================================
+  bool equipItem(std::string itemNameToEquip);
+  bool unequipItem(std::string itemTypeToUnequip);
+  void lootChestOrBody(ItemBag& toLoot);
 
-  void equipItem(Item itemToEquip);
-  void unequipItem(std::string itemType);
-  void equipArmor(Armor& armorParam);
-  void equipWeapon(Weapon& weaponParam);
-
-  int sumEnchants(std::string enchant) const;
+  // OTHER ==============================================
+  std::string toString() const;
+  void printEquipment() const;
 
 private:
-  Armor armor;
-  Weapon weapon;
-  ItemBag otherEquipped;
+  //Armor armor;
+  //Weapon weapon;
+  ItemBag equipped;
   ItemBag inventory;
 };
 

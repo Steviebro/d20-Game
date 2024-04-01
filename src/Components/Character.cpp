@@ -4,7 +4,7 @@
 #include <iostream>
 
 Character::Character(int levelParam, std::string styleParam)
-: level(levelParam), style(Functions::convertToUpper(styleParam)), xp(0),
+: level(levelParam), style(Functions::convertToUpper(styleParam)), xp(0), equipment(),
 STR(initScorePriority("STR", styleParam)), DEX(initScorePriority("DEX", styleParam)), CON(initScorePriority("CON", styleParam))
 {
     //Validate style
@@ -134,27 +134,32 @@ int Character::getXP() const
     return xp;
 }
 
-int Character::getScore(std::string scoreName) const
+int Character::getScore(std::string scoreName)
 {
     Functions::convertToUpper(scoreName);
     if (scoreName == "STR" || scoreName == "STRENGTH") {
-        return std::min(scores[STR], 20);
+        return std::min(scores[STR] + equipment.getEquipped().sumEnchants("STRENGTH"), 20);
     } else if (scoreName == "DEX" || scoreName == "DEXTERITY") {
-        return std::min(scores[DEX], 20);
+        return std::min(scores[DEX] + equipment.getEquipped().sumEnchants("DEXTERITY"), 20);
     } else if (scoreName == "CON" || scoreName == "CONSTITUTION") {
-        return std::min(scores[CON], 20);
+        return std::min(scores[CON] + equipment.getEquipped().sumEnchants("CONSTITUTION"), 20);
     } else if (scoreName == "INT" || scoreName == "INTELLIGENCE") {
-        return std::min(scores[INT], 20);
+        return std::min(scores[INT] + equipment.getEquipped().sumEnchants("INTELLIGENCE"), 20);
     } else if (scoreName == "CHA" || scoreName == "CHARISMA") {
-        return std::min(scores[CHA], 20);
+        return std::min(scores[CHA] + equipment.getEquipped().sumEnchants("CHARISMA"), 20);
     } else if (scoreName == "WIS" || scoreName == "WISDOM") {
-        return std::min(scores[WIS], 20);
+        return std::min(scores[WIS] + equipment.getEquipped().sumEnchants("WISDOM"), 20);
     } else {
         throw std::invalid_argument("Invalid argument passed for getScore() method: "+scoreName);
     }
 }
 
-int Character::getModifier(std::string modifierType) const
+Equipment& Character::getEquipment()
+{
+    return equipment;
+}
+
+int Character::getModifier(std::string modifierType)
 {
     Functions::convertToUpper(modifierType);
     return std::min(static_cast<int>(std::floor((getScore(modifierType) - 10)/2.0)),10);
@@ -163,21 +168,30 @@ int Character::getModifier(std::string modifierType) const
 void Character::setEquipment(Equipment& equipmentParam) {
   equipment = equipmentParam;
 }
-int Character::getArmorClass() const
+
+int Character::getArmorClass()
 {
-    return getModifier("DEX") + equipment.sumEnchants("ARMOR_CLASS")+ equipment.getArmor().getBaseArmorAC();
+    int result = getModifier("DEX") + equipment.getEquipped().sumEnchants("ARMOR_CLASS");
+
+    Armor* equippedArmorPtr = equipment.getArmor();
+    if (equippedArmorPtr != nullptr) {
+        result += equipment.getArmor()->getBaseArmorAC();
+    }
+    return result;
 }
 
-int Character::getAttackBonus() const
+int Character::getAttackBonus()
 {
+    int result = getProficiencyBonus() + equipment.getEquipped().sumEnchants("ATTACK_BONUS");
+
     if (style == "BULLY") {
-        return getProficiencyBonus() + getModifier("STR") + equipment.sumEnchants("ATTACK_BONUS");
+        return result + getModifier("STR");
     } else {
-        return getProficiencyBonus() + getModifier("DEX") + equipment.sumEnchants("ATTACK_BONUS");
+        return result + getModifier("DEX");
     }
 }
 
-int Character::getDamageBonus() const
+int Character::getDamageBonus()
 {
   if (style == "BULLY") {
     return getModifier("STR");
@@ -191,7 +205,7 @@ int Character::getProficiencyBonus() const
     return 2 + ((level - 1)/4);
 }
 
-void Character::printCharacter() const
+void Character::printCharacter()
 {
     std::cout << "\nCHARACTER: ==========================================="
     << "\nSTYLE: " << style
@@ -207,6 +221,7 @@ void Character::printCharacter() const
     << "\nARMOR CLASS: " << getArmorClass()
     << "\nATTACK BONUS: " << getAttackBonus()
     << "\nDAMAGE BONUS: " << getDamageBonus()
-    << "\nPROFICIENCY BONUS: " << getProficiencyBonus()
-    << "\n=====================================================\n";
+    << "\nPROFICIENCY BONUS: " << getProficiencyBonus();
+    equipment.printEquipment();
+    std::cout << "=====================================================\n";
 }

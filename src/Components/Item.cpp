@@ -129,3 +129,8 @@ int Item::incrementEnchantLevel(int levelsToAdd)
   }
   return enchantLevel;
 }
+
+std::string Item::toString() const
+{
+  return itemName + " " + itemType + " " + enchantType + " " + std::to_string(enchantLevel);
+}

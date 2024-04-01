@@ -23,3 +23,7 @@ std::string Armor::getArmorType()
 int Armor::getBaseArmorAC() {
   return baseArmorAC;
 }
+
+std::string Armor::toString() const {
+  return Item::toString() + " " + armorType + " " + std::to_string(baseArmorAC);
+}

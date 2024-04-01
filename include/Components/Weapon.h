@@ -9,7 +9,6 @@
 #ifndef INC_345PROJECT_INCLUDE_COMPONENTS_WEAPON_H_
 #define INC_345PROJECT_INCLUDE_COMPONENTS_WEAPON_H_
 #include "Item.h"
-#include "../Static/Functions.h"
 
 /**
  * @class Weapon
@@ -19,11 +18,13 @@
 class Weapon : public Item {
 public:
   Weapon(std::string itemNameParam, std::string itemTypeParam, std::string enchantTypeParam, int enchantLevelParam, std::string weaponTypeParam, int rangeParam, std::string diceTypeParam) : Item(itemNameParam, itemTypeParam, enchantTypeParam, enchantLevelParam), weaponType(Functions::convertToUpper(weaponTypeParam)), range(rangeParam), diceType(diceTypeParam){};
-  Weapon() : Item() {};
+  Weapon() : Item(), weaponType("-"), range(0), diceType("-") {};
 
   std::string getWeaponType();
   int getRange();
   std::string getDiceType();
+
+  std::string toString() const;
 
 private:
   std::string weaponType;

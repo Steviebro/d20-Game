@@ -31,3 +31,8 @@ std::string Weapon::getDiceType()
 {
   return diceType;
 }
+
+std::string Weapon::toString() const
+{
+  return Item::toString() + " " + weaponType + " " + std::to_string(range) + " " + diceType;
+}

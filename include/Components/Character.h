@@ -31,19 +31,20 @@ public:
     int getHP() const;
     int getLevel() const;
     int getXP() const;
-    int getScore(std::string scoreName) const;
+    int getScore(std::string scoreName);
+    Equipment& getEquipment();
 
     // COMPUTED ACCESSORS ======================================
-    int getModifier(std::string modifierType) const;
-    int getArmorClass() const;
-    int getAttackBonus() const;
-    int getDamageBonus() const;
+    int getModifier(std::string modifierType);
+    int getArmorClass();
+    int getAttackBonus();
+    int getDamageBonus();
     int getProficiencyBonus() const;
 
 
 
     // OTHER ==================================================
-    void printCharacter() const;
+    void printCharacter();
     
 private:
     //Style and Scores (with indices)

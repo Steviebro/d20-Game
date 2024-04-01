@@ -7,79 +7,79 @@
  */
 #include "../../include/Components/Equipment.h"
 
-Armor Equipment::getArmor() const{
-  return armor;
+ItemBag& Equipment::getEquipped()
+{
+  return equipped;
 }
 
-Weapon Equipment::getWeapon() const{
-  return weapon;
+ItemBag& Equipment::getInventory()
+{
+  return inventory;
 }
 
-/**
- * @brief method which allows a character to equip a new item
- * @param itemParam item to be equipped
- */
-void Equipment::equipItem(Item itemToEquip) {
-  if (otherEquipped.hasItemType(itemToEquip.getItemType())) {
-   inventory.put(otherEquipped.removeByType(itemToEquip.getItemType()));
-  }
-  otherEquipped.put(itemToEquip);
+Item* Equipment::getEquippedItem(std::string itemType)
+{
+  return equipped.getOrRemove(Functions::convertToUpper(itemType),false,true);
 }
 
-/**
- * @brief method to equip new armor
- * @param armorParam armor to be equipped
- */
-void Equipment::equipArmor(Armor& armorParam){
-  if (armor.getItemName() != "INVALID_ITEM") {
-    inventory.put(armor);
-  }
-  armor = armorParam;
+
+Armor* Equipment::getArmor() {
+  return static_cast<Armor*>(getEquippedItem("ARMOR"));
 }
+
+Weapon* Equipment::getWeapon() {
+  return static_cast<Weapon*>(getEquippedItem("WEAPON"));
+}
+
 
 /**
- * @brief method to equip new weapon
- * @param weaponParam weapon to be equipped
+ * @brief method which allows a character to equip an item from his inventory
+ * @param itemNameToEquip a string of the itemName of the Item to be equipped
+ * @return a bool of whether the target item is in inventory (i.e. success of equipping)
  */
-void Equipment::equipWeapon(Weapon& weaponParam) {
-  if (weapon.getItemName() != "INVALID_ITEM") {
-    inventory.put(weapon);
+bool Equipment::equipItem(std::string itemNameToEquip) {
+  //search inventory for itemName
+  Item* itemToEquipPtr = inventory.getOrRemove(Functions::convertToUpper(itemNameToEquip), true, false);
+  if (itemToEquipPtr == nullptr) { return false; }//item passed is not in inventory
+
+  //check if itemType is already equipped, if so, unequip it
+  if (equipped.hasItemType(itemToEquipPtr->getItemType())) {
+    unequipItem(itemToEquipPtr->getItemType());
   }
-  weapon = weaponParam;
+
+  //put the item in equipped
+  equipped.put(*itemToEquipPtr);
+  return true;
 }
 
 /**
  * @brief method to unequip a specific item
- * @param itemType item to unequip
+ * @param itemTypeToUnequip the itemType to be unequipped
+ * @return true if successful, false if itemType is not currently equipped
  */
-void Equipment::unequipItem(std::string itemType) {
-  if (itemType == "ARMOR" && armor.getItemName() != "INVALID_ITEM") {
-    inventory.put(armor);
-    Armor a;
-    armor = a;
-  } else if (itemType == "WEAPON" && weapon.getItemName() != "INVALID_ITEM") {
-    inventory.put(weapon);
-    Weapon w;
-    weapon = w;
-  } else {
-    inventory.put(otherEquipped.removeByType(itemType));
-  }
+bool Equipment::unequipItem(std::string itemTypeToUnequip) {
+  //remove the passed itemtype item from equipped
+  Item* unequippedItemPtr = equipped.getOrRemove(itemTypeToUnequip,true,true);
+  if (unequippedItemPtr == nullptr) { return false; }//itemType is not already equipped
+
+  inventory.put(*unequippedItemPtr);
+  return true;
 }
 
-/**
- * @brief method that adds up the specified enchant bonuses
- * @param enchant specific enchant
- * @return sum of bonuses
- */
-int Equipment::sumEnchants(std::string enchant) const {
-  Functions::convertToUpper(enchant);
-  int sum = otherEquipped.sumEnchants(enchant);
+void Equipment::lootChestOrBody(ItemBag& toLoot)
+{
+  inventory.putMany(toLoot, true);
+}
 
-  if (armor.getEnchantType() == enchant) {
-    sum += armor.getEnchantLevel();
-  }
-  if (weapon.getEnchantType() == enchant) {
-    sum += weapon.getEnchantLevel();
-  }
-  return sum;
+std::string Equipment::toString() const
+{
+  return equipped.getBagName() + " " + inventory.getBagName();
+}
+
+void Equipment::printEquipment() const
+{
+  std::cout << "\nEQUIPMENT: =========================="
+  << "\nEquipped: " << equipped.toString()
+  << "\nInventory: " << inventory.toString()
+  << "\n=========================================\n";
 }
