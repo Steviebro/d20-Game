@@ -6,11 +6,13 @@
 int main() {
   //Some sample items that we will bring in from files
   Armor leather_armor("leather_armor", "armor", "armor_class", 3, "light", 11);
+  Armor medium_armor("medium_armor", "armor", "armor_class", 3, "medium", 14);
   Weapon str_sword("str_sword", "weapon", "damage_bonus", 2, "str", 5, "1d6");
   Item ring1("ring1", "ring", "constitution", 4);
   //Same here, sample itembag to bring in from file
   ItemBag starterItems("STARTER_ITEMS");
   starterItems.put(leather_armor);
+  starterItems.put(medium_armor);
   starterItems.put(str_sword);
   starterItems.put(ring1);
   
@@ -34,6 +36,11 @@ int main() {
   c1.getEquipment().equipItem("str_sword");
   c1.getEquipment().equipItem("ring1");
   std::cout << "Now the character has all items equipped\n";
+  c1.printCharacter();
+
+  //equip already equipped test
+  c1.getEquipment().equipItem("medium_armor");
+  std::cout << "Now the character has equipped a new armor\n";
   c1.printCharacter();
 
   //unequip test
