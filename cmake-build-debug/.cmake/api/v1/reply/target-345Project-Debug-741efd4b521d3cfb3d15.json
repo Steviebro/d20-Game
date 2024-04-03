@@ -48,18 +48,18 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics"
+					"fragment" : "-g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/Users/mateb/Desktop/345Project/src"
+					"path" : "/Users/andrewoh/CLionProjects/345Project/src"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/Users/mateb/Desktop/345Project/catchTests"
+					"path" : "/Users/andrewoh/CLionProjects/345Project/catchTests"
 				}
 			],
 			"language" : "CXX",
