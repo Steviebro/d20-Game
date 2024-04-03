@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/andrewoh/CLionProjects/345Project
+CMAKE_SOURCE_DIR = /Users/andrewoh/CLionProjects/345Projecta
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/andrewoh/CLionProjects/345Project/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/andrewoh/CLionProjects/345Projecta/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/andrewoh/CLionProjects/345Project/cmake-build-debug/CMakeFiles /Users/andrewoh/CLionProjects/345Project/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/andrewoh/CLionProjects/345Projecta/cmake-build-debug/CMakeFiles /Users/andrewoh/CLionProjects/345Projecta/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/andrewoh/CLionProjects/345Project/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/andrewoh/CLionProjects/345Projecta/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -249,174 +249,6 @@ src/Components/ItemBag.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/ItemBag.cpp.s
 .PHONY : src/Components/ItemBag.cpp.s
 
-src/Components/MapBuilder.o: src/Components/MapBuilder.cpp.o
-.PHONY : src/Components/MapBuilder.o
-
-# target to build an object file
-src/Components/MapBuilder.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/MapBuilder.cpp.o
-.PHONY : src/Components/MapBuilder.cpp.o
-
-src/Components/MapBuilder.i: src/Components/MapBuilder.cpp.i
-.PHONY : src/Components/MapBuilder.i
-
-# target to preprocess a source file
-src/Components/MapBuilder.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/MapBuilder.cpp.i
-.PHONY : src/Components/MapBuilder.cpp.i
-
-src/Components/MapBuilder.s: src/Components/MapBuilder.cpp.s
-.PHONY : src/Components/MapBuilder.s
-
-# target to generate assembly for a file
-src/Components/MapBuilder.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/MapBuilder.cpp.s
-.PHONY : src/Components/MapBuilder.cpp.s
-
-src/Components/MapConcreteBuilder.o: src/Components/MapConcreteBuilder.cpp.o
-.PHONY : src/Components/MapConcreteBuilder.o
-
-# target to build an object file
-src/Components/MapConcreteBuilder.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/MapConcreteBuilder.cpp.o
-.PHONY : src/Components/MapConcreteBuilder.cpp.o
-
-src/Components/MapConcreteBuilder.i: src/Components/MapConcreteBuilder.cpp.i
-.PHONY : src/Components/MapConcreteBuilder.i
-
-# target to preprocess a source file
-src/Components/MapConcreteBuilder.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/MapConcreteBuilder.cpp.i
-.PHONY : src/Components/MapConcreteBuilder.cpp.i
-
-src/Components/MapConcreteBuilder.s: src/Components/MapConcreteBuilder.cpp.s
-.PHONY : src/Components/MapConcreteBuilder.s
-
-# target to generate assembly for a file
-src/Components/MapConcreteBuilder.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/MapConcreteBuilder.cpp.s
-.PHONY : src/Components/MapConcreteBuilder.cpp.s
-
-src/Components/MapDirector.o: src/Components/MapDirector.cpp.o
-.PHONY : src/Components/MapDirector.o
-
-# target to build an object file
-src/Components/MapDirector.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/MapDirector.cpp.o
-.PHONY : src/Components/MapDirector.cpp.o
-
-src/Components/MapDirector.i: src/Components/MapDirector.cpp.i
-.PHONY : src/Components/MapDirector.i
-
-# target to preprocess a source file
-src/Components/MapDirector.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/MapDirector.cpp.i
-.PHONY : src/Components/MapDirector.cpp.i
-
-src/Components/MapDirector.s: src/Components/MapDirector.cpp.s
-.PHONY : src/Components/MapDirector.s
-
-# target to generate assembly for a file
-src/Components/MapDirector.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/MapDirector.cpp.s
-.PHONY : src/Components/MapDirector.cpp.s
-
-src/Components/MapEditor.o: src/Components/MapEditor.cpp.o
-.PHONY : src/Components/MapEditor.o
-
-# target to build an object file
-src/Components/MapEditor.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.o
-.PHONY : src/Components/MapEditor.cpp.o
-
-src/Components/MapEditor.i: src/Components/MapEditor.cpp.i
-.PHONY : src/Components/MapEditor.i
-
-# target to preprocess a source file
-src/Components/MapEditor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.i
-.PHONY : src/Components/MapEditor.cpp.i
-
-src/Components/MapEditor.s: src/Components/MapEditor.cpp.s
-.PHONY : src/Components/MapEditor.s
-
-# target to generate assembly for a file
-src/Components/MapEditor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.s
-.PHONY : src/Components/MapEditor.cpp.s
-
-src/Components/MapGeneration.o: src/Components/MapGeneration.cpp.o
-.PHONY : src/Components/MapGeneration.o
-
-# target to build an object file
-src/Components/MapGeneration.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o
-.PHONY : src/Components/MapGeneration.cpp.o
-
-src/Components/MapGeneration.i: src/Components/MapGeneration.cpp.i
-.PHONY : src/Components/MapGeneration.i
-
-# target to preprocess a source file
-src/Components/MapGeneration.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.i
-.PHONY : src/Components/MapGeneration.cpp.i
-
-src/Components/MapGeneration.s: src/Components/MapGeneration.cpp.s
-.PHONY : src/Components/MapGeneration.s
-
-# target to generate assembly for a file
-src/Components/MapGeneration.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.s
-.PHONY : src/Components/MapGeneration.cpp.s
-
-src/Components/Observer.o: src/Components/Observer.cpp.o
-.PHONY : src/Components/Observer.o
-
-# target to build an object file
-src/Components/Observer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/Observer.cpp.o
-.PHONY : src/Components/Observer.cpp.o
-
-src/Components/Observer.i: src/Components/Observer.cpp.i
-.PHONY : src/Components/Observer.i
-
-# target to preprocess a source file
-src/Components/Observer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/Observer.cpp.i
-.PHONY : src/Components/Observer.cpp.i
-
-src/Components/Observer.s: src/Components/Observer.cpp.s
-.PHONY : src/Components/Observer.s
-
-# target to generate assembly for a file
-src/Components/Observer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/Observer.cpp.s
-.PHONY : src/Components/Observer.cpp.s
-
-src/Components/Subject.o: src/Components/Subject.cpp.o
-.PHONY : src/Components/Subject.o
-
-# target to build an object file
-src/Components/Subject.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/Subject.cpp.o
-.PHONY : src/Components/Subject.cpp.o
-
-src/Components/Subject.i: src/Components/Subject.cpp.i
-.PHONY : src/Components/Subject.i
-
-# target to preprocess a source file
-src/Components/Subject.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/Subject.cpp.i
-.PHONY : src/Components/Subject.cpp.i
-
-src/Components/Subject.s: src/Components/Subject.cpp.s
-.PHONY : src/Components/Subject.s
-
-# target to generate assembly for a file
-src/Components/Subject.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/Subject.cpp.s
-.PHONY : src/Components/Subject.cpp.s
-
 src/Components/Weapon.o: src/Components/Weapon.cpp.o
 .PHONY : src/Components/Weapon.o
 
@@ -537,27 +369,6 @@ help:
 	@echo "... src/Components/ItemBag.o"
 	@echo "... src/Components/ItemBag.i"
 	@echo "... src/Components/ItemBag.s"
-	@echo "... src/Components/MapBuilder.o"
-	@echo "... src/Components/MapBuilder.i"
-	@echo "... src/Components/MapBuilder.s"
-	@echo "... src/Components/MapConcreteBuilder.o"
-	@echo "... src/Components/MapConcreteBuilder.i"
-	@echo "... src/Components/MapConcreteBuilder.s"
-	@echo "... src/Components/MapDirector.o"
-	@echo "... src/Components/MapDirector.i"
-	@echo "... src/Components/MapDirector.s"
-	@echo "... src/Components/MapEditor.o"
-	@echo "... src/Components/MapEditor.i"
-	@echo "... src/Components/MapEditor.s"
-	@echo "... src/Components/MapGeneration.o"
-	@echo "... src/Components/MapGeneration.i"
-	@echo "... src/Components/MapGeneration.s"
-	@echo "... src/Components/Observer.o"
-	@echo "... src/Components/Observer.i"
-	@echo "... src/Components/Observer.s"
-	@echo "... src/Components/Subject.o"
-	@echo "... src/Components/Subject.i"
-	@echo "... src/Components/Subject.s"
 	@echo "... src/Components/Weapon.o"
 	@echo "... src/Components/Weapon.i"
 	@echo "... src/Components/Weapon.s"

@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/andrewoh/CLionProjects/345Project/src -I/Users/andrewoh/CLionProjects/345Project/catchTests
+CXX_INCLUDES = -I/Users/andrewoh/CLionProjects/345Projecta/src -I/Users/andrewoh/CLionProjects/345Projecta/catchTests
 
 CXX_FLAGSarm64 = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics
 

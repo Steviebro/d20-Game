@@ -1,7 +1,7 @@
 CMakeFiles/345Project.dir/src/Components/Character.cpp.o: \
-  /Users/andrewoh/CLionProjects/345Project/src/Components/Character.cpp \
-  /Users/andrewoh/CLionProjects/345Project/src/Components/../../include/Components/Character.h \
-  /Users/andrewoh/CLionProjects/345Project/src/Components/../../include/Components/../Static/Functions.h \
+  /Users/andrewoh/CLionProjects/345Projecta/src/Components/Character.cpp \
+  /Users/andrewoh/CLionProjects/345Projecta/src/Components/../../include/Components/Character.h \
+  /Users/andrewoh/CLionProjects/345Projecta/src/Components/../../include/Components/../Static/Functions.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/algorithm \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config_site \
@@ -361,15 +361,15 @@ CMakeFiles/345Project.dir/src/Components/Character.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/_types/_wctrans_t.h \
-  /Users/andrewoh/CLionProjects/345Project/src/Components/../../include/Components/../Static/Dice.h \
-  /Users/andrewoh/CLionProjects/345Project/src/Components/../../include/Components/ItemBag.h \
-  /Users/andrewoh/CLionProjects/345Project/src/Components/../../include/Components/Item.h \
+  /Users/andrewoh/CLionProjects/345Projecta/src/Components/../../include/Components/../Static/Dice.h \
+  /Users/andrewoh/CLionProjects/345Projecta/src/Components/../../include/Components/ItemBag.h \
+  /Users/andrewoh/CLionProjects/345Projecta/src/Components/../../include/Components/Item.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__bit_reference \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__split_buffer \
-  /Users/andrewoh/CLionProjects/345Project/src/Components/../../include/Components/Equipment.h \
-  /Users/andrewoh/CLionProjects/345Project/src/Components/../../include/Components/Armor.h \
-  /Users/andrewoh/CLionProjects/345Project/src/Components/../../include/Components/Weapon.h \
+  /Users/andrewoh/CLionProjects/345Projecta/src/Components/../../include/Components/Equipment.h \
+  /Users/andrewoh/CLionProjects/345Projecta/src/Components/../../include/Components/Armor.h \
+  /Users/andrewoh/CLionProjects/345Projecta/src/Components/../../include/Components/Weapon.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/math.h \

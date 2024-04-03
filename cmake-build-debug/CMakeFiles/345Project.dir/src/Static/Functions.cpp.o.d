@@ -1,6 +1,6 @@
 CMakeFiles/345Project.dir/src/Static/Functions.cpp.o: \
-  /Users/andrewoh/CLionProjects/345Project/src/Static/Functions.cpp \
-  /Users/andrewoh/CLionProjects/345Project/src/Static/../../include/Static/Functions.h \
+  /Users/andrewoh/CLionProjects/345Projecta/src/Static/Functions.cpp \
+  /Users/andrewoh/CLionProjects/345Projecta/src/Static/../../include/Static/Functions.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/algorithm \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config_site \

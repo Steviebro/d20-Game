@@ -1,7 +1,7 @@
 CMakeFiles/345Project.dir/src/Components/ItemBag.cpp.o: \
-  /Users/andrewoh/CLionProjects/345Project/src/Components/ItemBag.cpp \
-  /Users/andrewoh/CLionProjects/345Project/src/Components/../../include/Components/ItemBag.h \
-  /Users/andrewoh/CLionProjects/345Project/src/Components/../../include/Components/Item.h \
+  /Users/andrewoh/CLionProjects/345Projecta/src/Components/ItemBag.cpp \
+  /Users/andrewoh/CLionProjects/345Projecta/src/Components/../../include/Components/ItemBag.h \
+  /Users/andrewoh/CLionProjects/345Projecta/src/Components/../../include/Components/Item.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config_site \
@@ -364,4 +364,4 @@ CMakeFiles/345Project.dir/src/Components/ItemBag.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__bit_reference \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__split_buffer \
-  /Users/andrewoh/CLionProjects/345Project/src/Components/../../include/Components/../Static/Functions.h
+  /Users/andrewoh/CLionProjects/345Projecta/src/Components/../../include/Components/../Static/Functions.h
