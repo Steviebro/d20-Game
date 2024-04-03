@@ -8,6 +8,7 @@
 #define INC_345PROJECT_INCLUDE_COMPONENTS_ITEM_H_
 
 #include <string>
+#include <vector>
 
 #include "../Static/Functions.h"
 /**
