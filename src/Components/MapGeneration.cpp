@@ -7,11 +7,10 @@
  */
 
 #include "../../include/Components/MapGeneration.h"
-#include "../../include/Components/Position.h"
 #include <iostream>
 #include <string>
 
-GridMap::GridMap() : width(5), height(5){};
+GridMap::GridMap() : Subject(), width(5), height(5){};
 GridMap::~GridMap() = default;
 
 void GridMap::populateMap(){
@@ -52,7 +51,7 @@ bool GridMap::setCell(const int& x, const int& y, const char& c) {
         if (x > 0 && map[y][x-1] == '#' || x < width - 1 && map[y][x+1] == '#' || y > 0 && map[y-1][x] == '#' || y < height - 1 && map[y+1][x] == '#') {
             char temp = getCell(x,y);
             map[y][x] = c;
-            if (!hasValidPath()) {
+            if (!hasValidPath('X')) {
                 map[y][x] = temp;
                 std::cout << "Illegal introduction of a wall, the map must have a valid path\n";
                 notify();
@@ -141,12 +140,12 @@ bool GridMap::isValid(const int& x, const int& y) const {
  * @return true if path is found
  * @return false if path is not found
  */
-bool GridMap::DFS(const int& x, const int& y, std::vector<std::vector<bool> >& visited) {
+bool GridMap::DFS(const int& x, const int& y, std::vector<std::vector<bool> >& visited, char target) {
     // Mark the current cell as visited
     visited[y][x] = true;
 
     // If the current cell is 'X', we have found a path
-    if (map[y][x] == 'X') {
+    if (map[y][x] == target) {
         return true;
     }
 
@@ -160,7 +159,7 @@ bool GridMap::DFS(const int& x, const int& y, std::vector<std::vector<bool> >& v
 
         // If the new cell is valid and not visited, move to it
         if (isValid(newX, newY) && !visited[newY][newX]) {
-            if (DFS(newX, newY, visited)) {
+            if (DFS(newX, newY, visited, target)) {
                 return true;
             }
         }
@@ -175,7 +174,7 @@ bool GridMap::DFS(const int& x, const int& y, std::vector<std::vector<bool> >& v
  * @return true if there is a valid path
  * @return false if there is no valid path
  */
-bool GridMap::hasValidPath() {
+bool GridMap::hasValidPath(char t) {
     // Create a visited matrix
     std::vector<std::vector<bool> > visited(height, std::vector<bool>(width, false));
 
@@ -184,7 +183,7 @@ bool GridMap::hasValidPath() {
         for (int j = 0; j < width; j++) {
             if (map[i][j] == 'E') {
                 // Start DFS from 'E'
-                return DFS(j, i, visited);
+                return DFS(j, i, visited, t);
             }
         }
     }

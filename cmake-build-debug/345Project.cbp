@@ -99,6 +99,27 @@
 		<Unit filename="/Users/andrewoh/CLionProjects/345Project/src/Components/ItemBag.cpp">
 			<Option target="345Project"/>
 		</Unit>
+		<Unit filename="/Users/andrewoh/CLionProjects/345Project/src/Components/MapBuilder.cpp">
+			<Option target="345Project"/>
+		</Unit>
+		<Unit filename="/Users/andrewoh/CLionProjects/345Project/src/Components/MapConcreteBuilder.cpp">
+			<Option target="345Project"/>
+		</Unit>
+		<Unit filename="/Users/andrewoh/CLionProjects/345Project/src/Components/MapDirector.cpp">
+			<Option target="345Project"/>
+		</Unit>
+		<Unit filename="/Users/andrewoh/CLionProjects/345Project/src/Components/MapEditor.cpp">
+			<Option target="345Project"/>
+		</Unit>
+		<Unit filename="/Users/andrewoh/CLionProjects/345Project/src/Components/MapGeneration.cpp">
+			<Option target="345Project"/>
+		</Unit>
+		<Unit filename="/Users/andrewoh/CLionProjects/345Project/src/Components/Observer.cpp">
+			<Option target="345Project"/>
+		</Unit>
+		<Unit filename="/Users/andrewoh/CLionProjects/345Project/src/Components/Subject.cpp">
+			<Option target="345Project"/>
+		</Unit>
 		<Unit filename="/Users/andrewoh/CLionProjects/345Project/src/Components/Weapon.cpp">
 			<Option target="345Project"/>
 		</Unit>

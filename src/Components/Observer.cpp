@@ -4,7 +4,7 @@
  * the constructors.
  * @ref Observer.h
  */
-#include "../../include/Components/Observer.h"
+#include "../include/Components/Observer.h"
 
 Observer::Observer() = default;
 Observer::~Observer() = default;

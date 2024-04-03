@@ -195,6 +195,104 @@ CMakeFiles/345Project.dir/src/Components/Equipment.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/345Project.dir/src/Components/Equipment.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrewoh/CLionProjects/345Project/src/Components/Equipment.cpp -o CMakeFiles/345Project.dir/src/Components/Equipment.cpp.s
 
+CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o: CMakeFiles/345Project.dir/flags.make
+CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o: /Users/andrewoh/CLionProjects/345Project/src/Components/MapGeneration.cpp
+CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o: CMakeFiles/345Project.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewoh/CLionProjects/345Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o -MF CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o.d -o CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o -c /Users/andrewoh/CLionProjects/345Project/src/Components/MapGeneration.cpp
+
+CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrewoh/CLionProjects/345Project/src/Components/MapGeneration.cpp > CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.i
+
+CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrewoh/CLionProjects/345Project/src/Components/MapGeneration.cpp -o CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.s
+
+CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.o: CMakeFiles/345Project.dir/flags.make
+CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.o: /Users/andrewoh/CLionProjects/345Project/src/Components/MapEditor.cpp
+CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.o: CMakeFiles/345Project.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewoh/CLionProjects/345Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.o -MF CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.o.d -o CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.o -c /Users/andrewoh/CLionProjects/345Project/src/Components/MapEditor.cpp
+
+CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrewoh/CLionProjects/345Project/src/Components/MapEditor.cpp > CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.i
+
+CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrewoh/CLionProjects/345Project/src/Components/MapEditor.cpp -o CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.s
+
+CMakeFiles/345Project.dir/src/Components/MapDirector.cpp.o: CMakeFiles/345Project.dir/flags.make
+CMakeFiles/345Project.dir/src/Components/MapDirector.cpp.o: /Users/andrewoh/CLionProjects/345Project/src/Components/MapDirector.cpp
+CMakeFiles/345Project.dir/src/Components/MapDirector.cpp.o: CMakeFiles/345Project.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewoh/CLionProjects/345Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/345Project.dir/src/Components/MapDirector.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/345Project.dir/src/Components/MapDirector.cpp.o -MF CMakeFiles/345Project.dir/src/Components/MapDirector.cpp.o.d -o CMakeFiles/345Project.dir/src/Components/MapDirector.cpp.o -c /Users/andrewoh/CLionProjects/345Project/src/Components/MapDirector.cpp
+
+CMakeFiles/345Project.dir/src/Components/MapDirector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/345Project.dir/src/Components/MapDirector.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrewoh/CLionProjects/345Project/src/Components/MapDirector.cpp > CMakeFiles/345Project.dir/src/Components/MapDirector.cpp.i
+
+CMakeFiles/345Project.dir/src/Components/MapDirector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/345Project.dir/src/Components/MapDirector.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrewoh/CLionProjects/345Project/src/Components/MapDirector.cpp -o CMakeFiles/345Project.dir/src/Components/MapDirector.cpp.s
+
+CMakeFiles/345Project.dir/src/Components/MapBuilder.cpp.o: CMakeFiles/345Project.dir/flags.make
+CMakeFiles/345Project.dir/src/Components/MapBuilder.cpp.o: /Users/andrewoh/CLionProjects/345Project/src/Components/MapBuilder.cpp
+CMakeFiles/345Project.dir/src/Components/MapBuilder.cpp.o: CMakeFiles/345Project.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewoh/CLionProjects/345Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/345Project.dir/src/Components/MapBuilder.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/345Project.dir/src/Components/MapBuilder.cpp.o -MF CMakeFiles/345Project.dir/src/Components/MapBuilder.cpp.o.d -o CMakeFiles/345Project.dir/src/Components/MapBuilder.cpp.o -c /Users/andrewoh/CLionProjects/345Project/src/Components/MapBuilder.cpp
+
+CMakeFiles/345Project.dir/src/Components/MapBuilder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/345Project.dir/src/Components/MapBuilder.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrewoh/CLionProjects/345Project/src/Components/MapBuilder.cpp > CMakeFiles/345Project.dir/src/Components/MapBuilder.cpp.i
+
+CMakeFiles/345Project.dir/src/Components/MapBuilder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/345Project.dir/src/Components/MapBuilder.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrewoh/CLionProjects/345Project/src/Components/MapBuilder.cpp -o CMakeFiles/345Project.dir/src/Components/MapBuilder.cpp.s
+
+CMakeFiles/345Project.dir/src/Components/MapConcreteBuilder.cpp.o: CMakeFiles/345Project.dir/flags.make
+CMakeFiles/345Project.dir/src/Components/MapConcreteBuilder.cpp.o: /Users/andrewoh/CLionProjects/345Project/src/Components/MapConcreteBuilder.cpp
+CMakeFiles/345Project.dir/src/Components/MapConcreteBuilder.cpp.o: CMakeFiles/345Project.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewoh/CLionProjects/345Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/345Project.dir/src/Components/MapConcreteBuilder.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/345Project.dir/src/Components/MapConcreteBuilder.cpp.o -MF CMakeFiles/345Project.dir/src/Components/MapConcreteBuilder.cpp.o.d -o CMakeFiles/345Project.dir/src/Components/MapConcreteBuilder.cpp.o -c /Users/andrewoh/CLionProjects/345Project/src/Components/MapConcreteBuilder.cpp
+
+CMakeFiles/345Project.dir/src/Components/MapConcreteBuilder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/345Project.dir/src/Components/MapConcreteBuilder.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrewoh/CLionProjects/345Project/src/Components/MapConcreteBuilder.cpp > CMakeFiles/345Project.dir/src/Components/MapConcreteBuilder.cpp.i
+
+CMakeFiles/345Project.dir/src/Components/MapConcreteBuilder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/345Project.dir/src/Components/MapConcreteBuilder.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrewoh/CLionProjects/345Project/src/Components/MapConcreteBuilder.cpp -o CMakeFiles/345Project.dir/src/Components/MapConcreteBuilder.cpp.s
+
+CMakeFiles/345Project.dir/src/Components/Subject.cpp.o: CMakeFiles/345Project.dir/flags.make
+CMakeFiles/345Project.dir/src/Components/Subject.cpp.o: /Users/andrewoh/CLionProjects/345Project/src/Components/Subject.cpp
+CMakeFiles/345Project.dir/src/Components/Subject.cpp.o: CMakeFiles/345Project.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewoh/CLionProjects/345Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/345Project.dir/src/Components/Subject.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/345Project.dir/src/Components/Subject.cpp.o -MF CMakeFiles/345Project.dir/src/Components/Subject.cpp.o.d -o CMakeFiles/345Project.dir/src/Components/Subject.cpp.o -c /Users/andrewoh/CLionProjects/345Project/src/Components/Subject.cpp
+
+CMakeFiles/345Project.dir/src/Components/Subject.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/345Project.dir/src/Components/Subject.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrewoh/CLionProjects/345Project/src/Components/Subject.cpp > CMakeFiles/345Project.dir/src/Components/Subject.cpp.i
+
+CMakeFiles/345Project.dir/src/Components/Subject.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/345Project.dir/src/Components/Subject.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrewoh/CLionProjects/345Project/src/Components/Subject.cpp -o CMakeFiles/345Project.dir/src/Components/Subject.cpp.s
+
+CMakeFiles/345Project.dir/src/Components/Observer.cpp.o: CMakeFiles/345Project.dir/flags.make
+CMakeFiles/345Project.dir/src/Components/Observer.cpp.o: /Users/andrewoh/CLionProjects/345Project/src/Components/Observer.cpp
+CMakeFiles/345Project.dir/src/Components/Observer.cpp.o: CMakeFiles/345Project.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrewoh/CLionProjects/345Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/345Project.dir/src/Components/Observer.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/345Project.dir/src/Components/Observer.cpp.o -MF CMakeFiles/345Project.dir/src/Components/Observer.cpp.o.d -o CMakeFiles/345Project.dir/src/Components/Observer.cpp.o -c /Users/andrewoh/CLionProjects/345Project/src/Components/Observer.cpp
+
+CMakeFiles/345Project.dir/src/Components/Observer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/345Project.dir/src/Components/Observer.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrewoh/CLionProjects/345Project/src/Components/Observer.cpp > CMakeFiles/345Project.dir/src/Components/Observer.cpp.i
+
+CMakeFiles/345Project.dir/src/Components/Observer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/345Project.dir/src/Components/Observer.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrewoh/CLionProjects/345Project/src/Components/Observer.cpp -o CMakeFiles/345Project.dir/src/Components/Observer.cpp.s
+
 # Object files for target 345Project
 345Project_OBJECTS = \
 "CMakeFiles/345Project.dir/src/main.cpp.o" \
@@ -205,7 +303,14 @@ CMakeFiles/345Project.dir/src/Components/Equipment.cpp.s: cmake_force
 "CMakeFiles/345Project.dir/src/Components/Weapon.cpp.o" \
 "CMakeFiles/345Project.dir/src/Components/Armor.cpp.o" \
 "CMakeFiles/345Project.dir/src/Components/ItemBag.cpp.o" \
-"CMakeFiles/345Project.dir/src/Components/Equipment.cpp.o"
+"CMakeFiles/345Project.dir/src/Components/Equipment.cpp.o" \
+"CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o" \
+"CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.o" \
+"CMakeFiles/345Project.dir/src/Components/MapDirector.cpp.o" \
+"CMakeFiles/345Project.dir/src/Components/MapBuilder.cpp.o" \
+"CMakeFiles/345Project.dir/src/Components/MapConcreteBuilder.cpp.o" \
+"CMakeFiles/345Project.dir/src/Components/Subject.cpp.o" \
+"CMakeFiles/345Project.dir/src/Components/Observer.cpp.o"
 
 # External object files for target 345Project
 345Project_EXTERNAL_OBJECTS =
@@ -219,9 +324,16 @@ CMakeFiles/345Project.dir/src/Components/Equipment.cpp.s: cmake_force
 345Project: CMakeFiles/345Project.dir/src/Components/Armor.cpp.o
 345Project: CMakeFiles/345Project.dir/src/Components/ItemBag.cpp.o
 345Project: CMakeFiles/345Project.dir/src/Components/Equipment.cpp.o
+345Project: CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o
+345Project: CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.o
+345Project: CMakeFiles/345Project.dir/src/Components/MapDirector.cpp.o
+345Project: CMakeFiles/345Project.dir/src/Components/MapBuilder.cpp.o
+345Project: CMakeFiles/345Project.dir/src/Components/MapConcreteBuilder.cpp.o
+345Project: CMakeFiles/345Project.dir/src/Components/Subject.cpp.o
+345Project: CMakeFiles/345Project.dir/src/Components/Observer.cpp.o
 345Project: CMakeFiles/345Project.dir/build.make
 345Project: CMakeFiles/345Project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/andrewoh/CLionProjects/345Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable 345Project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/andrewoh/CLionProjects/345Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable 345Project"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/345Project.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

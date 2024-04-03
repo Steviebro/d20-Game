@@ -1,5 +1,6 @@
 #include "../include/Components/Character.h"
 #include "../include/Static/Functions.h"
+#include "../include/Components/MapEditor.h"
 
 #include <iostream>
 
@@ -24,6 +25,7 @@ int main() {
 //    Character c4(-1000, "bullY");
 //    c4.printCharacter();
     
-    
-
+    MapEditor mapEditor;
+    mapEditor.mainMenu();
+    return 0;
 }

@@ -10,9 +10,8 @@
 #define INC_345ASSIGNMENT1_MAPGENERATION_H
 #include <vector>
 #include <string>
-#include "Observer.h"
-#include "Subject.h"
-#include "Position.h"
+#include "../include/Components/Subject.h"
+#include "../include/Components/Position.h"
 
 /**
  * @brief GridMap class
@@ -49,9 +48,9 @@ public:
 
     [[nodiscard]] bool isValid(const int& x, const int& y) const;
 
-    bool DFS(const int& x, const int& y, std::vector<std::vector<bool> >& visited);
+    bool DFS(const int& x, const int& y, std::vector<std::vector<bool> >& visited, char target);
 
-    bool hasValidPath();
+    bool hasValidPath(char t);
 
     void displayMap();
 

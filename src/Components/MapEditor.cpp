@@ -223,7 +223,7 @@ void MapEditor::newMap()
 
 void MapEditor::editMap()
 {
-    if (currentMaps.size() == 0) {
+    if (currentMaps.empty()) {
         std::cout << "There are no maps to edit! Try creating a new map instead.\n";
         return;
     }
@@ -285,6 +285,7 @@ void MapEditor::editMap(GridMap& map, const std::string& mapName)
         << "3 - Remove Chests or Walls\n"
         << "4 - Change Entrance Location\n"
         << "5 - Change Exit Location\n"
+        << "6 - Add Objective\n"
         << "0 - No Changes, I'm ready to save my map!\n"
         << "Your selection: ";
         std::cin >> input;
@@ -305,6 +306,9 @@ void MapEditor::editMap(GridMap& map, const std::string& mapName)
             case '5':
             changeEOrX(map,'X');
             break;
+            case '6':
+            addObjective(map);
+            break;
             case '0':
             break;
             default:
@@ -318,7 +322,7 @@ void MapEditor::editMap(GridMap& map, const std::string& mapName)
 void MapEditor::saveMap(GridMap &map, std::string mapName)
 {
     //Validate map before saving:
-    if (!map.hasValidPath()) {
+    if (!map.hasValidPath('X')) {
         std::cerr << "ERROR saving map: Map does not have a valid path. THE MAP WAS NOT SAVED.\n"
         << mapName << ":\n" << map.toString();
         return;
@@ -552,7 +556,6 @@ void MapEditor::removeChestsOrWalls(GridMap& map)
 
 void MapEditor::changeEOrX(GridMap& map, char EorX)
 {
-
     EorX = std::toupper(EorX);
     if (EorX != 'X' && EorX != 'E') {
         throw std::runtime_error("Attempting to assign 'E' or 'X' without passing 'E' or 'X' as arguments");
@@ -619,6 +622,46 @@ void MapEditor::changeEOrX(GridMap& map, char EorX)
         std::cout << toChange << " changed successfully!\n";
     }
 }
+
+// add objective cell (!) to enable exit
+void MapEditor::addObjective(GridMap& map) {
+    int x, y;
+    bool objectiveAdded = false;
+
+    std::cout << "\nADDING OBJECTIVE:\n"
+              << "Note that the objective must be placed within the map border walls.\n"
+              << "Please provide (x,y) coordinates for where you want to place the objective.\n";
+    map.displayMap();
+
+    do {
+        std::cout << "Provide a value for 'x' between 1 and " << map.getWidth() - 2 << ": ";
+        std::cin >> x;
+        std::cout << "Provide a value for 'y' between 1 and " << map.getHeight() - 2 << ": ";
+        std::cin >> y;
+        if (x > 0 && y > 0 && x < map.getWidth() - 1 && y < map.getHeight() - 1) {//checking within outside border
+            if (map.getCell(x, y) != '#') {//checking that objective will not be placed on a wall
+                objectiveAdded = map.setCell(x, y, '!');
+            } else {
+                std::cout << "Invalid inputs, can NOT place the objective on a wall! Please try again.\n";
+                objectiveAdded = false;
+            }
+        } else {
+            std::cout << "Invalid inputs, values must lie within the outside border of the map. Please try again.\n";
+            objectiveAdded = false;
+        }
+    } while (!objectiveAdded);
+    if (!map.hasValidPath('!')) {
+        std::cerr << "ERROR adding objective: Map does not have a valid path. THE OBJECTIVE WAS NOT ADDED.\n"
+                  << ":\n"
+                  << map.toString();
+        map.setCell(x, y, ' ');
+        return;
+    } else {
+        std::cout << "Objective successfully added!\n";
+    }
+}
+
+
 
 std::pair<int, int> MapEditor::findEOrX(GridMap map, char EorX)
 {

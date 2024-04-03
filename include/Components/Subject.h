@@ -6,7 +6,7 @@
  */
 #ifndef INC_345ASSIGNMENT1_SRC_SUBJECT_H_
 #define INC_345ASSIGNMENT1_SRC_SUBJECT_H_
-#include "Observer.h"
+#include "../include/Components/Observable.h"
 #include <list>
 using namespace std;
 /**
@@ -16,14 +16,14 @@ using namespace std;
  * to be observed.
  * @extends Observable
  */
-class Subject {
+class Subject : public Observable {
  public:
   Subject();
-  ~Subject();
+  ~Subject() override;
 
-  void attach(Observer *);
-  void detach(Observer *);
-  void notify();
+  void attach(Observer *) override;
+  void detach(Observer *) override;
+  void notify() override;
  private:
   list<Observer *> *_observers;
 };
