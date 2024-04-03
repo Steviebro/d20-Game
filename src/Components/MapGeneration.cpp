@@ -61,7 +61,7 @@ bool GridMap::setCell(const int& x, const int& y, const char& c) {
             return true;
         };
     }
-    else if (c == ' ' || c == '*' || c == 'm') {
+    else if (c == ' ' || c == '*' || c == 'm' || c == '!') {
         map[y][x] = c;
         notify();
         return true;
