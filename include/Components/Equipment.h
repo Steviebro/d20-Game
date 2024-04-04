@@ -19,25 +19,31 @@
  */
 class Equipment {
 public:
-  Equipment(Armor& armorParam, Weapon& weaponParam, ItemBag& otherEquippedParam, ItemBag& inventoryParam) : armor(armorParam), weapon(weaponParam),
-                                                                                                        otherEquipped(otherEquippedParam), inventory(inventoryParam) {};
+  Equipment(std::string nameParam, ItemBag& equippedParam, ItemBag& inventoryParam) : name(nameParam), equipped(equippedParam), inventory(inventoryParam) {};
 
-  Equipment() {};
-  Armor getArmor() const;
-  Weapon getWeapon() const;
+  Equipment(std::string nameParam) : name(Functions::convertToUpper(nameParam)), equipped(Functions::convertToUpper(nameParam)+"E"), inventory(Functions::convertToUpper(nameParam)+"I") {};
+  // ACCESSORS =============================================
+  ItemBag& getEquipped();
+  ItemBag& getInventory();
+  Item* getEquippedItem(std::string itemType);
+  Armor* getArmor();
+  Weapon* getWeapon();
+  std::string getName();
 
+  // MUTATORS ==============================================
+  bool equipItem(std::string itemNameToEquip);
+  bool unequipItem(std::string itemTypeToUnequip);
+  void lootChestOrBody(ItemBag& toLoot);
 
-  void equipItem(Item itemToEquip);
-  void unequipItem(std::string itemType);
-  void equipArmor(Armor& armorParam);
-  void equipWeapon(Weapon& weaponParam);
-
-  int sumEnchants(std::string enchant) const;
+  // OTHER ==============================================
+  std::string toString() const;
+  void printEquipment() const;
+  static void writeEquipmentsToFile(std::vector<Equipment>& equipmentsToWrite);
+  static std::vector<Equipment> readEquipmentsFromFile(std::vector<ItemBag> itemBags);
 
 private:
-  Armor armor;
-  Weapon weapon;
-  ItemBag otherEquipped;
+  std::string name;
+  ItemBag equipped;
   ItemBag inventory;
 };
 
