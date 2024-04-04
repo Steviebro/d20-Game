@@ -19,15 +19,16 @@
  */
 class Equipment {
 public:
-  Equipment(ItemBag& equippedParam, ItemBag& inventoryParam) : equipped(equippedParam), inventory(inventoryParam) {};
+  Equipment(std::string nameParam, ItemBag& equippedParam, ItemBag& inventoryParam) : name(nameParam), equipped(equippedParam), inventory(inventoryParam) {};
 
-  Equipment() : equipped("EQUIPPED_ITEMS"), inventory("INVENTORY_ITEMS") {};
+  Equipment(std::string nameParam) : name(Functions::convertToUpper(nameParam)), equipped(Functions::convertToUpper(nameParam)+"E"), inventory(Functions::convertToUpper(nameParam)+"I") {};
   // ACCESSORS =============================================
   ItemBag& getEquipped();
   ItemBag& getInventory();
   Item* getEquippedItem(std::string itemType);
   Armor* getArmor();
   Weapon* getWeapon();
+  std::string getName();
 
   // MUTATORS ==============================================
   bool equipItem(std::string itemNameToEquip);
@@ -37,10 +38,11 @@ public:
   // OTHER ==============================================
   std::string toString() const;
   void printEquipment() const;
+  static void writeEquipmentsToFile(std::vector<Equipment>& equipmentsToWrite);
+  static std::vector<Equipment> readEquipmentsFromFile(std::vector<ItemBag> itemBags);
 
 private:
-  //Armor armor;
-  //Weapon weapon;
+  std::string name;
   ItemBag equipped;
   ItemBag inventory;
 };

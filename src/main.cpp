@@ -8,7 +8,7 @@ int main() {
   std::cout << "WELCOME TO THE GAME!\n";
   char input;
   do {
-    std::cout << "Game Main Menu =========================\n"
+    std::cout << "|Game Main Menu =======================\n"
     << "|1 - Start the Game!\n"
     << "|2 - Other Function\n"
     << "|3 - Other Function\n"
@@ -23,8 +23,11 @@ int main() {
       GameManager gameManager;
       break;
       }
-      case '2':
+      case '2': {
+      Character c("bro", 1, "bully");
+      c.printCharacter();
       break;
+      }
       case '3':
       break;
       case '4':

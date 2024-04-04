@@ -178,7 +178,7 @@ std::vector<ItemBag> ItemBag::readBagsFromFile(std::vector<Item>& importedItems,
       }
     }
   } else {
-    throw std::runtime_error("unable to read from file ../saved/Item/itembags.txt\n");
+    throw std::runtime_error("unable to read from file ../saved/ItemBag/itembags.txt\n");
   }
   file.close();
   return result;

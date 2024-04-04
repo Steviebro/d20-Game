@@ -3,8 +3,8 @@
 
 #include <iostream>
 
-Character::Character(int levelParam, std::string styleParam)
-: level(levelParam), style(Functions::convertToUpper(styleParam)), xp(0), equipment(),
+Character::Character(std::string nameParam, int levelParam, std::string styleParam)
+: name(Functions::convertToUpper(nameParam)), level(levelParam), style(Functions::convertToUpper(styleParam)), xp(0), equipment(nameParam),
 STR(initScorePriority("STR", styleParam)), DEX(initScorePriority("DEX", styleParam)), CON(initScorePriority("CON", styleParam))
 {
     //Validate style
@@ -21,6 +21,25 @@ STR(initScorePriority("STR", styleParam)), DEX(initScorePriority("DEX", stylePar
 
     //Initialize Hit Points
     initHP();
+}
+
+Character::Character(std::string nameParam, int levelParam, std::string styleParam, int xpParam, int hpParam, int scoresParam[6])
+: name(Functions::convertToUpper(nameParam)), level(levelParam), style(Functions::convertToUpper(styleParam)), xp(xpParam), hp(hpParam), equipment(nameParam),
+STR(initScorePriority("STR", styleParam)), DEX(initScorePriority("DEX", styleParam)), CON(initScorePriority("CON", styleParam))
+{
+    //initialize the scores
+    for (int i = 0 ; i < 6 ; i++) {
+        scores[i] = scoresParam[i];
+    }
+
+    //Validate style
+    if (style != "BULLY" && style != "NIMBLE" && style != "TANK") {
+        throw std::invalid_argument("Invalid style passed in Character constructor: must fall within: BULLY, NIMBLE, TANK.\n");
+    }
+
+    //Validate level
+    if (level > 20) { level = 20; }
+    if (level < 1) { level = 1; }
 }
 
 void Character::initScores()
@@ -112,6 +131,11 @@ int Character::gainXP(int xpGained)
     }
 
     return xp;
+}
+
+std::string Character::getName() const
+{
+    return name;
 }
 
 std::string Character::getStyle() const
@@ -208,9 +232,10 @@ int Character::getProficiencyBonus() const
 void Character::printCharacter()
 {
     std::cout << "\nCHARACTER: ==========================================="
+    << "\nNAME: " << name
     << "\nSTYLE: " << style
     << "\nLEVEL: " << level
-    << "\nEXPERIENCE: " << xp << "/" << level * 1000
+    << "\nEXPERIENCE: " << xp << "/" << level * 100
     << "\nHIT POINTS: " << hp
     << "\nSTR: " << getScore("STR") << " | STR MOD: " << getModifier("STR")
     << "\nDEX: " << getScore("DEX") << " | DEX MOD: " << getModifier("DEX")
@@ -224,4 +249,58 @@ void Character::printCharacter()
     << "\nPROFICIENCY BONUS: " << getProficiencyBonus();
     equipment.printEquipment();
     std::cout << "=====================================================\n";
+}
+
+std::string Character::toString()
+{
+    return name + " " + std::to_string(level) + " " + style + " " + std::to_string(xp) + " " + std::to_string(hp) + " "
+    + std::to_string(scores[0]) + " " + std::to_string(scores[1]) + " " + std::to_string(scores[2]) + " " + std::to_string(scores[3]) + " " + std::to_string(scores[4]) + " " + std::to_string(scores[5]);
+}
+
+void Character::writeCharactersToFile(std::vector<Character>& charactersToWrite, std::string enemiesOrPlayers)
+{
+    Functions::convertToLower(enemiesOrPlayers);
+    if (enemiesOrPlayers == "enemies" || enemiesOrPlayers == "players") {
+        std::string fileName = "../saved/Character/" + enemiesOrPlayers + ".txt";
+        std::ofstream file(fileName);
+
+        if (file.is_open()) {
+            for (auto& character : charactersToWrite) {
+                file << character.toString() << "\n";
+            }
+            file.close();
+        } else {
+            throw std::runtime_error("unable to write to file "+fileName+"\n");
+        }
+    } else {
+        throw std::invalid_argument("Parameter enemiesOrPlayers did not pass in enemies or players, passed in: "+enemiesOrPlayers);
+    }
+}
+std::vector<Character> Character::readCharactersFromFile(std::string enemiesOrPlayers, std::vector<Equipment> equipments)
+{
+    Functions::convertToLower(enemiesOrPlayers);
+    std::vector<Character> result;
+    int levelP, hpP, xpP, scoresP[6];
+    std::string nameP, styleP;
+    if (enemiesOrPlayers == "enemies" || enemiesOrPlayers == "players") {
+        std::string fileName = "../saved/Character/" + enemiesOrPlayers + ".txt";
+        std::ifstream file(fileName);
+        if (file.is_open()) {
+            while (file >> nameP >> levelP >> styleP >> xpP >> hpP >> scoresP[0] >> scoresP[1] >> scoresP[2] >> scoresP[3] >> scoresP[4] >> scoresP[5]) {
+                Character c(nameP, levelP, styleP, xpP, hpP, scoresP);
+                for (auto& equip : equipments) {
+                    if (equip.getName() == c.getName()) {
+                        c.setEquipment(equip);
+                    }
+                }
+                result.emplace_back(c);
+            }
+            file.close();
+        } else {
+            throw std::runtime_error("unable to read from file "+fileName+"\n");
+        }
+    } else {
+        throw std::invalid_argument("Parameter enemiesOrPlayers did not pass in enemies or players, passed in: "+enemiesOrPlayers);
+    }
+    return result;
 }

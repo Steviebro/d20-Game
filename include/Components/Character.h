@@ -14,7 +14,9 @@
 class Character {
 public:
     // CONSTRUCTOR & CONSTRUCTOR HELPERS ====================================
-    Character(int levelParam, std::string styleParam);
+    Character(std::string nameParam, int levelParam, std::string styleParam);
+    Character(std::string nameParam, int levelParam, std::string styleParam, int xpParam, int hpParam, int scoresParam[6]);
+    Character() : Character("INVALID_CHARACTER",1,"BULLY") {};
 
     void initScores();
     int initScorePriority(const std::string& toInit, std::string& style);
@@ -27,6 +29,7 @@ public:
     void setEquipment(Equipment& equipmentParam);
 
     // SIMPLE ACCESSORS ======================================
+    std::string getName() const;
     std::string getStyle() const;
     int getHP() const;
     int getLevel() const;
@@ -45,18 +48,22 @@ public:
 
     // OTHER ==================================================
     void printCharacter();
+    std::string toString();
+    static void writeCharactersToFile(std::vector<Character>& charactersToWrite, std::string enemiesOrPlayers);
+    static std::vector<Character> readCharactersFromFile(std::string enemiesOrPlayers, std::vector<Equipment> equipments);
     
 private:
     //Style and Scores (with indices)
-    const int STR;
-    const int DEX;
-    const int CON;
-    const int INT = 3;
-    const int CHA = 4;
-    const int WIS = 5;
+    int STR;
+    int DEX;
+    int CON;
+    int INT = 3;
+    int CHA = 4;
+    int WIS = 5;
     int scores[6];
-    const std::string style;
+    std::string style;
 
+    std::string name;
     //Levels
     int level;
     int xp;

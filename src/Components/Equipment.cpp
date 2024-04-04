@@ -31,6 +31,10 @@ Weapon* Equipment::getWeapon() {
   return static_cast<Weapon*>(getEquippedItem("WEAPON"));
 }
 
+std::string Equipment::getName()
+{
+  return name;
+}
 
 /**
  * @brief method which allows a character to equip an item from his inventory
@@ -79,7 +83,57 @@ std::string Equipment::toString() const
 void Equipment::printEquipment() const
 {
   std::cout << "\nEQUIPMENT: =========================="
+  << "\nName: " << name
   << "\nEquipped: " << equipped.toString()
   << "\nInventory: " << inventory.toString()
   << "\n=========================================\n";
+}
+
+void Equipment::writeEquipmentsToFile(std::vector<Equipment>& equipmentsToWrite)
+{
+  std::string fileName = "../saved/Equipment/equipments.txt";
+  std::ofstream file(fileName);
+
+  if (file.is_open()) {
+    for (auto& equipment : equipmentsToWrite) {
+      file << equipment.toString() << "\n";
+    }
+    file.close();
+  } else {
+    throw std::runtime_error("unable to write to file "+fileName+"\n");
+  }
+}
+
+std::vector<Equipment> Equipment::readEquipmentsFromFile(std::vector<ItemBag> itemBags)
+{
+  std::vector<Equipment> result;
+  std::string equipName, equippedBagName, inventoryBagName;
+  ItemBag equippedTemp, inventoryTemp;
+  bool equippedBagFound, inventoryBagFound;
+  std::ifstream file("../saved/Equipment/equipments.txt");
+  if (file.is_open()){
+    while (file >> equipName >> equippedBagName >> inventoryBagName) {
+      equippedBagFound = false;
+      inventoryBagFound = false;
+      for (auto& itemBag : itemBags) {
+        if (itemBag.getBagName() == equippedBagName) {
+          equippedTemp = itemBag;
+          equippedBagFound = true;
+        }
+        if (itemBag.getBagName() == inventoryBagName) {
+          inventoryTemp = itemBag;
+          inventoryBagFound = true;
+        }
+      }
+      if (!equippedBagFound || !inventoryBagFound) {
+        throw std::runtime_error("either "+equippedBagName+" or "+inventoryBagName+" not found in the itembags!\n");
+      }
+      Equipment e(equipName,equippedTemp,inventoryTemp);
+      result.emplace_back(e);
+    }
+  } else {
+    throw std::runtime_error("unable to read from file ../saved/Equipment/equipments.txt\n");
+  }
+  file.close();
+  return result;
 }
