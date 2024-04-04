@@ -8,6 +8,10 @@
  */
 #ifndef INC_345PROJECT_INCLUDE_COMPONENTS_ITEMBAG_H_
 #define INC_345PROJECT_INCLUDE_COMPONENTS_ITEMBAG_H_
+#include <iostream>//for print method
+#include <fstream>
+#include <sstream>
+
 #include "Item.h"
 #include "Armor.h"
 #include "Weapon.h"
@@ -39,6 +43,8 @@ public:
   // FILE I/O & PRINTING =======================================
   std::string toString() const;
   void printBag() const;
+  static void writeBagsToFile(std::vector<ItemBag>& bagsToWrite);
+  static std::vector<ItemBag> readBagsFromFile(std::vector<Item>& importedItems, std::vector<Armor>& importedArmors, std::vector<Weapon>& importedWeapons);
 
 private:
   std::string bagName;

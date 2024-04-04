@@ -3,13 +3,13 @@
 
 #include <algorithm>
 #include <cctype>
-
 #include <string>
 
 
 class Functions {
 public:
     static std::string convertToUpper(std::string& toConvert);
+    static std::string convertToLower(std::string toConvert);
 };
 
 #endif

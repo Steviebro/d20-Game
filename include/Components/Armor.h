@@ -25,6 +25,8 @@ class Armor : public Item {
   int getBaseArmorAC();
 
   std::string toString() const;
+  static void writeArmorsToFile(std::vector<Armor>& armorsToWrite);
+  static std::vector<Armor> readArmorsFromFile();
  private:
   std::string armorType;
   int baseArmorAC;

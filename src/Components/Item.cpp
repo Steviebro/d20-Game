@@ -10,7 +10,7 @@
 /**
  * @brief method that initializes the possible enchants that an item can have.
  */
-void Item::initPossibleEnchants()
+bool Item::initPossibleEnchants()
 {
   if (itemType == "HELMET") {
     possibleEnchants = {"INTELLIGENCE", "WISDOM", "ARMOR_CLASS"};
@@ -27,6 +27,15 @@ void Item::initPossibleEnchants()
   } else {
     throw std::runtime_error("Invalid item type passed: "+itemType+". Item type must be part of these 7 types (NOT case-sensitive): helmet, armor, shield, ring, belt, boots, weapon");
   }
+
+  bool validEnchant = false;
+  for (auto& possibleEnchant : possibleEnchants) {
+    if (possibleEnchant == enchantType) {
+      validEnchant = true;
+      break;
+    }
+  }
+  return validEnchant;
 }
 
 
@@ -97,6 +106,11 @@ int Item::getEnchantLevel() const {
   return enchantLevel;
 }
 
+std::vector<std::string> Item::getPossibleEnchants() const
+{
+  return possibleEnchants;
+}
+
 /**
  * @brief method that gets the item name
  * @return item name
@@ -133,4 +147,39 @@ int Item::incrementEnchantLevel(int levelsToAdd)
 std::string Item::toString() const
 {
   return itemName + " " + itemType + " " + enchantType + " " + std::to_string(enchantLevel);
+}
+
+void Item::writeItemsToFile(std::vector<Item>& itemsToWrite)
+{
+  std::string fileName = "../saved/Item/items.txt";
+  std::ofstream file(fileName);
+
+  if (file.is_open()) {
+    for (auto& item : itemsToWrite) {
+      file << item.toString() << "\n";
+    }
+    file.close();
+  } else {
+    throw std::runtime_error("unable to write to file "+fileName+"\n");
+  }
+}
+
+std::vector<Item> Item::readItemsFromFile()
+{
+  std::vector<Item> result;
+  Item temp;
+  std::ifstream file("../saved/Item/items.txt");
+  if (file.is_open()){
+    while (file >> temp.itemName >> temp.itemType >> temp.enchantType >> temp.enchantLevel) {
+      if (temp.initPossibleEnchants()) {
+        result.emplace_back(temp);
+      } else {
+        throw std::invalid_argument("In file ../saved/Item/items.txt, itemType "+temp.itemType+" is incompatible with the enchantType "+temp.enchantType+". Item not created!\n");
+      }
+    }
+  } else {
+    throw std::runtime_error("unable to read from file ../saved/Item/items.txt\n");
+  }
+  file.close();
+  return result;
 }

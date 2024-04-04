@@ -113,3 +113,73 @@ void ItemBag::printBag() const
   result += "===================================================\n";
   std::cout << result;
 }
+
+void ItemBag::writeBagsToFile(std::vector<ItemBag>& bagsToWrite)
+{
+  std::string fileName = "../saved/ItemBag/itembags.txt";
+  std::ofstream file(fileName);
+
+  if (file.is_open()) {
+    for (auto& itembag : bagsToWrite) {
+      file << itembag.toString() << "\n";
+    }
+    file.close();
+  } else {
+    throw std::runtime_error("unable to write to file "+fileName+"\n");
+  }
+}
+
+std::vector<ItemBag> ItemBag::readBagsFromFile(std::vector<Item>& importedItems, std::vector<Armor>& importedArmors, std::vector<Weapon>& importedWeapons)
+{
+  std::vector<ItemBag> result;
+  ItemBag tempBag;
+  std::string itemName;
+  std::ifstream file("../saved/ItemBag/itembags.txt");
+  if (file.is_open()){
+    std::string line;
+    while (std::getline(file, line)) {
+      std::istringstream iss(line);
+      if (iss >> tempBag.bagName) {
+        while (iss >> itemName) {
+          bool itemFound = false;
+          //search for itemname in vectors
+          for (auto& item : importedItems) {
+            if (itemName == item.getItemName()) {
+              tempBag.storage.emplace_back(&item);
+              itemFound = true;
+              break;
+            }
+          }
+          if (!itemFound) {
+            for (auto& weapon : importedWeapons) {
+              if (itemName == weapon.getItemName()) {
+                tempBag.storage.emplace_back(&weapon);
+                itemFound = true;
+                break;
+              }
+            }
+          }
+          if (!itemFound) {
+            for (auto& armor : importedArmors) {
+              if (itemName == armor.getItemName()) {
+                tempBag.storage.emplace_back(&armor);
+                itemFound = true;
+                break;
+              }
+            }
+          }
+          if (!itemFound) {
+            throw std::runtime_error("itemName "+itemName+" not found in the items!\n");
+          }
+        }
+        //emplace tempBag in result and reset tempBag = ItemBag()
+        result.emplace_back(tempBag);
+        tempBag = ItemBag();
+      }
+    }
+  } else {
+    throw std::runtime_error("unable to read from file ../saved/Item/itembags.txt\n");
+  }
+  file.close();
+  return result;
+}

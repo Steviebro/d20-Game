@@ -25,6 +25,8 @@ public:
   std::string getDiceType();
 
   std::string toString() const;
+  static void writeWeaponsToFile(std::vector<Weapon>& weaponsToWrite);
+  static std::vector<Weapon> readWeaponsFromFile();
 
 private:
   std::string weaponType;

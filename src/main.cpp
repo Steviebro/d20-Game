@@ -1,14 +1,58 @@
 #include "../include/Components/Character.h"
 #include "../include/Static/Functions.h"
+#include "../include/Controller/GameManager.h"
 
 #include <iostream>
 
 int main() {
+  std::cout << "WELCOME TO THE GAME!\n";
+  char input;
+  do {
+    std::cout << "Game Main Menu =========================\n"
+    << "|1 - Start the Game!\n"
+    << "|2 - Other Function\n"
+    << "|3 - Other Function\n"
+    << "|4 - Other Function\n"
+    << "|0 - Exit Application.\n"
+    << "|======================================\n"
+    << "|Your selection: ";
+    std::cin >> input;
+
+    switch(input) {
+      case '1': {
+      std::cout << "before gm\n";
+      GameManager gameManager;
+      std::cout << "after gm\n";
+      break;
+      }
+      case '2':
+      break;
+      case '3':
+      break;
+      case '4':
+      break;
+      case '0':
+      break;
+      default:
+      std::cout << "You have entered an invalid input, please try again!\n";
+    }
+
+  } while (input != '0');
+  
+ 
+
+  
+/*
+  
   //Some sample items that we will bring in from files
   Armor leather_armor("leather_armor", "armor", "armor_class", 3, "light", 11);
   Armor medium_armor("medium_armor", "armor", "armor_class", 3, "medium", 14);
   Weapon str_sword("str_sword", "weapon", "damage_bonus", 2, "str", 5, "1d6");
   Item ring1("ring1", "ring", "constitution", 4);
+  Item wis_helmet("wis_helmet", "helmet", "wisdom", 1);
+  std::vector<Item> items;
+  items.emplace_back(ring1);
+  items.emplace_back(wis_helmet);
   //Same here, sample itembag to bring in from file
   ItemBag starterItems("STARTER_ITEMS");
   starterItems.put(leather_armor);
@@ -53,9 +97,7 @@ int main() {
   std::cout << "Now the character has equipped back his armor\n";
   c1.printCharacter();
 
-
-
-
+*/
 
 
  

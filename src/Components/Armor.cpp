@@ -27,3 +27,38 @@ int Armor::getBaseArmorAC() {
 std::string Armor::toString() const {
   return Item::toString() + " " + armorType + " " + std::to_string(baseArmorAC);
 }
+
+void Armor::writeArmorsToFile(std::vector<Armor>& armorsToWrite)
+{
+  std::string fileName = "../saved/Item/armors.txt";
+  std::ofstream file(fileName);
+
+  if (file.is_open()) {
+    for (auto& armor : armorsToWrite) {
+      file << armor.toString() << "\n";
+    }
+    file.close();
+  } else {
+    throw std::runtime_error("unable to write to file "+fileName+"\n");
+  }
+}
+
+std::vector<Armor> Armor::readArmorsFromFile()
+{
+  std::vector<Armor> result;
+  Armor temp;
+  std::ifstream file("../saved/Item/armors.txt");
+  if (file.is_open()){
+    while (file >> temp.itemName >> temp.itemType >> temp.enchantType >> temp.enchantLevel >> temp.armorType >> temp.baseArmorAC) {
+      if (temp.initPossibleEnchants()) {
+        result.emplace_back(temp);
+      } else {
+        throw std::invalid_argument("In file ../saved/Item/armors.txt, itemType "+temp.itemType+" is incompatible with the enchantType "+temp.enchantType+". Item not created!\n");
+      }
+    }
+  } else {
+    throw std::runtime_error("unable to read from file ../saved/Item/armors.txt\n");
+  }
+  file.close();
+  return result;
+}
