@@ -20,9 +20,7 @@ int main() {
 
     switch(input) {
       case '1': {
-      std::cout << "before gm\n";
       GameManager gameManager;
-      std::cout << "after gm\n";
       break;
       }
       case '2':
@@ -43,7 +41,7 @@ int main() {
 
   
 /*
-  
+/  
   //Some sample items that we will bring in from files
   Armor leather_armor("leather_armor", "armor", "armor_class", 3, "light", 11);
   Armor medium_armor("medium_armor", "armor", "armor_class", 3, "medium", 14);
