@@ -11,6 +11,7 @@
 #include <vector>
 #include <stdexcept>
 #include <fstream>
+#include <vector>
 
 #include "../Static/Functions.h"
 /**
