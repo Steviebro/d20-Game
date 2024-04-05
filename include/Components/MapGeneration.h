@@ -12,65 +12,89 @@
 #include <string>
 #include "../include/Components/Subject.h"
 #include "../include/Components/Position.h"
+#include "../include/Components/ItemBag.h"
+#include "../include/Components/Character.h"
 
 /**
  * @brief GridMap class
+ * hash map for characters and chests
  */
 class GridMap : public Subject{
 private:
-    int width;
-    int height;
-    int chests;
-    int creatures;
-    std::vector<std::vector<char> > map;
+  int width;
+  int height;
+  //int chest;
+  //int creatures;
+  std::string mapName;
+  std::pair<int,int> entrance;
+  std::pair<int,int> exit;
+  std::pair<int,int> objective;
+  // vector [{pos,bag}] -> pos: {x,y} -> bag: ItemBag
+  std::vector<std::pair<std::pair<int,int>,ItemBag>> chests;
+  std::vector<std::pair<std::pair<int,int>,Character>> enemies;
+  // [<1,3>, <2,3>, <3,3>, ... <6,3>]
+  std::vector<std::pair<int,int>> walls;
+  std::vector<std::vector<char> > map;
+//w h ex ey xx xy ox oy
+//bname x y bname x y
+//ename x y, ename x y
+//x y x y x y x y x y
 
 public:
-    /**
-     * @brief Construct a new Grid Map object
-     * @param w
-     * @param h
-     */
-    GridMap();
-    ~GridMap();
-    GridMap(const int& w, const int& h) {
-        width = w;
-        height = h;
-        chests = 0;
-        creatures = 0;
-        map.resize(height, std::vector<char>(width, ' '));
-        GridMap::populateMap();
-    }
-    void populateMap();
+  /**
+   * @brief Construct a new Grid Map object
+   * @param w
+   * @param h
+   */
+   //std::vector<std::pair<std::pair<int,int>,ItemBag>> chestsP;
+   //  std::vector<std::pair<std::pair<int,int>,Character>> enemiesP;
+  GridMap();
+  GridMap(int w, int h){
+    map.resize(height, std::vector<char>(width,' '));
+    GridMap::populateMap();
+  }
+  ~GridMap();
+  GridMap(std::string mapNameP, const int coords[8], std::vector<std::pair<std::pair<int,int>,ItemBag>> chestsP, std::vector<std::pair<std::pair<int,int>,Character>> enemiesP, std::vector<std::pair<int,int>> wallsP)
+  : mapName(mapNameP), width(coords[0]), height(coords[1]), entrance(coords[2],coords[3]), exit(coords[4],coords[5]), objective(coords[6],coords[7]), chests(chestsP), enemies(enemiesP), walls(wallsP)
+  {
+    map.resize(height, std::vector<char>(width, ' '));
+    GridMap::populateMap();
+  }
+  void populateMap();
 
-    bool setCell(const int& x, const int& y, const char& c);
+  bool setCell(const int& x, const int& y, const char& c);
 
-    [[nodiscard]] char getCell(const int& x, const int& y) const;
+  [[nodiscard]] char getCell(const int& x, const int& y) const;
 
-    [[nodiscard]] bool isValid(const int& x, const int& y) const;
+  [[nodiscard]] bool isValid(const int& x, const int& y) const;
 
-    bool DFS(const int& x, const int& y, std::vector<std::vector<bool> >& visited, char target);
+  bool DFS(const int& x, const int& y, std::vector<std::vector<bool> >& visited, char target);
 
-    bool hasValidPath(char t);
+  bool hasValidPath(char t);
 
-    void displayMap();
+  void displayMap();
 
-    std::string toString();
+  std::string toString();
 
-    int getWidth();
+  int getWidth();
 
-    int getHeight();
+  int getHeight();
 
-    void setCellBuilder(const int& x, const int& y, const char& c);
+  void setCellBuilder(const int& x, const int& y, const char& c);
 
-    void increaseChests();
+  void increaseChests();
 
-    void increaseCreatures();
+  void increaseCreatures();
 
-    int getChests();
+  int getChests();
 
-    int getCreatures();
+  int getCreatures();
 
-    bool isValidPosition(Position position);
+  std::string toStringF();
+
+  static void writeMapsToFile(std::vector<GridMap> mapsToWrite);
+
+  static std::vector<GridMap> readMapsFromFile (const std::vector<ItemBag>& itemBags, const std::vector<Character>& enemies);
 
 };
 #endif

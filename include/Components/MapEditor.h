@@ -89,7 +89,7 @@ public:
      * @param map the current GridMap object being edited
      * @param EorX a char ('E' or 'X') to choose whether to call the function on the entrance or exit
     */
-    void changeEOrX(GridMap& map, char EorX);
+    void changeEorXorO(GridMap& map, char EorXorO);
     void addObjective(GridMap &map);
     /**
      * Gets the (x,y) coordinates of the current position of the entrance or exit

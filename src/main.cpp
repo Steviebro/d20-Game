@@ -2,10 +2,12 @@
 #include "../include/Static/Functions.h"
 #include "../include/Controller/GameManager.h"
 #include "../include/Components/MapEditor.h"
+#include "../include/Components/MapGeneration.h"
 
 #include <iostream>
 
 int main() {
+
   std::cout << "WELCOME TO THE GAME!\n";
   char input;
   do {
@@ -40,7 +42,7 @@ int main() {
     }
 
   } while (input != '0');
-  
+
  
 
   
@@ -101,10 +103,6 @@ int main() {
 
 */
 
-
- 
-
-
 //    Character c2(12, "NImble");
 //    c2.printCharacter();
 //
@@ -114,7 +112,7 @@ int main() {
 //    Character c4(-1000, "bullY");
 //    c4.printCharacter();
     
-    MapEditor mapEditor;
-    mapEditor.mainMenu();
+//    MapEditor mapEditor;
+//    mapEditor.mainMenu();
     return 0;
 }

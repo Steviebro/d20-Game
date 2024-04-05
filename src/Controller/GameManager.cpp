@@ -158,6 +158,24 @@ Character GameManager::selectExistingPlayer()
 
 void GameManager::startGame()
 {
+
+  char input;
+  for (auto& map : maps) {
+    map.displayMap();
+
+    std::cout
+    << map.getWidth() << "\n"
+    << map.getHeight() << "\n"
+    << map.getCell(1,8) << "\n"
+    << map.hasValidPath('X') << "\n";
+    map.setCell(1,8,'#');
+    map.setCell(2,2,'#');
+    map.displayMap();
+
+    std::cout << "end of loop\n";
+  }
+
+
   //select campaign
   //campaignMaps = chosen campaign
 
@@ -189,5 +207,6 @@ void GameManager::saveObjects()
   Equipment::writeEquipmentsToFile(equipments);
   Character::writeCharactersToFile(players,"players");
   Character::writeCharactersToFile(enemies,"enemies");
-  //TOADD: maps, campaigns, characters
+  GridMap::writeMapsToFile(maps);
+  //TOADD: campaigns
 }

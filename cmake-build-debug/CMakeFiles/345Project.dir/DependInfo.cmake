@@ -8,15 +8,19 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/andrewoh/CLionProjects/345Projecta/src/Components/Armor.cpp" "CMakeFiles/345Project.dir/src/Components/Armor.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Components/Armor.cpp.o.d"
-  "/Users/andrewoh/CLionProjects/345Projecta/src/Components/Character.cpp" "CMakeFiles/345Project.dir/src/Components/Character.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Components/Character.cpp.o.d"
-  "/Users/andrewoh/CLionProjects/345Projecta/src/Components/Equipment.cpp" "CMakeFiles/345Project.dir/src/Components/Equipment.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Components/Equipment.cpp.o.d"
-  "/Users/andrewoh/CLionProjects/345Projecta/src/Components/Item.cpp" "CMakeFiles/345Project.dir/src/Components/Item.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Components/Item.cpp.o.d"
-  "/Users/andrewoh/CLionProjects/345Projecta/src/Components/ItemBag.cpp" "CMakeFiles/345Project.dir/src/Components/ItemBag.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Components/ItemBag.cpp.o.d"
-  "/Users/andrewoh/CLionProjects/345Projecta/src/Components/Weapon.cpp" "CMakeFiles/345Project.dir/src/Components/Weapon.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Components/Weapon.cpp.o.d"
-  "/Users/andrewoh/CLionProjects/345Projecta/src/Static/Dice.cpp" "CMakeFiles/345Project.dir/src/Static/Dice.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Static/Dice.cpp.o.d"
-  "/Users/andrewoh/CLionProjects/345Projecta/src/Static/Functions.cpp" "CMakeFiles/345Project.dir/src/Static/Functions.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Static/Functions.cpp.o.d"
-  "/Users/andrewoh/CLionProjects/345Projecta/src/main.cpp" "CMakeFiles/345Project.dir/src/main.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/main.cpp.o.d"
+  "/Users/mateb/Desktop/345Project/src/Components/Armor.cpp" "CMakeFiles/345Project.dir/src/Components/Armor.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Components/Armor.cpp.o.d"
+  "/Users/mateb/Desktop/345Project/src/Components/Character.cpp" "CMakeFiles/345Project.dir/src/Components/Character.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Components/Character.cpp.o.d"
+  "/Users/mateb/Desktop/345Project/src/Components/Equipment.cpp" "CMakeFiles/345Project.dir/src/Components/Equipment.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Components/Equipment.cpp.o.d"
+  "/Users/mateb/Desktop/345Project/src/Components/Item.cpp" "CMakeFiles/345Project.dir/src/Components/Item.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Components/Item.cpp.o.d"
+  "/Users/mateb/Desktop/345Project/src/Components/ItemBag.cpp" "CMakeFiles/345Project.dir/src/Components/ItemBag.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Components/ItemBag.cpp.o.d"
+  "/Users/mateb/Desktop/345Project/src/Components/MapGeneration.cpp" "CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o.d"
+  "/Users/mateb/Desktop/345Project/src/Components/Observer.cpp" "CMakeFiles/345Project.dir/src/Components/Observer.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Components/Observer.cpp.o.d"
+  "/Users/mateb/Desktop/345Project/src/Components/Subject.cpp" "CMakeFiles/345Project.dir/src/Components/Subject.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Components/Subject.cpp.o.d"
+  "/Users/mateb/Desktop/345Project/src/Components/Weapon.cpp" "CMakeFiles/345Project.dir/src/Components/Weapon.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Components/Weapon.cpp.o.d"
+  "/Users/mateb/Desktop/345Project/src/Controller/GameManager.cpp" "CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.o.d"
+  "/Users/mateb/Desktop/345Project/src/Static/Dice.cpp" "CMakeFiles/345Project.dir/src/Static/Dice.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Static/Dice.cpp.o.d"
+  "/Users/mateb/Desktop/345Project/src/Static/Functions.cpp" "CMakeFiles/345Project.dir/src/Static/Functions.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Static/Functions.cpp.o.d"
+  "/Users/mateb/Desktop/345Project/src/main.cpp" "CMakeFiles/345Project.dir/src/main.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

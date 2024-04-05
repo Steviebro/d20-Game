@@ -195,6 +195,62 @@ CMakeFiles/345Project.dir/src/Components/Equipment.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/345Project.dir/src/Components/Equipment.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mateb/Desktop/345Project/src/Components/Equipment.cpp -o CMakeFiles/345Project.dir/src/Components/Equipment.cpp.s
 
+CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.o: CMakeFiles/345Project.dir/flags.make
+CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.o: /Users/mateb/Desktop/345Project/src/Controller/GameManager.cpp
+CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.o: CMakeFiles/345Project.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mateb/Desktop/345Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.o -MF CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.o.d -o CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.o -c /Users/mateb/Desktop/345Project/src/Controller/GameManager.cpp
+
+CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mateb/Desktop/345Project/src/Controller/GameManager.cpp > CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.i
+
+CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mateb/Desktop/345Project/src/Controller/GameManager.cpp -o CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.s
+
+CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o: CMakeFiles/345Project.dir/flags.make
+CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o: /Users/mateb/Desktop/345Project/src/Components/MapGeneration.cpp
+CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o: CMakeFiles/345Project.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mateb/Desktop/345Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o -MF CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o.d -o CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o -c /Users/mateb/Desktop/345Project/src/Components/MapGeneration.cpp
+
+CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mateb/Desktop/345Project/src/Components/MapGeneration.cpp > CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.i
+
+CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mateb/Desktop/345Project/src/Components/MapGeneration.cpp -o CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.s
+
+CMakeFiles/345Project.dir/src/Components/Subject.cpp.o: CMakeFiles/345Project.dir/flags.make
+CMakeFiles/345Project.dir/src/Components/Subject.cpp.o: /Users/mateb/Desktop/345Project/src/Components/Subject.cpp
+CMakeFiles/345Project.dir/src/Components/Subject.cpp.o: CMakeFiles/345Project.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mateb/Desktop/345Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/345Project.dir/src/Components/Subject.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/345Project.dir/src/Components/Subject.cpp.o -MF CMakeFiles/345Project.dir/src/Components/Subject.cpp.o.d -o CMakeFiles/345Project.dir/src/Components/Subject.cpp.o -c /Users/mateb/Desktop/345Project/src/Components/Subject.cpp
+
+CMakeFiles/345Project.dir/src/Components/Subject.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/345Project.dir/src/Components/Subject.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mateb/Desktop/345Project/src/Components/Subject.cpp > CMakeFiles/345Project.dir/src/Components/Subject.cpp.i
+
+CMakeFiles/345Project.dir/src/Components/Subject.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/345Project.dir/src/Components/Subject.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mateb/Desktop/345Project/src/Components/Subject.cpp -o CMakeFiles/345Project.dir/src/Components/Subject.cpp.s
+
+CMakeFiles/345Project.dir/src/Components/Observer.cpp.o: CMakeFiles/345Project.dir/flags.make
+CMakeFiles/345Project.dir/src/Components/Observer.cpp.o: /Users/mateb/Desktop/345Project/src/Components/Observer.cpp
+CMakeFiles/345Project.dir/src/Components/Observer.cpp.o: CMakeFiles/345Project.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mateb/Desktop/345Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/345Project.dir/src/Components/Observer.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/345Project.dir/src/Components/Observer.cpp.o -MF CMakeFiles/345Project.dir/src/Components/Observer.cpp.o.d -o CMakeFiles/345Project.dir/src/Components/Observer.cpp.o -c /Users/mateb/Desktop/345Project/src/Components/Observer.cpp
+
+CMakeFiles/345Project.dir/src/Components/Observer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/345Project.dir/src/Components/Observer.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mateb/Desktop/345Project/src/Components/Observer.cpp > CMakeFiles/345Project.dir/src/Components/Observer.cpp.i
+
+CMakeFiles/345Project.dir/src/Components/Observer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/345Project.dir/src/Components/Observer.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mateb/Desktop/345Project/src/Components/Observer.cpp -o CMakeFiles/345Project.dir/src/Components/Observer.cpp.s
+
 # Object files for target 345Project
 345Project_OBJECTS = \
 "CMakeFiles/345Project.dir/src/main.cpp.o" \
@@ -205,7 +261,11 @@ CMakeFiles/345Project.dir/src/Components/Equipment.cpp.s: cmake_force
 "CMakeFiles/345Project.dir/src/Components/Weapon.cpp.o" \
 "CMakeFiles/345Project.dir/src/Components/Armor.cpp.o" \
 "CMakeFiles/345Project.dir/src/Components/ItemBag.cpp.o" \
-"CMakeFiles/345Project.dir/src/Components/Equipment.cpp.o"
+"CMakeFiles/345Project.dir/src/Components/Equipment.cpp.o" \
+"CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.o" \
+"CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o" \
+"CMakeFiles/345Project.dir/src/Components/Subject.cpp.o" \
+"CMakeFiles/345Project.dir/src/Components/Observer.cpp.o"
 
 # External object files for target 345Project
 345Project_EXTERNAL_OBJECTS =
@@ -219,9 +279,13 @@ CMakeFiles/345Project.dir/src/Components/Equipment.cpp.s: cmake_force
 345Project: CMakeFiles/345Project.dir/src/Components/Armor.cpp.o
 345Project: CMakeFiles/345Project.dir/src/Components/ItemBag.cpp.o
 345Project: CMakeFiles/345Project.dir/src/Components/Equipment.cpp.o
+345Project: CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.o
+345Project: CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o
+345Project: CMakeFiles/345Project.dir/src/Components/Subject.cpp.o
+345Project: CMakeFiles/345Project.dir/src/Components/Observer.cpp.o
 345Project: CMakeFiles/345Project.dir/build.make
 345Project: CMakeFiles/345Project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/mateb/Desktop/345Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable 345Project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/mateb/Desktop/345Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable 345Project"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/345Project.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/andrewoh/CLionProjects/345Projecta
+CMAKE_SOURCE_DIR = /Users/mateb/Desktop/345Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/andrewoh/CLionProjects/345Projecta/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/mateb/Desktop/345Project/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/andrewoh/CLionProjects/345Projecta/cmake-build-debug/CMakeFiles /Users/andrewoh/CLionProjects/345Projecta/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mateb/Desktop/345Project/cmake-build-debug/CMakeFiles /Users/mateb/Desktop/345Project/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/andrewoh/CLionProjects/345Projecta/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mateb/Desktop/345Project/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -249,6 +249,78 @@ src/Components/ItemBag.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/ItemBag.cpp.s
 .PHONY : src/Components/ItemBag.cpp.s
 
+src/Components/MapGeneration.o: src/Components/MapGeneration.cpp.o
+.PHONY : src/Components/MapGeneration.o
+
+# target to build an object file
+src/Components/MapGeneration.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o
+.PHONY : src/Components/MapGeneration.cpp.o
+
+src/Components/MapGeneration.i: src/Components/MapGeneration.cpp.i
+.PHONY : src/Components/MapGeneration.i
+
+# target to preprocess a source file
+src/Components/MapGeneration.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.i
+.PHONY : src/Components/MapGeneration.cpp.i
+
+src/Components/MapGeneration.s: src/Components/MapGeneration.cpp.s
+.PHONY : src/Components/MapGeneration.s
+
+# target to generate assembly for a file
+src/Components/MapGeneration.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.s
+.PHONY : src/Components/MapGeneration.cpp.s
+
+src/Components/Observer.o: src/Components/Observer.cpp.o
+.PHONY : src/Components/Observer.o
+
+# target to build an object file
+src/Components/Observer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/Observer.cpp.o
+.PHONY : src/Components/Observer.cpp.o
+
+src/Components/Observer.i: src/Components/Observer.cpp.i
+.PHONY : src/Components/Observer.i
+
+# target to preprocess a source file
+src/Components/Observer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/Observer.cpp.i
+.PHONY : src/Components/Observer.cpp.i
+
+src/Components/Observer.s: src/Components/Observer.cpp.s
+.PHONY : src/Components/Observer.s
+
+# target to generate assembly for a file
+src/Components/Observer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/Observer.cpp.s
+.PHONY : src/Components/Observer.cpp.s
+
+src/Components/Subject.o: src/Components/Subject.cpp.o
+.PHONY : src/Components/Subject.o
+
+# target to build an object file
+src/Components/Subject.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/Subject.cpp.o
+.PHONY : src/Components/Subject.cpp.o
+
+src/Components/Subject.i: src/Components/Subject.cpp.i
+.PHONY : src/Components/Subject.i
+
+# target to preprocess a source file
+src/Components/Subject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/Subject.cpp.i
+.PHONY : src/Components/Subject.cpp.i
+
+src/Components/Subject.s: src/Components/Subject.cpp.s
+.PHONY : src/Components/Subject.s
+
+# target to generate assembly for a file
+src/Components/Subject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/Subject.cpp.s
+.PHONY : src/Components/Subject.cpp.s
+
 src/Components/Weapon.o: src/Components/Weapon.cpp.o
 .PHONY : src/Components/Weapon.o
 
@@ -272,6 +344,30 @@ src/Components/Weapon.s: src/Components/Weapon.cpp.s
 src/Components/Weapon.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/Weapon.cpp.s
 .PHONY : src/Components/Weapon.cpp.s
+
+src/Controller/GameManager.o: src/Controller/GameManager.cpp.o
+.PHONY : src/Controller/GameManager.o
+
+# target to build an object file
+src/Controller/GameManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.o
+.PHONY : src/Controller/GameManager.cpp.o
+
+src/Controller/GameManager.i: src/Controller/GameManager.cpp.i
+.PHONY : src/Controller/GameManager.i
+
+# target to preprocess a source file
+src/Controller/GameManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.i
+.PHONY : src/Controller/GameManager.cpp.i
+
+src/Controller/GameManager.s: src/Controller/GameManager.cpp.s
+.PHONY : src/Controller/GameManager.s
+
+# target to generate assembly for a file
+src/Controller/GameManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.s
+.PHONY : src/Controller/GameManager.cpp.s
 
 src/Static/Dice.o: src/Static/Dice.cpp.o
 .PHONY : src/Static/Dice.o
@@ -369,9 +465,21 @@ help:
 	@echo "... src/Components/ItemBag.o"
 	@echo "... src/Components/ItemBag.i"
 	@echo "... src/Components/ItemBag.s"
+	@echo "... src/Components/MapGeneration.o"
+	@echo "... src/Components/MapGeneration.i"
+	@echo "... src/Components/MapGeneration.s"
+	@echo "... src/Components/Observer.o"
+	@echo "... src/Components/Observer.i"
+	@echo "... src/Components/Observer.s"
+	@echo "... src/Components/Subject.o"
+	@echo "... src/Components/Subject.i"
+	@echo "... src/Components/Subject.s"
 	@echo "... src/Components/Weapon.o"
 	@echo "... src/Components/Weapon.i"
 	@echo "... src/Components/Weapon.s"
+	@echo "... src/Controller/GameManager.o"
+	@echo "... src/Controller/GameManager.i"
+	@echo "... src/Controller/GameManager.s"
 	@echo "... src/Static/Dice.o"
 	@echo "... src/Static/Dice.i"
 	@echo "... src/Static/Dice.s"

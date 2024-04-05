@@ -1,6 +1,7 @@
 #ifndef INC_345PROJECT_INCLUDE_COMPONENTS_GAMEMANAGER_H_
 #define INC_345PROJECT_INCLUDE_COMPONENTS_GAMEMANAGER_H_
 #include "../Components/Character.h"
+#include "../Components/MapGeneration.h"
 
 #include <vector>
 #include <iostream>
@@ -10,7 +11,7 @@ public:
     GameManager() : newPlayerCreated(false), items(Item::readItemsFromFile()), weapons(Weapon::readWeaponsFromFile()), armors(Armor::readArmorsFromFile()),
     itemBags(ItemBag::readBagsFromFile(items,armors,weapons)), equipments(Equipment::readEquipmentsFromFile(itemBags)),
     players(Character::readCharactersFromFile("players",equipments)), enemies(Character::readCharactersFromFile("enemies",equipments)),
-    //TOADD HERE: maps, campaigns
+    maps(GridMap::readMapsFromFile(itemBags,enemies)),//TOADD HERE: campaigns
     player()
     {
         player = initPlayer();
@@ -43,6 +44,7 @@ private:
     std::vector<Equipment> equipments;
     std::vector<Character> players;
     std::vector<Character> enemies;
+    std::vector<GridMap> maps;
     //TOADD: maps, campaigns
 
 };

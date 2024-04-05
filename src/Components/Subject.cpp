@@ -18,7 +18,7 @@ Subject::Subject() {
  * @brief method which deletes the observers list
  */
 Subject::~Subject() {
-  delete _observers;
+  //delete _observers;
 }
 /**
  * @brief method that adds the observer to the list of observers
