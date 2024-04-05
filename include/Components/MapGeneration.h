@@ -76,6 +76,8 @@ public:
 
   std::string toString();
 
+  std::string getMapName();
+
   int getWidth();
 
   int getHeight();
@@ -95,6 +97,10 @@ public:
   static void writeMapsToFile(std::vector<GridMap> mapsToWrite);
 
   static std::vector<GridMap> readMapsFromFile (const std::vector<ItemBag>& itemBags, const std::vector<Character>& enemies);
+
+  static void writeCampaignsToFile(std::vector<std::list<std::string>> campaignsToWrite);
+
+  static std::vector<std::list<std::string>> readCampaignsFromFile(std::vector<GridMap> maps);
 
 };
 #endif

@@ -24,16 +24,11 @@
 #include <cctype>
 #include <stdexcept>
 
-MapEditor::MapEditor()
+MapEditor::MapEditor() : items(Item::readItemsFromFile()), weapons(Weapon::readWeaponsFromFile()), armors(Armor::readArmorsFromFile()), 
+itemBags(ItemBag::readBagsFromFile(items,armors,weapons)), equipments(Equipment::readEquipmentsFromFile(itemBags)), 
+enemies(Character::readCharactersFromFile("enemies", equipments)), maps(GridMap::readMapsFromFile(itemBags,enemies)),
+campaigns(GridMap::readCampaignsFromFile(maps))
 {
-    for (const auto& mapFile : std::filesystem::directory_iterator("../maps/")) {
-        currentMaps.emplace_back(mapFile.path().filename().string());
-    }
-
-    for (const auto& campaignFile : std::filesystem::directory_iterator("../campaigns/")) {
-        currentCampaigns.emplace_back(campaignFile.path().filename().string());
-    }
-
     mainMenu();
 }
 
@@ -246,10 +241,10 @@ void MapEditor::editMap()
         std::cout << "Please enter your selection WITHOUT the .txt file extension.\n"
         << "Your selection: ";
         std::cin >> input;
-        std::transform(input.begin(), input.end(), input.begin(), ::tolower);
+        Functions::convertToUpper(input);
 
         for (const auto& f : currentMaps) {
-            if (f == input+".txt") {
+            if (f == input) {
                 valid = true;
             }
         }
@@ -263,7 +258,7 @@ void MapEditor::editMap()
     //GridMap toEdit = mb.getGridMap();
     //editMap(toEdit);
     //**************************************************************************************************************
-
+/*
     MapDirector mapCreator;
     MapBuilder* concreteBuilder1 = new MapConcreteBuilderBasic;
 
@@ -272,6 +267,7 @@ void MapEditor::editMap()
     mapCreator.constructMap(1, "../maps/"+input+".txt");
     GridMap* constructor1 = mapCreator.getMap();
     editMap(*constructor1,input);
+*/
 }
 
 void MapEditor::editMap(GridMap& map, const std::string& mapName)

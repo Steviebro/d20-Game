@@ -11,7 +11,7 @@ public:
     GameManager() : newPlayerCreated(false), items(Item::readItemsFromFile()), weapons(Weapon::readWeaponsFromFile()), armors(Armor::readArmorsFromFile()),
     itemBags(ItemBag::readBagsFromFile(items,armors,weapons)), equipments(Equipment::readEquipmentsFromFile(itemBags)),
     players(Character::readCharactersFromFile("players",equipments)), enemies(Character::readCharactersFromFile("enemies",equipments)),
-    maps(GridMap::readMapsFromFile(itemBags,enemies)),//TOADD HERE: campaigns
+    maps(GridMap::readMapsFromFile(itemBags,enemies)), campaigns(GridMap::readCampaignsFromFile(maps)),
     player()
     {
         player = initPlayer();
@@ -45,6 +45,7 @@ private:
     std::vector<Character> players;
     std::vector<Character> enemies;
     std::vector<GridMap> maps;
+    std::vector<std::list<std::string>> campaigns;
     //TOADD: maps, campaigns
 
 };

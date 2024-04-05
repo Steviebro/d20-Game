@@ -130,6 +130,11 @@ std::string GridMap::toString() {
     return result;
 }
 
+std::string GridMap::getMapName()
+{
+  return mapName;
+}
+
 /**
  * @brief Check if cell is valid
  * @param x
@@ -302,7 +307,6 @@ std::vector<GridMap> GridMap::readMapsFromFile(const std::vector<ItemBag>& itemB
           //get the item bag
           for (auto& bag : itemBags) {
             if (bag.getBagName() == bname) {
-              std::cout << "Bag " << bname << " found in the itemBags!\n";
               posBagPairTemp.second = bag;
             }
           }
@@ -314,7 +318,6 @@ std::vector<GridMap> GridMap::readMapsFromFile(const std::vector<ItemBag>& itemB
           //get the enemy
           for (auto& enemy : enemies) {
             if (enemy.getName() == ename) {
-              std::cout << "Enemy " << ename << " found in the enemies!\n";
               posEnemyPairTemp.second = enemy;
             }
           }
@@ -340,6 +343,60 @@ std::vector<GridMap> GridMap::readMapsFromFile(const std::vector<ItemBag>& itemB
 
   } else {
     throw std::runtime_error("unable to read from file ../saved/Map/maps.txt\n");
+  }
+  file.close();
+  for (auto& map : result) {
+    std::cout << map.getMapName() << "\n";
+  }
+
+  return result;
+}
+
+void GridMap::writeCampaignsToFile(std::vector<std::list<std::string>> campaignsToWrite)
+{
+  std::string fileName = "../saved/Campaign/campaigns.txt";
+  std::ofstream file(fileName);
+
+  if (file.is_open()) {
+    for (auto& campaign : campaignsToWrite) {
+      for (auto& mapName : campaign) {//except first element is campaignName
+        Functions::convertToUpper(mapName);
+        file << mapName << " ";
+      }
+      file << "\n";
+    }
+    file.close();
+  } else {
+    throw std::runtime_error("unable to write to file "+fileName+"\n");
+  }
+}
+
+std::vector<std::list<std::string>> GridMap::readCampaignsFromFile(std::vector<GridMap> maps)
+{
+  std::vector<std::list<std::string>> result;
+  std::list<std::string> tempList;
+  std::string cName, mapNameTemp;
+  std::ifstream file("../saved/Campaign/campaigns.txt");
+  if (file.is_open()){
+    std::string line;
+    while (std::getline(file, line)) {
+      std::istringstream iss(line);
+      if (iss >> cName) {
+        tempList.emplace_back(cName);
+        while (iss >> mapNameTemp) {
+          for (auto& map : maps) {
+            if (map.getMapName() == mapNameTemp) {
+              tempList.emplace_back(mapNameTemp);
+              break;
+            }
+          }
+        }
+      }
+      result.emplace_back(tempList);
+      tempList.clear();
+    }
+  } else {
+    throw std::runtime_error("unable to read from file ../saved/Campaign/campaigns.txt\n");
   }
   file.close();
 
