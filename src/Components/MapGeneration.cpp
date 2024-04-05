@@ -24,6 +24,23 @@ void GridMap::populateMap(){
             }
         }
     }
+    //add entrance/exit/objective
+    map[entrance.second][entrance.first] = 'E';
+    map[exit.second][exit.first] = 'X';
+    map[objective.second][objective.first] = '!';
+    //add walls
+    for (auto& wall : walls) {
+      map[wall.second][wall.first] = '#';
+    }
+    //add chests
+    for (auto& chest : chests) {
+      map[chest.first.second][chest.first.first] = '*';
+    }
+    //add enemies
+    for (auto& enemy : enemies) {
+      map[enemy.first.second][enemy.first.first] = 'e';
+    }
+
 }
 
 /**
@@ -207,23 +224,119 @@ void GridMap::setCellBuilder(const int& x, const int& y, const char& c) {
     map[y][x] = c;
 }
 
-void GridMap::increaseChests() {
-    chests += 1;
+//void GridMap::increaseChests() {
+//    chests += 1;
+//}
+//
+//void GridMap::increaseCreatures() {
+//    creatures += 1;
+//}
+//
+//int GridMap::getChests() {
+//    return chests;
+//}
+//
+//int GridMap::getCreatures() {
+//    return creatures;
+//}
+
+std::string GridMap::toStringF()
+{
+  std::string result = mapName + " " + std::to_string(width) + " " + std::to_string(height) + " " + std::to_string(entrance.first) + " " + std::to_string(entrance.second) + " " + std::to_string(exit.first) + " " + std::to_string(exit.second) + " " + std::to_string(objective.first) + " " + std::to_string( objective.second) + "\n";
+  for (auto& chest : chests) {
+    result += chest.second.getBagName() + " " + std::to_string(chest.first.first) + " " + std::to_string(chest.first.second) + " ";
+  }
+  result += "\n";
+  for (auto& enemy : enemies) {
+    result += enemy.second.getName() + " " + std::to_string(enemy.first.first) + " " + std::to_string(enemy.first.second) + " ";
+  }
+  result += "\n";
+  for (auto& wall : walls) {
+    result += std::to_string(wall.first) + " " + std::to_string(wall.second) + " ";
+  }
+  result += "\n";
+  return result;
+
 }
 
-void GridMap::increaseCreatures() {
-    creatures += 1;
+void GridMap::writeMapsToFile(std::vector<GridMap> mapsToWrite)
+{
+  std::string fileName = "../saved/Map/maps.txt";
+  std::ofstream file(fileName);
+
+  if (file.is_open()) {
+    for (auto& map : mapsToWrite) {
+      file << map.toStringF() << "\n";
+    }
+    file.close();
+  } else {
+    throw std::runtime_error("unable to write to file "+fileName+"\n");
+  }
 }
 
-int GridMap::getChests() {
-    return chests;
-}
+std::vector<GridMap> GridMap::readMapsFromFile(const std::vector<ItemBag>& itemBags, const std::vector<Character>& enemies)
+{
+  std::vector<GridMap> result;
+  int coords[8];
+  int cx, cy;
+  std::string mname, bname, ename;
+  std::pair<int,int> posWallPairTemp;
+  std::pair<std::pair<int,int>,ItemBag> posBagPairTemp;
+  std::pair<std::pair<int,int>,Character> posEnemyPairTemp;
+  std::vector<std::pair<std::pair<int,int>,ItemBag>> chestsP;
+  std::vector<std::pair<std::pair<int,int>,Character>> enemiesP;
+  std::vector<std::pair<int,int>> wallsP;
 
-int GridMap::getCreatures() {
-    return creatures;
-}
+// campaigns: 1, 2, 3, ... [choose 1]
+// campaign1.txt -> line 1 map name
+  std::ifstream file("../saved/Map/maps.txt");
+  if (file.is_open()){
+    std::string line1, line2, line3, line4;
+    while (std::getline(file, line1) && std::getline(file, line2) && std::getline(file, line3) && std::getline(file,line4)) {
+      std::istringstream iss1(line1), iss2(line2), iss3(line3), iss4(line4);
+      if (iss1 >> mname >> coords[0] >> coords[1] >> coords[2] >> coords[3] >> coords[4] >> coords[5] >> coords[6] >> coords[7]) {
+        Functions::convertToUpper(mname);
+        while (iss2 >> bname >> cx >> cy) {
+          posBagPairTemp.first.first = cx;
+          posBagPairTemp.first.second = cy;
+          //get the item bag
+          for (auto& bag : itemBags) {
+            if (bag.getBagName() == bname) {
+              posBagPairTemp.second = bag;
+            }
+          }
+          chestsP.emplace_back(posBagPairTemp);
+        }
+        while (iss3 >> ename >> cx >> cy) {
+          posEnemyPairTemp.first.first = cx;
+          posEnemyPairTemp.first.second = cy;
+          //get the enemy
+          for (auto& enemy : enemies) {
+            if (enemy.getName() == ename) {
+              posEnemyPairTemp.second = enemy;
+            }
+          }
+          enemiesP.emplace_back(posEnemyPairTemp);
+        }
+        while (iss4 >> cx >> cy) {
+          posWallPairTemp.first = cx;
+          posWallPairTemp.second = cy;
+          wallsP.emplace_back(posWallPairTemp);
+        }
+      }
+      //construct map using P parameters
+      GridMap m(mname,coords,chestsP,enemiesP,wallsP);
 
-bool GridMap::isValidPosition(Position position) {
-    return position.x >= 0 && position.x < width && position.y >= 0
-           && position.y < height && map[position.y][position.x] != '#';
+      //emplace constructed map to result
+      result.emplace_back(m);
+      m = GridMap();
+    }
+
+
+  } else {
+    throw std::runtime_error("unable to read from file ../saved/Map/maps.txt\n");
+  }
+  file.close();
+
+  return result;
 }

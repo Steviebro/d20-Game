@@ -80,7 +80,6 @@ void MapEditor::newMap()
     << "Let's start by naming your new map.\n";
 
     //1) Naming the map
-
     do {
         valid = true;
         std::cout << "Please choose a UNIQUE name for your NEW map which is NOT in the following list:\n";
@@ -138,10 +137,15 @@ void MapEditor::newMap()
     std::cout << "Exit successfully added to the map!\n";
 
 
-    //5) Add Walls
-    char input;
-    
+    //5) Set Objective
+    std::cout << "Now add an objective that will unlock the exit and give the (x,y) coordinates for the objective.\n"
+    << "Note that it MUST be within the outside borders and NOT on a pre-existing wall.\n";
+    addObjective(map);
+    map.displayMap();
 
+
+    //6) Add Walls
+    char input;
     std::cout << "You may now add walls to the map.\n";
     do {
         valid = true;
@@ -165,7 +169,7 @@ void MapEditor::newMap()
     } while (!valid);
 
 
-    //6) Add chests
+    //7) Add chests
     std::cout << "You may now add chests to the map.\n";
     do {
         valid = true;
@@ -187,7 +191,7 @@ void MapEditor::newMap()
         }
     } while (!valid);
 
-    //7) Validate if any more changes to make
+    //8) Validate if any more changes to make
 
     std::cout << "Your map now looks complete:\n";
     map.displayMap();
@@ -212,7 +216,7 @@ void MapEditor::newMap()
         }
     } while (!valid);
 
-    //8) Save the new map!
+    //9) Save the new map!
 
     std::cout << "Now we can save the map! Map " << mapName << " saving...\n";
 
@@ -268,8 +272,6 @@ void MapEditor::editMap()
     mapCreator.constructMap(1, "../maps/"+input+".txt");
     GridMap* constructor1 = mapCreator.getMap();
     editMap(*constructor1,input);
-
-
 }
 
 void MapEditor::editMap(GridMap& map, const std::string& mapName)
@@ -301,13 +303,16 @@ void MapEditor::editMap(GridMap& map, const std::string& mapName)
             removeChestsOrWalls(map);
             break;
             case '4':
-            changeEOrX(map,'E');
+            changeEorXorO(map,'E');
             break;
             case '5':
-            changeEOrX(map,'X');
+            changeEorXorO(map,'X');
             break;
             case '6':
             addObjective(map);
+            break;
+            case '7':
+            changeEorXorO(map, '!');
             break;
             case '0':
             break;
@@ -554,73 +559,112 @@ void MapEditor::removeChestsOrWalls(GridMap& map)
     } while (input != '0');
 }
 
-void MapEditor::changeEOrX(GridMap& map, char EorX)
+void MapEditor::changeEorXorO(GridMap& map, char EorXorO)
 {
-    EorX = std::toupper(EorX);
-    if (EorX != 'X' && EorX != 'E') {
-        throw std::runtime_error("Attempting to assign 'E' or 'X' without passing 'E' or 'X' as arguments");
-    }
-    std::string toChange;
-    switch (EorX) {
-        case 'E':
-        toChange = "ENTRANCE";
-        break;
-        case 'X':
-        toChange = "EXIT";
-        break;
-        default:
-        std::cerr << "Something went wrong, not E or X passed";
-        return;
-    }
+  bool EorX = false;
+  if (EorXorO == 'E' || EorXorO == 'X'){
+    EorXorO = std::toupper(EorXorO);
+    EorX = true;
+  }
+  if (EorXorO != 'X' && EorXorO != 'E' && EorXorO != '!') {
+    throw std::runtime_error("Attempting to assign 'E', 'X', or '!' without passing 'E', 'X', or '!' as arguments");
+  }
+  std::string toChange;
+  switch (EorXorO) {
+    case 'E':
+      toChange = "ENTRANCE";
+      break;
+    case 'X':
+      toChange = "EXIT";
+      break;
+    case '!':
+      toChange = "OBJECTIVE";
+      break;
+    default:
+      std::cerr << "Something went wrong, not E, X, or '!' passed";
+      return;
+  }
 
-    std::pair<int,int> currentLocation = findEOrX(map,EorX);
-    int x, y;
-    bool valid = false;
-
+  std::pair<int,int> currentLocation = findEOrX(map,EorXorO);
+  int x, y;
+  bool valid = false;
+  if (EorX) {
     std::cout << "\nCHANGING " << toChange << " LOCATION:\n"
-    << "Note that you MUST place the " << toChange << " at the edge of the map AND it can NOT be in the corner.\n"
-    << "Also note that the new " << toChange << " location must allow for a valid path from E to X.\n"
-    << "Examine the below map and give the (x,y) coordinates of where you want the " << toChange << ".\n";
-    map.displayMap();
+              << "Note that you MUST place the " << toChange
+              << " at the edge of the map AND it can NOT be in the corner.\n"
+              << "Also note that the new " << toChange << " location must allow for a valid path from E to X.\n"
+              << "Examine the below map and give the (x,y) coordinates of where you want the " << toChange << ".\n";
+  } else {
+    std::cout << "\nCHANGING OBJECTIVE LOCATION:\n"
+              << "Note that the objective must be placed within the map border walls.\n"
+              << "Please provide (x,y) coordinates for where you want to place the objective.\n";
+  }
+  map.displayMap();
 
-    
-
+  if (EorX) {
     do {
-        std::cout << "Provide a value for 'x' between 0 and "<< map.getWidth()-1 <<": ";
-        std::cin >> x;
-        std::cout << "Provide a value for 'y' between 0 and "<< map.getHeight()-1 <<": ";
-        std::cin >> y;
+      std::cout << "Provide a value for 'x' between 0 and " << map.getWidth() - 1 << ": ";
+      std::cin >> x;
+      std::cout << "Provide a value for 'y' between 0 and " << map.getHeight() - 1 << ": ";
+      std::cin >> y;
 
-        if (x >= 0 && y >= 0 && x < map.getWidth() && y < map.getHeight()) {//checking within range of map
-            if ((x != 0 && x != map.getWidth() - 1) || (y != 0 && y != map.getHeight() - 1)) {//checking not a corner
-                if (x == 0 || x == map.getWidth() - 1 || y == 0 || y == map.getHeight() - 1) {//checking is edge
-                    if (map.getCell(x,y) != 'X' && map.getCell(x,y) != 'E') {//checking not already assigned
-                        valid = true;
-                    } else {
-                        std::cout << "Invalid inputs, an entrance/exit is already assigned here. Please try again.\n";
-                    }
-                } else {
-                    std::cout << "Invalid inputs, MUST put the entrance at the edge of the map. Please try again.\n";
-                }
+      if (x >= 0 && y >= 0 && x < map.getWidth() && y < map.getHeight()) {//checking within range of map
+        if ((x != 0 && x != map.getWidth() - 1) ||
+            (y != 0 && y != map.getHeight() - 1)) {//checking not a corner
+          if (x == 0 || x == map.getWidth() - 1 || y == 0 || y == map.getHeight() - 1) {//checking is edge
+            if (map.getCell(x, y) != 'X' && map.getCell(x, y) != 'E') {//checking not already assigned
+              valid = true;
             } else {
-                std::cout << "Invalid inputs, cannot put the entrance on a corner. Please try again.\n";
+              std::cout
+                  << "Invalid inputs, an entrance/exit is already assigned here. Please try again.\n";
             }
+          } else {
+            std::cout
+                << "Invalid inputs, MUST put the entrance at the edge of the map. Please try again.\n";
+          }
         } else {
-            std::cout << "Invalid inputs, values must lie within the width and height of the map. Please try again.\n";
+          std::cout << "Invalid inputs, cannot put the entrance on a corner. Please try again.\n";
         }
+      } else {
+        std::cout
+            << "Invalid inputs, values must lie within the width and height of the map. Please try again.\n";
+      }
     } while (!valid);
+  } else {
+    do {
+      std::cout << "Provide a value for 'x' between 1 and " << map.getWidth() - 2 << ": ";
+      std::cin >> x;
+      std::cout << "Provide a value for 'y' between 1 and " << map.getHeight() - 2 << ": ";
+      std::cin >> y;
 
-    //Valid Entrance/Exit Location, add it:
-    map.setCell(x,y,EorX);
+      if (x > 0 && y > 0 && x < map.getWidth() - 1 && y < map.getHeight() - 1) {//checking within outside border
+        if (map.getCell(x, y) != '#') {//checking that objective will not be placed on a wall
+          valid = true;
+        } else {
+          std::cout << "Invalid inputs, can NOT place the objective on a wall! Please try again.\n";
+          valid = false;
+        }
+      } else {
+        std::cout << "Invalid inputs, values must lie within the outside border of the map. Please try again.\n";
+        valid = false;
+      }
+    } while (!valid);
+  }
+  //Valid Entrance/Exit Location, add it:
+  map.setCell(x,y,EorXorO);
 
-    //Ensure valid path, revert if not
-    if (!map.setCell(currentLocation.first,currentLocation.second,'#')) {//setting invalid wall is reverted in GridMap class
-        std::cerr << "New " << toChange << " location is invalid, does not allow for a valid path from E to X.\n";
-        map.setCell(x,y,'#');//reverting new entrance/exit location to wall
-        std::cout << "Map changes reverted.\n";
-    } else {
-        std::cout << toChange << " changed successfully!\n";
-    }
+  //Ensure valid path, revert if not
+  if (EorX && !map.setCell(currentLocation.first,currentLocation.second,'#')) {//setting invalid wall is reverted in GridMap class
+    std::cerr << "New " << toChange << " location is invalid, does not allow for a valid path from E to X or !.\n";
+    map.setCell(x,y,'#');//reverting new entrance/exit location to wall
+    std::cout << "Map changes reverted.\n";
+  } else if (!EorX && !map.hasValidPath('!')) {
+    std::cerr << "New objective location is invalid, does not allow for a valid path from E to X or !.\n";
+    map.setCell(x, y, ' ');//reverting new objective location to empty
+    std::cout << "Map changes reverted.\n";
+  } else {
+    std::cout << toChange << " changed successfully!\n";
+  }
 }
 
 // add objective cell (!) to enable exit
@@ -661,8 +705,6 @@ void MapEditor::addObjective(GridMap& map) {
     }
 }
 
-
-
 std::pair<int, int> MapEditor::findEOrX(GridMap map, char EorX)
 {
     EorX = std::toupper(EorX);
@@ -684,7 +726,6 @@ std::pair<int, int> MapEditor::findEOrX(GridMap map, char EorX)
     //if reaching end of search without finding, error
     throw std::runtime_error("Unable to find "+std::to_string(EorX)+" in the map:\n"+map.toString());
 }
-
 
 void MapEditor::newCampaign()
 {

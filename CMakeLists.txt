@@ -20,10 +20,10 @@ add_executable(345Project
         src/Components/Equipment.cpp
         src/Controller/GameManager.cpp
         src/Components/MapGeneration.cpp
-        src/Components/MapEditor.cpp
-        src/Components/MapDirector.cpp
-        src/Components/MapBuilder.cpp
-        src/Components/MapConcreteBuilder.cpp
+        #src/Components/MapEditor.cpp
+        #src/Components/MapDirector.cpp
+        #src/Components/MapBuilder.cpp
+        #src/Components/MapConcreteBuilder.cpp
         src/Components/Subject.cpp
         src/Components/Observer.cpp
 )

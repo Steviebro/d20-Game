@@ -1,0 +1,8 @@
+MAP1 15 15 1 0 14 11 6 4
+chest1 3 7
+enemy1 9 6 ENEMY2 4 5
+2 8 3 8 4 8 5 8
+MAP2 14 14 7 0 14 9 6 4
+chest1 3 7 CHEST2 10 2
+enemy1 9 6 ENEMY3 5 8
+2 8 3 8 4 8 5 8
