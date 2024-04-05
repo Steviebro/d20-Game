@@ -279,7 +279,7 @@ void GridMap::writeMapsToFile(std::vector<GridMap> mapsToWrite)
   }
 }
 
-std::vector<GridMap> GridMap::readMapsFromFile(const std::vector<ItemBag>& itemBags, const std::vector<Character>& enemies)
+std::vector<GridMap> GridMap::readMapsFromFile(std::vector<ItemBag> itemBags, std::vector<Character> enemies)
 {
   std::vector<GridMap> result;
   int coords[8];
@@ -345,9 +345,6 @@ std::vector<GridMap> GridMap::readMapsFromFile(const std::vector<ItemBag>& itemB
     throw std::runtime_error("unable to read from file ../saved/Map/maps.txt\n");
   }
   file.close();
-  for (auto& map : result) {
-    std::cout << map.getMapName() << "\n";
-  }
 
   return result;
 }

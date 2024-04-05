@@ -2,6 +2,7 @@
 #define INC_345PROJECT_INCLUDE_COMPONENTS_GAMEMANAGER_H_
 #include "../Components/Character.h"
 #include "../Components/MapGeneration.h"
+#include "GameEngine.h"
 
 #include <vector>
 #include <iostream>
@@ -34,7 +35,7 @@ public:
 private:
     bool newPlayerCreated;
     Character player;
-    //std::vector<Map> campaignMaps; (for CHOSEN campaign)
+    std::vector<GridMap> chosenCampaign;
 
     std::vector<Item> items;
     std::vector<Weapon> weapons;
@@ -44,9 +45,9 @@ private:
     std::vector<Equipment> equipments;
     std::vector<Character> players;
     std::vector<Character> enemies;
+
     std::vector<GridMap> maps;
     std::vector<std::list<std::string>> campaigns;
-    //TOADD: maps, campaigns
 
 };
 
