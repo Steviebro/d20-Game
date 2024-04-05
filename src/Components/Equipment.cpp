@@ -77,7 +77,7 @@ void Equipment::lootChestOrBody(ItemBag& toLoot)
 
 std::string Equipment::toString() const
 {
-  return equipped.getBagName() + " " + inventory.getBagName();
+  return name + " " + equipped.getBagName() + " " + inventory.getBagName();
 }
 
 void Equipment::printEquipment() const

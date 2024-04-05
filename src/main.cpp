@@ -13,7 +13,7 @@ int main() {
   do {
     std::cout << "|Game Main Menu =======================\n"
     << "|1 - Start the Game!\n"
-    << "|2 - Other Function\n"
+    << "|2 - Create/Edit Maps & Campaigns\n"
     << "|3 - Other Function\n"
     << "|4 - Other Function\n"
     << "|0 - Exit Application.\n"
@@ -27,8 +27,7 @@ int main() {
       break;
       }
       case '2': {
-      Character c("bro", 1, "bully");
-      c.printCharacter();
+      MapEditor me;
       break;
       }
       case '3':

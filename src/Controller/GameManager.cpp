@@ -134,9 +134,9 @@ Character GameManager::selectExistingPlayer()
     //Validate existence and display, validate choice
     for (auto& p : players) {
       if (p.getName() == selectedCharacterName) {
-        std::cout << "You have chosen the player " << selectedCharacterName << ". Here is the player: \n";
         p.printCharacter();
-        std::cout << "Enter any key to continue or 0 to cancel.\n";
+        std::cout << "You have chosen the player " << selectedCharacterName << ". Above is the player.\n";
+        std::cout << "Enter any key to continue or 0 to cancel: ";
         char input;
         std::cin >> input;
         if (input == '0') {
@@ -158,30 +158,37 @@ Character GameManager::selectExistingPlayer()
 
 void GameManager::startGame()
 {
-
-  char input;
-  for (auto& map : maps) {
-    map.displayMap();
-
-    std::cout
-    << map.getWidth() << "\n"
-    << map.getHeight() << "\n"
-    << map.getCell(1,8) << "\n"
-    << map.hasValidPath('X') << "\n";
-    map.setCell(1,8,'#');
-    map.setCell(2,2,'#');
-    map.displayMap();
-
-    std::cout << "end of loop\n";
-  }
-
-
   //select campaign
-  //campaignMaps = chosen campaign
+  std::string inputStr;
+  std::cout << "Please select the name of the campaign you want to play:\n";
+  for (auto& campaign : campaigns) {
+    for (auto& mapName : campaign) {
+      std::cout << mapName << " ";
+    }
+    std::cout << "\n";
+  }
+  std::cout << "Your selection: ";
+  std::cin >> inputStr;
+  Functions::convertToUpper(inputStr);
 
-  //for (auto& map : campaignMaps) {
-  //MapEngine(&map,&player)
-  //}
+  for (auto& campaign : campaigns) {
+    if (inputStr == *campaign.cbegin()) {//chosen campaign is campaign
+      for (auto& mapName : campaign) {//go through each mapName and load in the map
+        for (auto map : maps) {
+          if (map.getMapName() == mapName) {//mapName from campaign found: map
+            chosenCampaign.emplace_back(map);
+            break;
+          }
+        }
+      }
+    }
+    break;
+  }
+  
+
+  for (auto map : chosenCampaign) {
+    GameEngine ge(map,player);
+  }
   
   //save objects
   saveObjects();
@@ -208,5 +215,5 @@ void GameManager::saveObjects()
   Character::writeCharactersToFile(players,"players");
   Character::writeCharactersToFile(enemies,"enemies");
   GridMap::writeMapsToFile(maps);
-  //TOADD: campaigns
+  GridMap::writeCampaignsToFile(campaigns);
 }

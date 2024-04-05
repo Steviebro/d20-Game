@@ -130,6 +130,11 @@ std::string GridMap::toString() {
     return result;
 }
 
+std::string GridMap::getMapName()
+{
+  return mapName;
+}
+
 /**
  * @brief Check if cell is valid
  * @param x
@@ -242,7 +247,7 @@ void GridMap::setCellBuilder(const int& x, const int& y, const char& c) {
 
 std::string GridMap::toStringF()
 {
-  std::string result = mapName + " " + std::to_string(width) + " " + std::to_string(height) + " " + std::to_string(entrance.first) + " " + std::to_string(entrance.second) + " " + std::to_string(exit.first) + " " + std::to_string(exit.second) + " " + std::to_string(objective.first) + " " + std::to_string( objective.second) + "\n";
+  std::string result = mapName + " " + std::to_string(width) + " " + std::to_string(height) + " " + std::to_string(entrance.first) + " " + std::to_string(entrance.second) + " " + std::to_string(exit.first) + " " + std::to_string(exit.second) + " " + std::to_string(objective.first) + " " + std::to_string(objective.second) + "\n";
   for (auto& chest : chests) {
     result += chest.second.getBagName() + " " + std::to_string(chest.first.first) + " " + std::to_string(chest.first.second) + " ";
   }
@@ -266,7 +271,7 @@ void GridMap::writeMapsToFile(std::vector<GridMap> mapsToWrite)
 
   if (file.is_open()) {
     for (auto& map : mapsToWrite) {
-      file << map.toStringF() << "\n";
+      file << map.toStringF();
     }
     file.close();
   } else {
@@ -274,7 +279,7 @@ void GridMap::writeMapsToFile(std::vector<GridMap> mapsToWrite)
   }
 }
 
-std::vector<GridMap> GridMap::readMapsFromFile(const std::vector<ItemBag>& itemBags, const std::vector<Character>& enemies)
+std::vector<GridMap> GridMap::readMapsFromFile(std::vector<ItemBag> itemBags, std::vector<Character> enemies)
 {
   std::vector<GridMap> result;
   int coords[8];
@@ -329,12 +334,66 @@ std::vector<GridMap> GridMap::readMapsFromFile(const std::vector<ItemBag>& itemB
 
       //emplace constructed map to result
       result.emplace_back(m);
+      chestsP.clear();
+      enemiesP.clear();
+      wallsP.clear();
       m = GridMap();
     }
 
 
   } else {
     throw std::runtime_error("unable to read from file ../saved/Map/maps.txt\n");
+  }
+  file.close();
+
+  return result;
+}
+
+void GridMap::writeCampaignsToFile(std::vector<std::list<std::string>> campaignsToWrite)
+{
+  std::string fileName = "../saved/Campaign/campaigns.txt";
+  std::ofstream file(fileName);
+
+  if (file.is_open()) {
+    for (auto& campaign : campaignsToWrite) {
+      for (auto& mapName : campaign) {//except first element is campaignName
+        Functions::convertToUpper(mapName);
+        file << mapName << " ";
+      }
+      file << "\n";
+    }
+    file.close();
+  } else {
+    throw std::runtime_error("unable to write to file "+fileName+"\n");
+  }
+}
+
+std::vector<std::list<std::string>> GridMap::readCampaignsFromFile(std::vector<GridMap> maps)
+{
+  std::vector<std::list<std::string>> result;
+  std::list<std::string> tempList;
+  std::string cName, mapNameTemp;
+  std::ifstream file("../saved/Campaign/campaigns.txt");
+  if (file.is_open()){
+    std::string line;
+    while (std::getline(file, line)) {
+      std::istringstream iss(line);
+      if (iss >> cName) {
+        tempList.emplace_back(cName);
+        while (iss >> mapNameTemp) {
+          for (auto& map : maps) {
+            if (map.getMapName() == mapNameTemp) {
+              tempList.emplace_back(mapNameTemp);
+              break;
+            }
+          }
+        }
+      }
+      result.emplace_back(tempList);
+      tempList.clear();
+    }
+  } else {
+    throw std::runtime_error("unable to read from file ../saved/Campaign/campaigns.txt\n");
   }
   file.close();
 

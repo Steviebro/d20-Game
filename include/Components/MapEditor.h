@@ -171,6 +171,14 @@ public:
 
 
 private:
+    std::vector<Item> items;
+    std::vector<Weapon> weapons;
+    std::vector<Armor> armors;
+    std::vector<ItemBag> itemBags;
+    std::vector<Equipment> equipments;
+    std::vector<Character> enemies;
+    std::vector<GridMap> maps;
+    std::vector<std::list<std::string>> campaigns;
     
     std::vector<std::string> currentMaps;///< a string vector of the current saved maps
     std::vector<std::string> currentCampaigns;///< a string vector of the current saved campaigns
