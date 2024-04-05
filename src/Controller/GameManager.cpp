@@ -134,9 +134,9 @@ Character GameManager::selectExistingPlayer()
     //Validate existence and display, validate choice
     for (auto& p : players) {
       if (p.getName() == selectedCharacterName) {
-        std::cout << "You have chosen the player " << selectedCharacterName << ". Here is the player: \n";
         p.printCharacter();
-        std::cout << "Enter any key to continue or 0 to cancel.\n";
+        std::cout << "You have chosen the player " << selectedCharacterName << ". Above is the player.\n";
+        std::cout << "Enter any key to continue or 0 to cancel: ";
         char input;
         std::cin >> input;
         if (input == '0') {

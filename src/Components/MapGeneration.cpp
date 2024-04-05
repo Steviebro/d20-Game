@@ -242,7 +242,7 @@ void GridMap::setCellBuilder(const int& x, const int& y, const char& c) {
 
 std::string GridMap::toStringF()
 {
-  std::string result = mapName + " " + std::to_string(width) + " " + std::to_string(height) + " " + std::to_string(entrance.first) + " " + std::to_string(entrance.second) + " " + std::to_string(exit.first) + " " + std::to_string(exit.second) + " " + std::to_string(objective.first) + " " + std::to_string( objective.second) + "\n";
+  std::string result = mapName + " " + std::to_string(width) + " " + std::to_string(height) + " " + std::to_string(entrance.first) + " " + std::to_string(entrance.second) + " " + std::to_string(exit.first) + " " + std::to_string(exit.second) + " " + std::to_string(objective.first) + " " + std::to_string(objective.second) + "\n";
   for (auto& chest : chests) {
     result += chest.second.getBagName() + " " + std::to_string(chest.first.first) + " " + std::to_string(chest.first.second) + " ";
   }
@@ -266,7 +266,7 @@ void GridMap::writeMapsToFile(std::vector<GridMap> mapsToWrite)
 
   if (file.is_open()) {
     for (auto& map : mapsToWrite) {
-      file << map.toStringF() << "\n";
+      file << map.toStringF();
     }
     file.close();
   } else {
@@ -302,6 +302,7 @@ std::vector<GridMap> GridMap::readMapsFromFile(const std::vector<ItemBag>& itemB
           //get the item bag
           for (auto& bag : itemBags) {
             if (bag.getBagName() == bname) {
+              std::cout << "Bag " << bname << " found in the itemBags!\n";
               posBagPairTemp.second = bag;
             }
           }
@@ -313,6 +314,7 @@ std::vector<GridMap> GridMap::readMapsFromFile(const std::vector<ItemBag>& itemB
           //get the enemy
           for (auto& enemy : enemies) {
             if (enemy.getName() == ename) {
+              std::cout << "Enemy " << ename << " found in the enemies!\n";
               posEnemyPairTemp.second = enemy;
             }
           }
@@ -329,6 +331,9 @@ std::vector<GridMap> GridMap::readMapsFromFile(const std::vector<ItemBag>& itemB
 
       //emplace constructed map to result
       result.emplace_back(m);
+      chestsP.clear();
+      enemiesP.clear();
+      wallsP.clear();
       m = GridMap();
     }
 

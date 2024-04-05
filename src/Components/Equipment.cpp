@@ -77,7 +77,7 @@ void Equipment::lootChestOrBody(ItemBag& toLoot)
 
 std::string Equipment::toString() const
 {
-  return equipped.getBagName() + " " + inventory.getBagName();
+  return name + " " + equipped.getBagName() + " " + inventory.getBagName();
 }
 
 void Equipment::printEquipment() const
@@ -129,6 +129,7 @@ std::vector<Equipment> Equipment::readEquipmentsFromFile(std::vector<ItemBag> it
         throw std::runtime_error("either "+equippedBagName+" or "+inventoryBagName+" not found in the itembags!\n");
       }
       Equipment e(equipName,equippedTemp,inventoryTemp);
+      e.printEquipment();
       result.emplace_back(e);
     }
   } else {
