@@ -7,7 +7,7 @@
 
 class GameEngine {
 public:
-    GameEngine(GridMap mapParam, Character& playerParam) : map(mapParam), player(playerParam), exitReached(false) {
+    GameEngine(GridMap mapParam, Character& playerParam) : map(mapParam), player(playerParam), exitReached(false), objectiveReached(false) {
       initPlayerPosition();
       loopTurns();
     };

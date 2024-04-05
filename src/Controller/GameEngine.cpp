@@ -25,15 +25,18 @@ void GameEngine::initPlayerPosition()
 
 void GameEngine::loopTurns()
 {
+  char input;
   initiativeRoll();
   while (!exitReached) {
     for (auto& c : turnOrder) {
-      map.displayMap();
       if (c == &player) {//it's the player's turn
+        std::cout << "IT'S YOUR TURN!\n";
         playerTurn();
         if (exitReached) { break; }
       } else {//it's an enemy's turn
         std::cout << "Enemy " << c->getName() << "'s turn, does nothing!\n";
+        std::cout << "Press any key to continue to the next turn: ";
+        std::cin >> input;
         //enemyPlayTurn(c);
       }
     }
@@ -69,8 +72,10 @@ void GameEngine::initiativeRoll() {
 void GameEngine::playerTurn()
 {
   playerMove();
-  playerAttack();
-  playerFreeActions();
+  if (!exitReached) {
+    playerAttack();
+    playerFreeActions();
+  }
 }
 
 void GameEngine::enemyPlayTurn(Character* c)
@@ -105,7 +110,7 @@ void GameEngine::playerMove() {
   } while (input != 'U' && input != 'u' && input != 'D' && input != 'd' && input != 'L' && input != 'l' && input != 'R' && input != 'r');
 
   do {
-    std::cout << "Enter by how many spaces, you have a maximum of 6: \n";
+    std::cout << "Enter by how many spaces, you have a maximum of 6: ";
     std::cin >> movement;
   } while (movement < 0 || movement > 6);
 
@@ -115,7 +120,7 @@ void GameEngine::playerMove() {
       // invalid movement, lose a turn
       if (map.getCell(playerPosition.first, playerPosition.second - 1) == '#'
           || map.getCell(playerPosition.first, playerPosition.second - 1) == 'e') {
-        std::cout << "player fell over";
+        std::cout << "player fell over\n";
         return;
       }
       // update position
@@ -125,7 +130,7 @@ void GameEngine::playerMove() {
       // invalid movement, lose a turn
       if (map.getCell(playerPosition.first, playerPosition.second + 1) == '#'
           || map.getCell(playerPosition.first, playerPosition.second + 1) == 'e') {
-        std::cout << "player fell over";
+        std::cout << "player fell over\n";
         return;
       }
       //update position
@@ -135,7 +140,7 @@ void GameEngine::playerMove() {
       // invalid movement, lose a turn
       if (map.getCell(playerPosition.first - 1, playerPosition.second) == '#'
           || map.getCell(playerPosition.first - 1, playerPosition.second) == 'e') {
-        std::cout << "player fell over";
+        std::cout << "player fell over\n";
         return;
       }
       // update position
@@ -145,7 +150,7 @@ void GameEngine::playerMove() {
       // invalid movement, lose a turn
       if (map.getCell(playerPosition.first + 1, playerPosition.second) == '#'
           || map.getCell(playerPosition.first + 1, playerPosition.second) == 'e') {
-        std::cout << "player fell over";
+        std::cout << "player fell over\n";
         return;
       }
       //update position
@@ -157,12 +162,12 @@ void GameEngine::playerMove() {
       std::cout << "open chest";
     } else if (map.getCell(playerPosition.first, playerPosition.second) == '!') {
       objectiveReached = true;
-      std::cout << "objective reached!\n";
+      std::cout << "OBJECTIVE REACHED!-----------------------------\n";
     } else if (map.getCell(playerPosition.first, playerPosition.second) == 'X') {
       if (objectiveReached) {
         exitReached = true;
       } else {
-        std::cout << "Exit not unlocked, find objective";
+        std::cout << "Exit not unlocked, find objective\n";
         // player's turn ends
         return;
       }
@@ -173,7 +178,7 @@ void GameEngine::playerMove() {
     map.setCell(playerPosition.first, playerPosition.second, 'P');
     prev = playerPosition;
   }
-
+  map.displayMap();
 }
 
 void GameEngine::enemyMove(Character* c) {
@@ -258,17 +263,45 @@ void GameEngine::enemyMove(Character* c) {
 
 void GameEngine::playerAttack()
 {
+  char input;
   std::cout << "PLAYER ATTACK PHASE-----------------------------------------------------------------------------------------\n";
+  std::cout << "Combat not yet implemented. Press any key to continue: ";
+  std::cin >> input;
 }
 
 void GameEngine::enemyAttack(Character* c)
 {
+  char input;
   std::cout << "ENEMY " << c->getName() << " ATTACK PHASE----------------------------------------------------------------------------\n";
+  std::cout << "Press any key to continue: ";
+  std::cin >> input;
 }
 
 void GameEngine::playerFreeActions()
 {
-  std::cout << "PLAYER FREE ACTIONS PHASE-----------------------------------------------------------------------------------------\n";
+  char input;
+  do {
+    std::cout << "PLAYER FREE ACTIONS PHASE-----------------------------------------------------------------------------------------\n"
+    << "1 - View your character's stats\n"
+    << "2 - View your equipment\n"
+    << "0 - End your turn\n"
+    << "Your selection: ";
+    std::cin >> input;
+
+    switch (input)
+    {
+    case '1':
+    player.printCharacter();
+    break;
+    case '2':
+    player.getEquipment().printEquipment();
+    break;
+    case '0':
+    break;
+    default:
+      break;
+    }
+  } while (input != '0');
 }
 
 // combat -> list enemies in range (i.e., based on player's weapon)
