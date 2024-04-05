@@ -827,5 +827,7 @@ CMakeFiles/345Project.dir/src/main.cpp.o: \
   /Users/mateb/Desktop/345Project/src/../include/Components/Observable.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/list \
   /Users/mateb/Desktop/345Project/src/../include/Components/Position.h \
+  /Users/mateb/Desktop/345Project/src/../include/Controller/GameEngine.h \
+  /Users/mateb/Desktop/345Project/src/../include/Controller/../Static/Dice.h \
   /Users/mateb/Desktop/345Project/src/../include/Components/MapEditor.h \
   /Users/mateb/Desktop/345Project/src/../include/Components/MapGeneration.h

@@ -184,11 +184,13 @@ void GameManager::startGame()
     }
     break;
   }
-  
 
   for (auto map : chosenCampaign) {
     GameEngine ge(map,player);
   }
+
+  //finished campaign
+  std::cout << "CONGRATULATIONS, YOU HAVE FINISHED THE CAMPAIGN! \n Bye.\n";
   
   //save objects
   saveObjects();

@@ -826,4 +826,6 @@ CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/list \
   /Users/mateb/Desktop/345Project/src/../include/Components/Position.h \
   /Users/mateb/Desktop/345Project/src/../include/Components/ItemBag.h \
-  /Users/mateb/Desktop/345Project/src/../include/Components/Character.h
+  /Users/mateb/Desktop/345Project/src/../include/Components/Character.h \
+  /Users/mateb/Desktop/345Project/src/Controller/../../include/Controller/GameEngine.h \
+  /Users/mateb/Desktop/345Project/src/Controller/../../include/Controller/../Static/Dice.h

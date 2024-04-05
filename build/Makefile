@@ -249,6 +249,30 @@ src/Components/ItemBag.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/ItemBag.cpp.s
 .PHONY : src/Components/ItemBag.cpp.s
 
+src/Components/MapEditor.o: src/Components/MapEditor.cpp.o
+.PHONY : src/Components/MapEditor.o
+
+# target to build an object file
+src/Components/MapEditor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.o
+.PHONY : src/Components/MapEditor.cpp.o
+
+src/Components/MapEditor.i: src/Components/MapEditor.cpp.i
+.PHONY : src/Components/MapEditor.i
+
+# target to preprocess a source file
+src/Components/MapEditor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.i
+.PHONY : src/Components/MapEditor.cpp.i
+
+src/Components/MapEditor.s: src/Components/MapEditor.cpp.s
+.PHONY : src/Components/MapEditor.s
+
+# target to generate assembly for a file
+src/Components/MapEditor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.s
+.PHONY : src/Components/MapEditor.cpp.s
+
 src/Components/MapGeneration.o: src/Components/MapGeneration.cpp.o
 .PHONY : src/Components/MapGeneration.o
 
@@ -344,6 +368,30 @@ src/Components/Weapon.s: src/Components/Weapon.cpp.s
 src/Components/Weapon.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/Weapon.cpp.s
 .PHONY : src/Components/Weapon.cpp.s
+
+src/Controller/GameEngine.o: src/Controller/GameEngine.cpp.o
+.PHONY : src/Controller/GameEngine.o
+
+# target to build an object file
+src/Controller/GameEngine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Controller/GameEngine.cpp.o
+.PHONY : src/Controller/GameEngine.cpp.o
+
+src/Controller/GameEngine.i: src/Controller/GameEngine.cpp.i
+.PHONY : src/Controller/GameEngine.i
+
+# target to preprocess a source file
+src/Controller/GameEngine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Controller/GameEngine.cpp.i
+.PHONY : src/Controller/GameEngine.cpp.i
+
+src/Controller/GameEngine.s: src/Controller/GameEngine.cpp.s
+.PHONY : src/Controller/GameEngine.s
+
+# target to generate assembly for a file
+src/Controller/GameEngine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Controller/GameEngine.cpp.s
+.PHONY : src/Controller/GameEngine.cpp.s
 
 src/Controller/GameManager.o: src/Controller/GameManager.cpp.o
 .PHONY : src/Controller/GameManager.o
@@ -465,6 +513,9 @@ help:
 	@echo "... src/Components/ItemBag.o"
 	@echo "... src/Components/ItemBag.i"
 	@echo "... src/Components/ItemBag.s"
+	@echo "... src/Components/MapEditor.o"
+	@echo "... src/Components/MapEditor.i"
+	@echo "... src/Components/MapEditor.s"
 	@echo "... src/Components/MapGeneration.o"
 	@echo "... src/Components/MapGeneration.i"
 	@echo "... src/Components/MapGeneration.s"
@@ -477,6 +528,9 @@ help:
 	@echo "... src/Components/Weapon.o"
 	@echo "... src/Components/Weapon.i"
 	@echo "... src/Components/Weapon.s"
+	@echo "... src/Controller/GameEngine.o"
+	@echo "... src/Controller/GameEngine.i"
+	@echo "... src/Controller/GameEngine.s"
 	@echo "... src/Controller/GameManager.o"
 	@echo "... src/Controller/GameManager.i"
 	@echo "... src/Controller/GameManager.s"

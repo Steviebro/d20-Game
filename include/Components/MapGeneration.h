@@ -82,15 +82,21 @@ public:
 
   int getHeight();
 
+  std::pair<int,int> getEntrancePosition();
+
+  std::vector<std::pair<std::pair<int,int>,Character>>& getEnemies();
+
+  std::vector<std::pair<std::pair<int,int>,ItemBag>>& getChests();
+
   void setCellBuilder(const int& x, const int& y, const char& c);
 
-  void increaseChests();
-
-  void increaseCreatures();
-
-  int getChests();
-
-  int getCreatures();
+//  void increaseChests();
+//
+//  void increaseCreatures();
+//
+//  int getChests();
+//
+//  int getCreatures();
 
   std::string toStringF();
 

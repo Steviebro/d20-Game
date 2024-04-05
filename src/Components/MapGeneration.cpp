@@ -78,7 +78,7 @@ bool GridMap::setCell(const int& x, const int& y, const char& c) {
             return true;
         };
     }
-    else if (c == ' ' || c == '*' || c == 'm' || c == '!') {
+    else if (c == ' ' || c == '*' || c == '!' || c == 'e' || c == 'P') {
         map[y][x] = c;
         notify();
         return true;
@@ -224,6 +224,20 @@ int GridMap::getHeight()
     return height;
 }
 
+std::pair<int,int> GridMap::getEntrancePosition()
+{
+  return entrance;
+}
+
+std::vector<std::pair<std::pair<int,int>,Character>>& GridMap::getEnemies()
+{
+  return enemies;
+}
+
+std::vector<std::pair<std::pair<int,int>,ItemBag>>& GridMap::getChests()
+{
+  return chests;
+}
 
 void GridMap::setCellBuilder(const int& x, const int& y, const char& c) {
     map[y][x] = c;
