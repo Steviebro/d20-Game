@@ -206,6 +206,7 @@ int Character::getArmorClass()
 
 int Character::getAttackBonus()
 {
+
     int result = getProficiencyBonus() + equipment.getEquipped().sumEnchants("ATTACK_BONUS");
 
     if (style == "BULLY") {

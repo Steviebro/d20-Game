@@ -34,7 +34,7 @@ void GridMap::populateMap(){
     }
     //add chests
     for (auto& chest : chests) {
-      map[chest.first.second][chest.first.first] = '*';
+      map[chest.first.second][chest.first.first] = 'c';
     }
     //add enemies
     for (auto& enemy : enemies) {
@@ -44,7 +44,7 @@ void GridMap::populateMap(){
 }
 
 /**
- * @brief Set cell; input must be ' ', '*', '-', '|', 'E', 'X'
+ * @brief Set cell; input must be ' ', 'c', '-', '|', 'E', 'X'
  * @param x
  * @param y
  * @param c
@@ -78,13 +78,13 @@ bool GridMap::setCell(const int& x, const int& y, const char& c) {
             return true;
         };
     }
-    else if (c == ' ' || c == '*' || c == '!' || c == 'e' || c == 'P') {
+    else if (c == ' ' || c == 'c' || c == '!' || c == 'e' || c == 'P' || c == 'd') {
         map[y][x] = c;
         notify();
         return true;
     }
     else {
-        std::cout << "Invalid cell.";
+        std::cout << "Invalid cell.\n";
         notify();
         return false;
     }

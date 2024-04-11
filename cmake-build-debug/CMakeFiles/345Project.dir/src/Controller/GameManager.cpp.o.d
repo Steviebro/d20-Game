@@ -828,4 +828,5 @@ CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.o: \
   /Users/mateb/Desktop/345Project/src/../include/Components/ItemBag.h \
   /Users/mateb/Desktop/345Project/src/../include/Components/Character.h \
   /Users/mateb/Desktop/345Project/src/Controller/../../include/Controller/GameEngine.h \
-  /Users/mateb/Desktop/345Project/src/Controller/../../include/Controller/../Static/Dice.h
+  /Users/mateb/Desktop/345Project/src/Controller/../../include/Controller/../Static/Dice.h \
+  /Users/mateb/Desktop/345Project/src/Controller/../../include/Controller/Combat.h

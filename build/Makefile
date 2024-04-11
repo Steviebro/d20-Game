@@ -369,6 +369,30 @@ src/Components/Weapon.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/Weapon.cpp.s
 .PHONY : src/Components/Weapon.cpp.s
 
+src/Controller/Combat.o: src/Controller/Combat.cpp.o
+.PHONY : src/Controller/Combat.o
+
+# target to build an object file
+src/Controller/Combat.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Controller/Combat.cpp.o
+.PHONY : src/Controller/Combat.cpp.o
+
+src/Controller/Combat.i: src/Controller/Combat.cpp.i
+.PHONY : src/Controller/Combat.i
+
+# target to preprocess a source file
+src/Controller/Combat.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Controller/Combat.cpp.i
+.PHONY : src/Controller/Combat.cpp.i
+
+src/Controller/Combat.s: src/Controller/Combat.cpp.s
+.PHONY : src/Controller/Combat.s
+
+# target to generate assembly for a file
+src/Controller/Combat.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Controller/Combat.cpp.s
+.PHONY : src/Controller/Combat.cpp.s
+
 src/Controller/GameEngine.o: src/Controller/GameEngine.cpp.o
 .PHONY : src/Controller/GameEngine.o
 
@@ -528,6 +552,9 @@ help:
 	@echo "... src/Components/Weapon.o"
 	@echo "... src/Components/Weapon.i"
 	@echo "... src/Components/Weapon.s"
+	@echo "... src/Controller/Combat.o"
+	@echo "... src/Controller/Combat.i"
+	@echo "... src/Controller/Combat.s"
 	@echo "... src/Controller/GameEngine.o"
 	@echo "... src/Controller/GameEngine.i"
 	@echo "... src/Controller/GameEngine.s"

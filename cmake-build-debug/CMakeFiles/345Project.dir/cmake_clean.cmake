@@ -21,6 +21,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/345Project.dir/src/Components/Subject.cpp.o.d"
   "CMakeFiles/345Project.dir/src/Components/Weapon.cpp.o"
   "CMakeFiles/345Project.dir/src/Components/Weapon.cpp.o.d"
+  "CMakeFiles/345Project.dir/src/Controller/Combat.cpp.o"
+  "CMakeFiles/345Project.dir/src/Controller/Combat.cpp.o.d"
   "CMakeFiles/345Project.dir/src/Controller/GameEngine.cpp.o"
   "CMakeFiles/345Project.dir/src/Controller/GameEngine.cpp.o.d"
   "CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.o"
