@@ -112,6 +112,9 @@
 		<Unit filename="/Users/mateb/Desktop/345Project/src/Components/Weapon.cpp">
 			<Option target="345Project"/>
 		</Unit>
+		<Unit filename="/Users/mateb/Desktop/345Project/src/Controller/Combat.cpp">
+			<Option target="345Project"/>
+		</Unit>
 		<Unit filename="/Users/mateb/Desktop/345Project/src/Controller/GameEngine.cpp">
 			<Option target="345Project"/>
 		</Unit>

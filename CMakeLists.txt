@@ -28,6 +28,7 @@ add_executable(345Project
         #src/Components/MapConcreteBuilder.cpp
         src/Components/Subject.cpp
         src/Components/Observer.cpp
+        src/Controller/Combat.cpp
 )
 
 #[[
