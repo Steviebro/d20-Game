@@ -31,11 +31,15 @@ int Combat::attackRoll(Character& attacker, Character& defender)
 {
   int diceRoll = Dice::rollDice("1d20");
 
+
   if (diceRoll == 1) {
+    std::cout<<"Attack roll rolled a " << diceRoll << " You need a " << defender.getArmorClass() << " to hit!\n";
     return 0;
   } else if (diceRoll == 20) {
+    std::cout<<"Attack roll rolled a " << diceRoll << " You need a " << defender.getArmorClass() << " to hit!\n";
     return 2;
   } else if (diceRoll + attacker.getAttackBonus() >= defender.getArmorClass()){
+    std::cout<<"Attack roll rolled a " << diceRoll + attacker.getAttackBonus() << " You need a " << defender.getArmorClass() << " to hit!\n";
     return 1;
   }
 

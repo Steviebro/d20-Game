@@ -829,5 +829,6 @@ CMakeFiles/345Project.dir/src/main.cpp.o: \
   /Users/mateb/Desktop/345Project/src/../include/Components/Position.h \
   /Users/mateb/Desktop/345Project/src/../include/Controller/GameEngine.h \
   /Users/mateb/Desktop/345Project/src/../include/Controller/../Static/Dice.h \
+  /Users/mateb/Desktop/345Project/src/../include/Controller/Combat.h \
   /Users/mateb/Desktop/345Project/src/../include/Components/MapEditor.h \
   /Users/mateb/Desktop/345Project/src/../include/Components/MapGeneration.h

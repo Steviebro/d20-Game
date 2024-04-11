@@ -1,7 +1,8 @@
-CMakeFiles/345Project.dir/src/main.cpp.o: \
-  /Users/mateb/Desktop/345Project/src/main.cpp \
-  /Users/mateb/Desktop/345Project/src/../include/Components/Character.h \
-  /Users/mateb/Desktop/345Project/src/../include/Components/../Static/Functions.h \
+CMakeFiles/345Project.dir/src/Controller/Combat.cpp.o: \
+  /Users/mateb/Desktop/345Project/src/Controller/Combat.cpp \
+  /Users/mateb/Desktop/345Project/src/Controller/../../include/Controller/Combat.h \
+  /Users/mateb/Desktop/345Project/src/Controller/../../include/Controller/../Components/Character.h \
+  /Users/mateb/Desktop/345Project/src/Controller/../../include/Controller/../Components/../Static/Functions.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/algorithm \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__assert \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__config \
@@ -738,8 +739,8 @@ CMakeFiles/345Project.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/string \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__ios/fpos.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__string/extern_template_lists.h \
-  /Users/mateb/Desktop/345Project/src/../include/Components/../Static/Dice.h \
-  /Users/mateb/Desktop/345Project/src/../include/Components/ItemBag.h \
+  /Users/mateb/Desktop/345Project/src/Controller/../../include/Controller/../Components/../Static/Dice.h \
+  /Users/mateb/Desktop/345Project/src/Controller/../../include/Controller/../Components/ItemBag.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/ios \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__locale \
@@ -815,20 +816,7 @@ CMakeFiles/345Project.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__filesystem/u8path.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/sstream \
-  /Users/mateb/Desktop/345Project/src/../include/Components/Item.h \
-  /Users/mateb/Desktop/345Project/src/../include/Components/Armor.h \
-  /Users/mateb/Desktop/345Project/src/../include/Components/Weapon.h \
-  /Users/mateb/Desktop/345Project/src/../include/Components/Equipment.h \
-  /Users/mateb/Desktop/345Project/src/../include/Static/Functions.h \
-  /Users/mateb/Desktop/345Project/src/../include/Controller/GameManager.h \
-  /Users/mateb/Desktop/345Project/src/../include/Controller/../Components/Character.h \
-  /Users/mateb/Desktop/345Project/src/../include/Controller/../Components/MapGeneration.h \
-  /Users/mateb/Desktop/345Project/src/../include/Components/Subject.h \
-  /Users/mateb/Desktop/345Project/src/../include/Components/Observable.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/list \
-  /Users/mateb/Desktop/345Project/src/../include/Components/Position.h \
-  /Users/mateb/Desktop/345Project/src/../include/Controller/GameEngine.h \
-  /Users/mateb/Desktop/345Project/src/../include/Controller/../Static/Dice.h \
-  /Users/mateb/Desktop/345Project/src/../include/Controller/Combat.h \
-  /Users/mateb/Desktop/345Project/src/../include/Components/MapEditor.h \
-  /Users/mateb/Desktop/345Project/src/../include/Components/MapGeneration.h
+  /Users/mateb/Desktop/345Project/src/Controller/../../include/Controller/../Components/Item.h \
+  /Users/mateb/Desktop/345Project/src/Controller/../../include/Controller/../Components/Armor.h \
+  /Users/mateb/Desktop/345Project/src/Controller/../../include/Controller/../Components/Weapon.h \
+  /Users/mateb/Desktop/345Project/src/Controller/../../include/Controller/../Components/Equipment.h
