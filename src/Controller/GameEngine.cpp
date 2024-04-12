@@ -430,6 +430,7 @@ void GameEngine::playerFreeActions()
     std::cout << "PLAYER FREE ACTIONS PHASE-----------------------------------------------------------------------------------------\n"
     << "1 - View your character's stats\n"
     << "2 - View your equipment\n"
+    << "3 - Take a health potion\n"
     << "0 - End your turn\n"
     << "Your selection: ";
     std::cin >> input;
@@ -442,6 +443,9 @@ void GameEngine::playerFreeActions()
     case '2':
     player.getEquipment().printEquipment();
     break;
+      case '3':
+        Potion* potion = player.getEquipment().getInventory().getOrRemove("HEALTHPOTION", true, false);
+        potion->takePotion(player);
     case '0':
       break;
     default:

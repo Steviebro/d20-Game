@@ -99,6 +99,12 @@ int Character::takeDamage(int damageTaken)
     return hp;
 }
 
+void Character::healDamage(int damageHealed){
+  if (damageHealed > 0){
+    hp += damageHealed;
+  }
+}
+
 void Character::levelUp()
 {
     if (level < 20) {

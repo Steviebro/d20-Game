@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/mateb/Desktop/345Project/src/Components/MapEditor.cpp" "CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.o.d"
   "/Users/mateb/Desktop/345Project/src/Components/MapGeneration.cpp" "CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o.d"
   "/Users/mateb/Desktop/345Project/src/Components/Observer.cpp" "CMakeFiles/345Project.dir/src/Components/Observer.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Components/Observer.cpp.o.d"
+  "/Users/mateb/Desktop/345Project/src/Components/Potion.cpp" "CMakeFiles/345Project.dir/src/Components/Potion.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Components/Potion.cpp.o.d"
   "/Users/mateb/Desktop/345Project/src/Components/Subject.cpp" "CMakeFiles/345Project.dir/src/Components/Subject.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Components/Subject.cpp.o.d"
   "/Users/mateb/Desktop/345Project/src/Components/Weapon.cpp" "CMakeFiles/345Project.dir/src/Components/Weapon.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Components/Weapon.cpp.o.d"
   "/Users/mateb/Desktop/345Project/src/Controller/Combat.cpp" "CMakeFiles/345Project.dir/src/Controller/Combat.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Controller/Combat.cpp.o.d"

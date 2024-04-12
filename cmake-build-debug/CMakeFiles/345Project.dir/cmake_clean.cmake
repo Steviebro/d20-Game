@@ -17,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/345Project.dir/src/Components/MapGeneration.cpp.o.d"
   "CMakeFiles/345Project.dir/src/Components/Observer.cpp.o"
   "CMakeFiles/345Project.dir/src/Components/Observer.cpp.o.d"
+  "CMakeFiles/345Project.dir/src/Components/Potion.cpp.o"
+  "CMakeFiles/345Project.dir/src/Components/Potion.cpp.o.d"
   "CMakeFiles/345Project.dir/src/Components/Subject.cpp.o"
   "CMakeFiles/345Project.dir/src/Components/Subject.cpp.o.d"
   "CMakeFiles/345Project.dir/src/Components/Weapon.cpp.o"

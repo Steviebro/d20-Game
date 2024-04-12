@@ -24,6 +24,7 @@ public:
 
     // MUTATORS ==================================================
     int takeDamage(int damageTaken);
+    void healDamage(int damageHealed);
     void levelUp();
     int gainXP(int experienceGained);
     void setEquipment(Equipment& equipmentParam);
