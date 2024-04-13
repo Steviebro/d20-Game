@@ -1,3 +1,3 @@
-/Users/mateb/Desktop/345Project/build/CMakeFiles/345Project.dir
-/Users/mateb/Desktop/345Project/build/CMakeFiles/edit_cache.dir
-/Users/mateb/Desktop/345Project/build/CMakeFiles/rebuild_cache.dir
+C:/C++Projects/d20Game/build/CMakeFiles/d20Game.dir
+C:/C++Projects/d20Game/build/CMakeFiles/edit_cache.dir
+C:/C++Projects/d20Game/build/CMakeFiles/rebuild_cache.dir
