@@ -22,6 +22,7 @@ public:
     void playerMove();
     void playerAttack();
     void playerFreeActions();
+    void editEquipment();
 
     void enemyPlayTurn(Character* c);
     void enemyMove(Character* c);
