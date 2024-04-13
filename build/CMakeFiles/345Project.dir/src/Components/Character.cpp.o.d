@@ -818,4 +818,5 @@ CMakeFiles/345Project.dir/src/Components/Character.cpp.o: \
   /Users/mateb/Desktop/345Project/src/Components/../../include/Components/Item.h \
   /Users/mateb/Desktop/345Project/src/Components/../../include/Components/Armor.h \
   /Users/mateb/Desktop/345Project/src/Components/../../include/Components/Weapon.h \
-  /Users/mateb/Desktop/345Project/src/Components/../../include/Components/Equipment.h
+  /Users/mateb/Desktop/345Project/src/Components/../../include/Components/Equipment.h \
+  /Users/mateb/Desktop/345Project/src/Components/../../include/Components/Potion.h

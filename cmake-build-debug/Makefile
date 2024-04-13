@@ -465,6 +465,30 @@ src/Controller/GameManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.s
 .PHONY : src/Controller/GameManager.cpp.s
 
+src/Controller/ObjectEditor.o: src/Controller/ObjectEditor.cpp.o
+.PHONY : src/Controller/ObjectEditor.o
+
+# target to build an object file
+src/Controller/ObjectEditor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Controller/ObjectEditor.cpp.o
+.PHONY : src/Controller/ObjectEditor.cpp.o
+
+src/Controller/ObjectEditor.i: src/Controller/ObjectEditor.cpp.i
+.PHONY : src/Controller/ObjectEditor.i
+
+# target to preprocess a source file
+src/Controller/ObjectEditor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Controller/ObjectEditor.cpp.i
+.PHONY : src/Controller/ObjectEditor.cpp.i
+
+src/Controller/ObjectEditor.s: src/Controller/ObjectEditor.cpp.s
+.PHONY : src/Controller/ObjectEditor.s
+
+# target to generate assembly for a file
+src/Controller/ObjectEditor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Controller/ObjectEditor.cpp.s
+.PHONY : src/Controller/ObjectEditor.cpp.s
+
 src/Static/Dice.o: src/Static/Dice.cpp.o
 .PHONY : src/Static/Dice.o
 
@@ -588,6 +612,9 @@ help:
 	@echo "... src/Controller/GameManager.o"
 	@echo "... src/Controller/GameManager.i"
 	@echo "... src/Controller/GameManager.s"
+	@echo "... src/Controller/ObjectEditor.o"
+	@echo "... src/Controller/ObjectEditor.i"
+	@echo "... src/Controller/ObjectEditor.s"
 	@echo "... src/Static/Dice.o"
 	@echo "... src/Static/Dice.i"
 	@echo "... src/Static/Dice.s"

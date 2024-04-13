@@ -22,6 +22,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/mateb/Desktop/345Project/src/Controller/Combat.cpp" "CMakeFiles/345Project.dir/src/Controller/Combat.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Controller/Combat.cpp.o.d"
   "/Users/mateb/Desktop/345Project/src/Controller/GameEngine.cpp" "CMakeFiles/345Project.dir/src/Controller/GameEngine.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Controller/GameEngine.cpp.o.d"
   "/Users/mateb/Desktop/345Project/src/Controller/GameManager.cpp" "CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.o.d"
+  "/Users/mateb/Desktop/345Project/src/Controller/ObjectEditor.cpp" "CMakeFiles/345Project.dir/src/Controller/ObjectEditor.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Controller/ObjectEditor.cpp.o.d"
   "/Users/mateb/Desktop/345Project/src/Static/Dice.cpp" "CMakeFiles/345Project.dir/src/Static/Dice.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Static/Dice.cpp.o.d"
   "/Users/mateb/Desktop/345Project/src/Static/Functions.cpp" "CMakeFiles/345Project.dir/src/Static/Functions.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/Static/Functions.cpp.o.d"
   "/Users/mateb/Desktop/345Project/src/main.cpp" "CMakeFiles/345Project.dir/src/main.cpp.o" "gcc" "CMakeFiles/345Project.dir/src/main.cpp.o.d"

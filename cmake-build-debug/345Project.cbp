@@ -124,6 +124,9 @@
 		<Unit filename="/Users/mateb/Desktop/345Project/src/Controller/GameManager.cpp">
 			<Option target="345Project"/>
 		</Unit>
+		<Unit filename="/Users/mateb/Desktop/345Project/src/Controller/ObjectEditor.cpp">
+			<Option target="345Project"/>
+		</Unit>
 		<Unit filename="/Users/mateb/Desktop/345Project/src/Static/Dice.cpp">
 			<Option target="345Project"/>
 		</Unit>

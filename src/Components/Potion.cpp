@@ -4,7 +4,7 @@ std::string Potion::getDiceType()
   return diceType;
 }
 
-void Potion::takePotion(Character &player) {
-  int diceRoll = Dice::rollDice(getDiceType());
-  player.healDamage(diceRoll + getEnchantLevel());
+int Potion::takePotion() {
+   int diceRoll = Dice::rollDice("2d4");
+   return diceRoll;
 }

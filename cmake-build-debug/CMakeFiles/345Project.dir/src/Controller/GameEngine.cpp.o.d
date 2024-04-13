@@ -820,6 +820,7 @@ CMakeFiles/345Project.dir/src/Controller/GameEngine.cpp.o: \
   /Users/mateb/Desktop/345Project/src/Controller/../../include/Controller/../Components/Armor.h \
   /Users/mateb/Desktop/345Project/src/Controller/../../include/Controller/../Components/Weapon.h \
   /Users/mateb/Desktop/345Project/src/Controller/../../include/Controller/../Components/Equipment.h \
+  /Users/mateb/Desktop/345Project/src/Controller/../../include/Controller/../Components/Potion.h \
   /Users/mateb/Desktop/345Project/src/Controller/../../include/Controller/../Components/MapGeneration.h \
   /Users/mateb/Desktop/345Project/src/../include/Components/Subject.h \
   /Users/mateb/Desktop/345Project/src/../include/Components/Observable.h \

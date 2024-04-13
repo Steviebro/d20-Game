@@ -29,6 +29,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/345Project.dir/src/Controller/GameEngine.cpp.o.d"
   "CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.o"
   "CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.o.d"
+  "CMakeFiles/345Project.dir/src/Controller/ObjectEditor.cpp.o"
+  "CMakeFiles/345Project.dir/src/Controller/ObjectEditor.cpp.o.d"
   "CMakeFiles/345Project.dir/src/Static/Dice.cpp.o"
   "CMakeFiles/345Project.dir/src/Static/Dice.cpp.o.d"
   "CMakeFiles/345Project.dir/src/Static/Functions.cpp.o"

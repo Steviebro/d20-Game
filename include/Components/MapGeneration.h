@@ -35,6 +35,7 @@ private:
   // [<1,3>, <2,3>, <3,3>, ... <6,3>]
   std::vector<std::pair<int,int>> walls;
   std::vector<std::vector<char> > map;
+  std::vector<std::pair<int,int>> friendly;
 //w h ex ey xx xy ox oy
 //bname x y bname x y
 //ename x y, ename x y
@@ -54,8 +55,8 @@ public:
     GridMap::populateMap();
   }
   ~GridMap();
-  GridMap(std::string mapNameP, const int coords[8], std::vector<std::pair<std::pair<int,int>,ItemBag>> chestsP, std::vector<std::pair<std::pair<int,int>,Character>> enemiesP, std::vector<std::pair<int,int>> wallsP)
-  : mapName(mapNameP), width(coords[0]), height(coords[1]), entrance(coords[2],coords[3]), exit(coords[4],coords[5]), objective(coords[6],coords[7]), chests(chestsP), enemies(enemiesP), walls(wallsP)
+  GridMap(std::string mapNameP, const int coords[8], std::vector<std::pair<std::pair<int,int>,ItemBag>> chestsP, std::vector<std::pair<std::pair<int,int>,Character>> enemiesP, std::vector<std::pair<int,int>> wallsP, std::vector<std::pair<int,int>> friendlyP)
+  : mapName(mapNameP), width(coords[0]), height(coords[1]), entrance(coords[2],coords[3]), exit(coords[4],coords[5]), objective(coords[6],coords[7]), chests(chestsP), enemies(enemiesP), walls(wallsP), friendly(friendlyP)
   {
     map.resize(height, std::vector<char>(width, ' '));
     GridMap::populateMap();
@@ -89,14 +90,6 @@ public:
   std::vector<std::pair<std::pair<int,int>,ItemBag>>& getChests();
 
   void setCellBuilder(const int& x, const int& y, const char& c);
-
-//  void increaseChests();
-//
-//  void increaseCreatures();
-//
-//  int getChests();
-//
-//  int getCreatures();
 
   std::string toStringF();
 

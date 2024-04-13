@@ -826,6 +826,7 @@ CMakeFiles/345Project.dir/src/Components/MapEditor.cpp.o: \
   /Users/mateb/Desktop/345Project/src/Components/../../include/Components/../Static/Dice.h \
   /Users/mateb/Desktop/345Project/src/Components/../../include/Components/ItemBag.h \
   /Users/mateb/Desktop/345Project/src/Components/../../include/Components/Equipment.h \
+  /Users/mateb/Desktop/345Project/src/Components/../../include/Components/Potion.h \
   /Users/mateb/Desktop/345Project/src/Components/../../include/Components/MapBuilder.h \
   /Users/mateb/Desktop/345Project/src/Components/../../include/Components/MapDirector.h \
   /Users/mateb/Desktop/345Project/src/Components/../../include/Components/MapConcreteBuilder.h

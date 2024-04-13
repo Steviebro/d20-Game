@@ -24,6 +24,8 @@ bool Item::initPossibleEnchants()
     possibleEnchants = {"ARMOR_CLASS", "DEXTERITY"};
   } else if (itemType == "WEAPON") {
     possibleEnchants = {"ATTACK_BONUS", "DAMAGE_BONUS"};
+  } else if(itemType == "POTION"){
+    possibleEnchants = { "-" };
   } else {
     throw std::runtime_error("Invalid item type passed: "+itemType+". Item type must be part of these 7 types (NOT case-sensitive): helmet, armor, shield, ring, belt, boots, weapon");
   }

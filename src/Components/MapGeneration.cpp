@@ -40,6 +40,9 @@ void GridMap::populateMap(){
     for (auto& enemy : enemies) {
       map[enemy.first.second][enemy.first.first] = 'e';
     }
+    for (auto& npc : friendly) {
+      map[npc.second][npc.first] = 'f';
+    }
 
 }
 
@@ -274,6 +277,10 @@ std::string GridMap::toStringF()
     result += std::to_string(wall.first) + " " + std::to_string(wall.second) + " ";
   }
   result += "\n";
+  for (auto& friendd : friendly) {
+    result += std::to_string(friendd.first) + " " + std::to_string(friendd.second) + " ";
+  }
+  result += "\n";
   return result;
 
 }
@@ -300,19 +307,21 @@ std::vector<GridMap> GridMap::readMapsFromFile(std::vector<ItemBag> itemBags, st
   int cx, cy;
   std::string mname, bname, ename;
   std::pair<int,int> posWallPairTemp;
+  std::pair<int,int> posNPCPairTemp;
   std::pair<std::pair<int,int>,ItemBag> posBagPairTemp;
   std::pair<std::pair<int,int>,Character> posEnemyPairTemp;
   std::vector<std::pair<std::pair<int,int>,ItemBag>> chestsP;
   std::vector<std::pair<std::pair<int,int>,Character>> enemiesP;
   std::vector<std::pair<int,int>> wallsP;
+  std::vector<std::pair<int,int>> friendlyP;
 
 // campaigns: 1, 2, 3, ... [choose 1]
 // campaign1.txt -> line 1 map name
   std::ifstream file("../saved/Map/maps.txt");
   if (file.is_open()){
-    std::string line1, line2, line3, line4;
-    while (std::getline(file, line1) && std::getline(file, line2) && std::getline(file, line3) && std::getline(file,line4)) {
-      std::istringstream iss1(line1), iss2(line2), iss3(line3), iss4(line4);
+    std::string line1, line2, line3, line4, line5;
+    while (std::getline(file, line1) && std::getline(file, line2) && std::getline(file, line3) && std::getline(file,line4) && std::getline(file,line5)) {
+      std::istringstream iss1(line1), iss2(line2), iss3(line3), iss4(line4), iss5(line5);
       if (iss1 >> mname >> coords[0] >> coords[1] >> coords[2] >> coords[3] >> coords[4] >> coords[5] >> coords[6] >> coords[7]) {
         Functions::convertToUpper(mname);
         while (iss2 >> bname >> cx >> cy) {
@@ -342,15 +351,21 @@ std::vector<GridMap> GridMap::readMapsFromFile(std::vector<ItemBag> itemBags, st
           posWallPairTemp.second = cy;
           wallsP.emplace_back(posWallPairTemp);
         }
+        while(iss5 >> cx >> cy) {
+          posNPCPairTemp.first = cx;
+          posNPCPairTemp.second = cy;
+          friendlyP.emplace_back(posNPCPairTemp);
+        }
       }
       //construct map using P parameters
-      GridMap m(mname,coords,chestsP,enemiesP,wallsP);
+      GridMap m(mname,coords,chestsP,enemiesP,wallsP,friendlyP);
 
       //emplace constructed map to result
       result.emplace_back(m);
       chestsP.clear();
       enemiesP.clear();
       wallsP.clear();
+      friendlyP.clear();
       m = GridMap();
     }
 

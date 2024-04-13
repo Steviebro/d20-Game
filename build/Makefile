@@ -321,6 +321,30 @@ src/Components/Observer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/Observer.cpp.s
 .PHONY : src/Components/Observer.cpp.s
 
+src/Components/Potion.o: src/Components/Potion.cpp.o
+.PHONY : src/Components/Potion.o
+
+# target to build an object file
+src/Components/Potion.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/Potion.cpp.o
+.PHONY : src/Components/Potion.cpp.o
+
+src/Components/Potion.i: src/Components/Potion.cpp.i
+.PHONY : src/Components/Potion.i
+
+# target to preprocess a source file
+src/Components/Potion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/Potion.cpp.i
+.PHONY : src/Components/Potion.cpp.i
+
+src/Components/Potion.s: src/Components/Potion.cpp.s
+.PHONY : src/Components/Potion.s
+
+# target to generate assembly for a file
+src/Components/Potion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Components/Potion.cpp.s
+.PHONY : src/Components/Potion.cpp.s
+
 src/Components/Subject.o: src/Components/Subject.cpp.o
 .PHONY : src/Components/Subject.o
 
@@ -441,6 +465,30 @@ src/Controller/GameManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Controller/GameManager.cpp.s
 .PHONY : src/Controller/GameManager.cpp.s
 
+src/Controller/ObjectEditor.o: src/Controller/ObjectEditor.cpp.o
+.PHONY : src/Controller/ObjectEditor.o
+
+# target to build an object file
+src/Controller/ObjectEditor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Controller/ObjectEditor.cpp.o
+.PHONY : src/Controller/ObjectEditor.cpp.o
+
+src/Controller/ObjectEditor.i: src/Controller/ObjectEditor.cpp.i
+.PHONY : src/Controller/ObjectEditor.i
+
+# target to preprocess a source file
+src/Controller/ObjectEditor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Controller/ObjectEditor.cpp.i
+.PHONY : src/Controller/ObjectEditor.cpp.i
+
+src/Controller/ObjectEditor.s: src/Controller/ObjectEditor.cpp.s
+.PHONY : src/Controller/ObjectEditor.s
+
+# target to generate assembly for a file
+src/Controller/ObjectEditor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/345Project.dir/build.make CMakeFiles/345Project.dir/src/Controller/ObjectEditor.cpp.s
+.PHONY : src/Controller/ObjectEditor.cpp.s
+
 src/Static/Dice.o: src/Static/Dice.cpp.o
 .PHONY : src/Static/Dice.o
 
@@ -546,6 +594,9 @@ help:
 	@echo "... src/Components/Observer.o"
 	@echo "... src/Components/Observer.i"
 	@echo "... src/Components/Observer.s"
+	@echo "... src/Components/Potion.o"
+	@echo "... src/Components/Potion.i"
+	@echo "... src/Components/Potion.s"
 	@echo "... src/Components/Subject.o"
 	@echo "... src/Components/Subject.i"
 	@echo "... src/Components/Subject.s"
@@ -561,6 +612,9 @@ help:
 	@echo "... src/Controller/GameManager.o"
 	@echo "... src/Controller/GameManager.i"
 	@echo "... src/Controller/GameManager.s"
+	@echo "... src/Controller/ObjectEditor.o"
+	@echo "... src/Controller/ObjectEditor.i"
+	@echo "... src/Controller/ObjectEditor.s"
 	@echo "... src/Static/Dice.o"
 	@echo "... src/Static/Dice.i"
 	@echo "... src/Static/Dice.s"
