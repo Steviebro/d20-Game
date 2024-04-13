@@ -1,7 +1,7 @@
 #include "../include/Components/Character.h"
 #include "../include/Static/Functions.h"
 #include "../include/Controller/GameManager.h"
-#include "../include/Components/MapEditor.h"
+#include "../include/Controller/ObjectEditor.h"
 #include "../include/Components/MapGeneration.h"
 
 #include <iostream>
@@ -14,8 +14,6 @@ int main() {
     std::cout << "|Game Main Menu =======================\n"
     << "|1 - Start the Game!\n"
     << "|2 - Create/Edit Maps & Campaigns\n"
-    << "|3 - Other Function\n"
-    << "|4 - Other Function\n"
     << "|0 - Exit Application.\n"
     << "|======================================\n"
     << "|Your selection: ";
@@ -27,13 +25,9 @@ int main() {
       break;
       }
       case '2': {
-      MapEditor me;
+      ObjectEditor oe;
       break;
       }
-      case '3':
-      break;
-      case '4':
-      break;
       case '0':
       break;
       default:

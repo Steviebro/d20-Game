@@ -3,7 +3,7 @@
 Character GameManager::initPlayer()
 {
   char input;
-  std::cout << "GAME MANAGER ====================!\n";
+  std::cout << "=== GAME MANAGER ====================\n";
   do {
     std::cout << "Would you like to create a new Player Character or select an existing one?\n"
     << "1 - Create New Player Character!\n"
@@ -33,7 +33,7 @@ Character GameManager::createNewPlayer()
   std::string style, name;
   bool nameIsUnique;
 
-  std::cout << "CHARACTER CREATION=======================\n";
+  std::cout << "=== CHARACTER CREATION=======================\n";
   do {
     nameIsUnique = true;
     std::cout << "Please input a unique name for your character: \n";
@@ -160,6 +160,7 @@ void GameManager::startGame()
 {
   //select campaign
   std::string inputStr;
+  bool validInput = false;
   std::cout << "Please select the name of the campaign you want to play:\n";
   for (auto& campaign : campaigns) {
     for (auto& mapName : campaign) {
@@ -168,21 +169,23 @@ void GameManager::startGame()
     std::cout << "\n";
   }
   std::cout << "Your selection: ";
-  std::cin >> inputStr;
-  Functions::convertToUpper(inputStr);
+  while(!validInput) {
+    std::cin >> inputStr;
+    Functions::convertToUpper(inputStr);
 
-  for (auto& campaign : campaigns) {
-    if (inputStr == *campaign.cbegin()) {//chosen campaign is campaign
-      for (auto& mapName : campaign) {//go through each mapName and load in the map
-        for (auto map : maps) {
-          if (map.getMapName() == mapName) {//mapName from campaign found: map
-            chosenCampaign.emplace_back(map);
-            break;
+    for (auto &campaign : campaigns) {
+      if (inputStr == *campaign.cbegin()) {//chosen campaign is campaign
+        validInput = true;
+        for (auto &mapName : campaign) {//go through each mapName and load in the map
+          for (auto map : maps) {
+            if (map.getMapName() == mapName) {//mapName from campaign found: map
+              chosenCampaign.emplace_back(map);
+              break;
+            }
           }
         }
       }
     }
-    break;
   }
 
   for (auto map : chosenCampaign) {

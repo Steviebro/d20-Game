@@ -23,6 +23,7 @@ class Item{
  public:
   Item(std::string itemNameParam, std::string itemTypeParam, std::string enchantTypeParam, int enchantLevelParam) : itemName(Functions::convertToUpper(itemNameParam)), itemType(Functions::convertToUpper(itemTypeParam)){
     //Set the enchant
+    enchantType = enchantTypeParam;
     if (!initPossibleEnchants()) {
       throw std::invalid_argument("In item constructor: itemType "+itemType+" is incompatible with the enchantType "+enchantType+". Item not created!\n");
     }

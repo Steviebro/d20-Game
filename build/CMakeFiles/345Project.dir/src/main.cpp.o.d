@@ -819,6 +819,7 @@ CMakeFiles/345Project.dir/src/main.cpp.o: \
   /Users/mateb/Desktop/345Project/src/../include/Components/Armor.h \
   /Users/mateb/Desktop/345Project/src/../include/Components/Weapon.h \
   /Users/mateb/Desktop/345Project/src/../include/Components/Equipment.h \
+  /Users/mateb/Desktop/345Project/src/../include/Components/Potion.h \
   /Users/mateb/Desktop/345Project/src/../include/Static/Functions.h \
   /Users/mateb/Desktop/345Project/src/../include/Controller/GameManager.h \
   /Users/mateb/Desktop/345Project/src/../include/Controller/../Components/Character.h \
@@ -829,6 +830,7 @@ CMakeFiles/345Project.dir/src/main.cpp.o: \
   /Users/mateb/Desktop/345Project/src/../include/Components/Position.h \
   /Users/mateb/Desktop/345Project/src/../include/Controller/GameEngine.h \
   /Users/mateb/Desktop/345Project/src/../include/Controller/../Static/Dice.h \
+  /Users/mateb/Desktop/345Project/src/../include/Controller/../Components/Potion.h \
   /Users/mateb/Desktop/345Project/src/../include/Controller/Combat.h \
-  /Users/mateb/Desktop/345Project/src/../include/Components/MapEditor.h \
+  /Users/mateb/Desktop/345Project/src/../include/Controller/ObjectEditor.h \
   /Users/mateb/Desktop/345Project/src/../include/Components/MapGeneration.h

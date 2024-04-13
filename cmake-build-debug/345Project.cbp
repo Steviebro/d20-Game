@@ -106,6 +106,9 @@
 		<Unit filename="/Users/mateb/Desktop/345Project/src/Components/Observer.cpp">
 			<Option target="345Project"/>
 		</Unit>
+		<Unit filename="/Users/mateb/Desktop/345Project/src/Components/Potion.cpp">
+			<Option target="345Project"/>
+		</Unit>
 		<Unit filename="/Users/mateb/Desktop/345Project/src/Components/Subject.cpp">
 			<Option target="345Project"/>
 		</Unit>
@@ -119,6 +122,9 @@
 			<Option target="345Project"/>
 		</Unit>
 		<Unit filename="/Users/mateb/Desktop/345Project/src/Controller/GameManager.cpp">
+			<Option target="345Project"/>
+		</Unit>
+		<Unit filename="/Users/mateb/Desktop/345Project/src/Controller/ObjectEditor.cpp">
 			<Option target="345Project"/>
 		</Unit>
 		<Unit filename="/Users/mateb/Desktop/345Project/src/Static/Dice.cpp">

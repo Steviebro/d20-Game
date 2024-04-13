@@ -20,7 +20,7 @@ void GameEngine::initPlayerPosition()
   }
   map.setCell(playerPosition.first,playerPosition.second,'P');
   map.displayMap();
-  std::cout << "DISPLAYING MAP RIGHT AFTER FIRST INIT OF PLAYER ON MAP===========================================\n";
+//  std::cout << "DISPLAYING MAP RIGHT AFTER FIRST INIT OF PLAYER ON MAP===========================================\n";
 }
 
 void GameEngine::loopTurns()
@@ -41,16 +41,14 @@ void GameEngine::loopTurns()
             std::cout << "Press any key to continue: ";
             std::cin >> input;
             enemyPlayTurn(c);
-          } else {
-            std::cout << "No enemies";
           }
         }
       }
     }
     //prints at end of everyone's turn
-    for (auto& e : map.getEnemies()) {
-      std::cout << "Enemy " << e.second.getName() << " has ended in position " << e.first.first << "," << e.first.second << "\n";
-    }
+//    for (auto& e : map.getEnemies()) {
+//      std::cout << "Enemy " << e.second.getName() << " has ended in position " << e.first.first << "," << e.first.second << "\n";
+//    }
     map.displayMap();
   }
 }
@@ -66,12 +64,12 @@ void GameEngine::initiativeRoll() {
   //TOREMOVE: JUST SOME TEST PRINTS========================================
   for (auto &tp : turnPriority) {
     turnOrder.emplace_back(tp.second);
-    std::cout << "Initiative for " << tp.second->getName() << " is " << tp.first << "\n";
+//    std::cout << "Initiative for " << tp.second->getName() << " is " << tp.first << "\n";
   }
-  int order = 1;
-  for (auto &to : turnOrder) {
-    std::cout << "Character " << to->getName() << " is at position " << order++ << "\n";
-  }
+//  int order = 1;
+//  for (auto &to : turnOrder) {
+//    std::cout << "Character " << to->getName() << " is at position " << order++ << "\n";
+//  }
 }
 
 void GameEngine::playerTurn()
@@ -110,7 +108,12 @@ void GameEngine::playerMove() {
       // invalid movement, lose a turn
       if (map.getCell(playerPosition.first, playerPosition.second - 1) == '#'
           || map.getCell(playerPosition.first, playerPosition.second - 1) == 'e') {
-        std::cout << "player fell over\n";
+        std::cout << "You fell over, lose your turn\n";
+        map.displayMap();
+        return;
+      } else if (map.getCell(playerPosition.first, playerPosition.second - 1) == 'f') {
+        std::cout << "NPC: 'Hey, watch it!'\n";
+        map.displayMap();
         return;
       }
       // update position
@@ -120,7 +123,12 @@ void GameEngine::playerMove() {
       // invalid movement, lose a turn
       if (map.getCell(playerPosition.first, playerPosition.second + 1) == '#'
           || map.getCell(playerPosition.first, playerPosition.second + 1) == 'e') {
-        std::cout << "player fell over\n";
+        std::cout << "You fell over, lose your turn\n";
+        map.displayMap();
+        return;
+      } else if (map.getCell(playerPosition.first, playerPosition.second + 1) == 'f') {
+        std::cout << "NPC: 'Hey, watch it!'\n";
+        map.displayMap();
         return;
       }
       //update position
@@ -130,7 +138,12 @@ void GameEngine::playerMove() {
       // invalid movement, lose a turn
       if (map.getCell(playerPosition.first - 1, playerPosition.second) == '#'
           || map.getCell(playerPosition.first - 1, playerPosition.second) == 'e') {
-        std::cout << "player fell over\n";
+        std::cout << "You fell over, lose your turn\n";
+        map.displayMap();
+        return;
+      } else if (map.getCell(playerPosition.first - 1, playerPosition.second) == 'f') {
+        std::cout << "NPC: 'Hey, watch it!'\n";
+        map.displayMap();
         return;
       }
       // update position
@@ -140,7 +153,12 @@ void GameEngine::playerMove() {
       // invalid movement, lose a turn
       if (map.getCell(playerPosition.first + 1, playerPosition.second) == '#'
           || map.getCell(playerPosition.first + 1, playerPosition.second) == 'e') {
-        std::cout << "player fell over\n";
+        std::cout << "You fell over, lose your turn\n";
+        map.displayMap();
+        return;
+      } else if (map.getCell(playerPosition.first + 1, playerPosition.second) == 'f') {
+        std::cout << "NPC: 'Hey, watch it!'\n";
+        map.displayMap();
         return;
       }
       //update position
@@ -196,14 +214,12 @@ void GameEngine::enemyMove(Character* c) {
       int dy = playerPosition.second - enemy.first.second;
       // currently basic, does not check for obstacles
       // enemy movement algorithm
-      // player -> <1,3>
-      // enemy -> <4,6>
-      // dx = -3, dy = -3
       if (abs(dx) > abs(dy)) {
         if (dx > 0) { // move right
           // check for valid movement
           if (map.getCell(enemy.first.first+1, enemy.first.second) == '#'
-              || map.getCell(enemy.first.first+1, enemy.first.second) == 'P') {
+              || map.getCell(enemy.first.first+1, enemy.first.second) == 'P'
+              || map.getCell(enemy.first.first+1, enemy.first.second) == 'f') {
             return;
           } else {
             // update map and positions
@@ -214,7 +230,8 @@ void GameEngine::enemyMove(Character* c) {
         } else { // move left
           // check for valid movement
           if (map.getCell(enemy.first.first-1, enemy.first.second) == '#'
-              || map.getCell(enemy.first.first-1, enemy.first.second) == 'P') {
+              || map.getCell(enemy.first.first-1, enemy.first.second) == 'P'
+              || map.getCell(enemy.first.first-1, enemy.first.second) == 'f') {
             return;
           } else {
             // update map and positions
@@ -227,7 +244,8 @@ void GameEngine::enemyMove(Character* c) {
         if (dy < 0) { // move up
           // check for valid movement
           if (map.getCell(enemy.first.first, enemy.first.second-1) == '#'
-              || map.getCell(enemy.first.first, enemy.first.second-1) == 'P') {
+              || map.getCell(enemy.first.first, enemy.first.second-1) == 'P'
+              || map.getCell(enemy.first.first, enemy.first.second-1) == 'f') {
             return;
           } else {
             // update map and positions
@@ -238,7 +256,8 @@ void GameEngine::enemyMove(Character* c) {
         } else { // move down
           // check for valid movement
           if (map.getCell(enemy.first.first, enemy.first.second+1) == '#'
-              || map.getCell(enemy.first.first, enemy.first.second+1) == 'P') {
+              || map.getCell(enemy.first.first, enemy.first.second+1) == 'P'
+              || map.getCell(enemy.first.first, enemy.first.second+1) == 'f') {
             return;
           } else {
             // update map and positions
@@ -278,11 +297,11 @@ void GameEngine::playerAttack()
       }
     }
   }
-  std::cout << "Player's targetable positions are: ";
-  for (auto& target :targetablePositions) {
-    std::cout << target.first << "," << target.second << "|";
-  }
-  std::cout << "\n";
+//  std::cout << "Player's targetable positions are: ";
+//  for (auto& target :targetablePositions) {
+//    std::cout << target.first << "," << target.second << "|";
+//  }
+//  std::cout << "\n";
 
   //Check if there are enemies in range
   for (auto& enemy : map.getEnemies()) {
@@ -295,7 +314,7 @@ void GameEngine::playerAttack()
 
   //display enemies in range and prompt user to select one to attack
   bool validInput;
-  if (!targetableEnemies.empty()) {// >= 1 targetable
+  if (!targetableEnemies.empty()) { // >= 1 targetable
     std::cout << "There are enemies in range to attack!\n";
     do {
       validInput = false;
@@ -332,20 +351,12 @@ void GameEngine::playerAttack()
                 map.getChests().emplace_back(tempPair,fallenEnemyLoot);
                 map.setCell(tempPair.first,tempPair.second,'d');
 
-
-
-
-
                 //Erase the enemy from the map
                 auto itt = std::find(turnOrder.begin(), turnOrder.end(), fallenEnemy);
                 if (itt != turnOrder.end()) {
                   turnOrder.erase(itt);
                 }
                 map.getEnemies().erase(it);
-
-
-
-                //turnOrder.erase(std::remove(turnOrder.begin(), turnOrder.end(), fallenEnemy), turnOrder.end());
               }
             }
           }
@@ -375,12 +386,14 @@ void GameEngine::enemyAttack(Character* c)
       tempPairPosition.second = enemy.first.second;
     }
   }
-  std::cout << "Enemy's position is " << tempPairPosition.first << " " << tempPairPosition.second << "\n";
+  // uncomment to check enemy's position for debugging
+//  std::cout << "Enemy's position is " << tempPairPosition.first << " " << tempPairPosition.second << "\n";
 
 
   //Check range of enemy
   int range = (c->getEquipment().getWeapon()->getRange())/5;
-  std::cout << "Enemy's range is " << range << "\n";
+  // uncomment to check enemy's range for debugging
+//  std::cout << "Enemy's range is " << range << "\n";
 
 
   for (int x = tempPairPosition.first - range ; x <= tempPairPosition.first + range ; x++) {
@@ -395,17 +408,19 @@ void GameEngine::enemyAttack(Character* c)
 
     }
   }
-  std::cout << "Enemy's targetable positions are: ";
-  for (auto& target :targetablePositions) {
-    std::cout << target.first << "," << target.second << "|";
-  }
-  std::cout << "\n";
+
+  // uncomment to see targetable positions for debugging
+//  std::cout << "Enemy's targetable positions are: ";
+//  for (auto& target :targetablePositions) {
+//    std::cout << target.first << "," << target.second << "|";
+//  }
+//  std::cout << "\n";
 
   //Check for player in range
   for (auto& targetablePosition : targetablePositions) {
     if (playerPosition.first == targetablePosition.first && playerPosition.second == targetablePosition.second) {
       playerInRange = true;
-      std::cout << "Player is in range, at position " << playerPosition.first << "," << playerPosition.second << " attacking\n";
+//      std::cout << "Player is in range, at position " << playerPosition.first << "," << playerPosition.second << " attacking\n";
     }
   }
 
@@ -414,7 +429,7 @@ void GameEngine::enemyAttack(Character* c)
   if (playerInRange) {// >= 1 targetable
     bool playerDead = Combat::attack(*c, player);
     if(playerDead){
-      std::cout<< "Game Over! Womp Womp!  \n Bye.";
+      std::cout<< "Game Over! Womp Womp! \n Bye.";
       exit(1);
     }
   } else {//none targetable
@@ -430,6 +445,7 @@ void GameEngine::playerFreeActions()
     std::cout << "PLAYER FREE ACTIONS PHASE-----------------------------------------------------------------------------------------\n"
     << "1 - View your character's stats\n"
     << "2 - View your equipment\n"
+    << "3 - Take a health potion\n"
     << "0 - End your turn\n"
     << "Your selection: ";
     std::cin >> input;
@@ -442,6 +458,17 @@ void GameEngine::playerFreeActions()
     case '2':
     player.getEquipment().printEquipment();
     break;
+    case '3': {
+      if (player.getPotions() == 0) {
+        std::cout << "Out of potions!";
+        break;
+      } else {
+        Potion potion("HEAL", "POTION", "-", 0, "2d4");
+        player.healDamage(potion.takePotion());
+        player.decrementPotions();
+        break;
+      }
+    }
     case '0':
       break;
     default:
@@ -449,5 +476,3 @@ void GameEngine::playerFreeActions()
     }
   } while (input != '0');
 }
-
-// combat -> list enemies in range (i.e., based on player's weapon)

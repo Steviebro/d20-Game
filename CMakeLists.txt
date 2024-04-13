@@ -29,6 +29,8 @@ add_executable(345Project
         src/Components/Subject.cpp
         src/Components/Observer.cpp
         src/Controller/Combat.cpp
+        src/Components/Potion.cpp
+        src/Controller/ObjectEditor.cpp
 )
 
 #[[

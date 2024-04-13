@@ -24,9 +24,12 @@ public:
 
     // MUTATORS ==================================================
     int takeDamage(int damageTaken);
+    void healDamage(int damageHealed);
     void levelUp();
     int gainXP(int experienceGained);
     void setEquipment(Equipment& equipmentParam);
+    void decrementPotions();
+    void incrementPotions();
 
     // SIMPLE ACCESSORS ======================================
     std::string getName() const;
@@ -36,6 +39,7 @@ public:
     int getXP() const;
     int getScore(std::string scoreName);
     Equipment& getEquipment();
+    int getPotions();
 
     // COMPUTED ACCESSORS ======================================
     int getModifier(std::string modifierType);
@@ -71,6 +75,7 @@ private:
     int hp;
     //Inventory (TO ADD) to hold both equipped and unequipped items. We'll know which are equipped due to Decorator EquippedCharacter (TODO)
     Equipment equipment;
+    int potions = 1;
 };
 
 #endif

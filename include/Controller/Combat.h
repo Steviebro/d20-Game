@@ -5,7 +5,7 @@
 #ifndef INC_345PROJECT_INCLUDE_CONTROLLER_COMBAT_H_
 #define INC_345PROJECT_INCLUDE_CONTROLLER_COMBAT_H_
 
-#include "../Components/Character.h";
+#include "../Components/Character.h"
 class Combat {
 public:
   static bool attack(Character& attacker, Character& defender);

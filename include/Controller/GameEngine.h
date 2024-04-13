@@ -3,6 +3,7 @@
 #include "../Components/Character.h"
 #include "../Components/MapGeneration.h"
 #include "../Static/Dice.h"
+#include "../Components/Potion.h"
 #include "Combat.h"
 
 

@@ -816,4 +816,6 @@ CMakeFiles/345Project.dir/src/Components/Equipment.cpp.o: \
   /Users/mateb/Desktop/345Project/src/Components/../../include/Components/Item.h \
   /Users/mateb/Desktop/345Project/src/Components/../../include/Components/../Static/Functions.h \
   /Users/mateb/Desktop/345Project/src/Components/../../include/Components/Armor.h \
-  /Users/mateb/Desktop/345Project/src/Components/../../include/Components/Weapon.h
+  /Users/mateb/Desktop/345Project/src/Components/../../include/Components/Weapon.h \
+  /Users/mateb/Desktop/345Project/src/Components/../../include/Components/Potion.h \
+  /Users/mateb/Desktop/345Project/src/Components/../../include/Components/../Static/Dice.h

@@ -12,6 +12,7 @@
 #include "ItemBag.h"
 #include "Armor.h"
 #include "Weapon.h"
+#include "Potion.h"
 
 /**
  * @class Equipment

@@ -99,6 +99,12 @@ int Character::takeDamage(int damageTaken)
     return hp;
 }
 
+void Character::healDamage(int damageHealed){
+  if (damageHealed > 0){
+    hp += damageHealed;
+  }
+}
+
 void Character::levelUp()
 {
     if (level < 20) {
@@ -249,7 +255,6 @@ void Character::printCharacter()
     << "\nDAMAGE BONUS: " << getDamageBonus()
     << "\nPROFICIENCY BONUS: " << getProficiencyBonus();
     equipment.printEquipment();
-    std::cout << "=====================================================\n";
 }
 
 std::string Character::toString()
@@ -304,4 +309,18 @@ std::vector<Character> Character::readCharactersFromFile(std::string enemiesOrPl
         throw std::invalid_argument("Parameter enemiesOrPlayers did not pass in enemies or players, passed in: "+enemiesOrPlayers);
     }
     return result;
+}
+
+int Character::getPotions() {
+  return potions;
+}
+
+void Character::decrementPotions() {
+  potions--;
+  return;
+}
+
+void Character::incrementPotions() {
+  potions++;
+  return;
 }
