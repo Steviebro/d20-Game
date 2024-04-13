@@ -110,6 +110,7 @@ void Character::levelUp()
     if (level < 20) {
         hp += (Dice::rollDice("1d10") + getModifier("CON"));
         level++;
+        std::cout << "You leveled up!\n";
     }
     
 }

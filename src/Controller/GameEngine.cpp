@@ -357,6 +357,7 @@ void GameEngine::playerAttack()
                   turnOrder.erase(itt);
                 }
                 map.getEnemies().erase(it);
+                player.gainXP(50);
               }
             }
           }
@@ -364,7 +365,7 @@ void GameEngine::playerAttack()
       }
     } while (!validInput);
   } else {//none targetable
-      std::cout << "No targetable enemies, ending turn";
+      std::cout << "No targetable enemies, ending turn\n";
       return;
   }
 }
@@ -444,7 +445,7 @@ void GameEngine::playerFreeActions()
   do {
     std::cout << "PLAYER FREE ACTIONS PHASE-----------------------------------------------------------------------------------------\n"
     << "1 - View your character's stats\n"
-    << "2 - View your equipment\n"
+    << "2 - Edit your equipment\n"
     << "3 - Take a health potion\n"
     << "0 - End your turn\n"
     << "Your selection: ";
@@ -456,7 +457,7 @@ void GameEngine::playerFreeActions()
     player.printCharacter();
     break;
     case '2':
-    player.getEquipment().printEquipment();
+    editEquipment();
     break;
     case '3': {
       if (player.getPotions() == 0) {
@@ -475,4 +476,21 @@ void GameEngine::playerFreeActions()
       break; // continue?
     }
   } while (input != '0');
+}
+
+void GameEngine::editEquipment() {
+  std::string strInput;
+  std::cout << "Here is your current equipment:\n";
+  player.getEquipment().printEquipment();
+  do {
+    std::cout << "Enter the name of the item you want to equip (or type STOP): ";
+    std::cin >> strInput;
+    Functions::convertToUpper(strInput);
+
+    if (strInput != "STOP") {
+      player.getEquipment().equipItem(strInput);
+    }
+    std::cout << "Here is your new equipment:\n";
+    player.getEquipment().printEquipment();
+  } while (strInput != "STOP");
 }
