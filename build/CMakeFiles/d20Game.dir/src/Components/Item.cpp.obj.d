@@ -1,6 +1,6 @@
 CMakeFiles/d20Game.dir/src/Components/Item.cpp.obj: \
- C:\C++Projects\d20Game\src\Components\Item.cpp \
- C:/C++Projects/d20Game/include/Components/Item.h \
+ C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Item.cpp \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Item.h \
  C:/msys64/ucrt64/include/c++/13.2.0/string \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/requires_hosted.h \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -147,7 +147,7 @@ CMakeFiles/d20Game.dir/src/Components/Item.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/basic_file.h \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++io.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc \
- C:/C++Projects/d20Game/include/Static/Functions.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Static/Functions.h \
  C:/msys64/ucrt64/include/c++/13.2.0/algorithm \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_algo.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/algorithmfwd.h \

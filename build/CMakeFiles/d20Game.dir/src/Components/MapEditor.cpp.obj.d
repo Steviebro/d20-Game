@@ -1,6 +1,6 @@
 CMakeFiles/d20Game.dir/src/Components/MapEditor.cpp.obj: \
- C:\C++Projects\d20Game\src\Components\MapEditor.cpp \
- C:/C++Projects/d20Game/include/Components/MapEditor.h \
+ C:\CPPProjects\CPPWorkspace\d20Game\src\Components\MapEditor.cpp \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/MapEditor.h \
  C:/msys64/ucrt64/include/c++/13.2.0/string \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/requires_hosted.h \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -107,11 +107,11 @@ CMakeFiles/d20Game.dir/src/Components/MapEditor.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/allocated_ptr.h \
  C:/msys64/ucrt64/include/c++/13.2.0/ext/aligned_buffer.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/list.tcc \
- C:/C++Projects/d20Game/include/Components/MapGeneration.h \
- C:/C++Projects/d20Game/include/Components/Subject.h \
- C:/C++Projects/d20Game/include/Components/Observable.h \
- C:/C++Projects/d20Game/include/Components/Position.h \
- C:/C++Projects/d20Game/include/Components/ItemBag.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/MapGeneration.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Subject.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Observable.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Position.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/ItemBag.h \
  C:/msys64/ucrt64/include/c++/13.2.0/iostream \
  C:/msys64/ucrt64/include/c++/13.2.0/ostream \
  C:/msys64/ucrt64/include/c++/13.2.0/ios \
@@ -162,8 +162,8 @@ CMakeFiles/d20Game.dir/src/Components/MapEditor.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/sstream \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/sstream.tcc \
- C:/C++Projects/d20Game/include/Components/Item.h \
- C:/C++Projects/d20Game/include/Static/Functions.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Item.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Static/Functions.h \
  C:/msys64/ucrt64/include/c++/13.2.0/algorithm \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_algo.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/algorithmfwd.h \
@@ -172,13 +172,13 @@ CMakeFiles/d20Game.dir/src/Components/MapEditor.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_tempbuf.h \
  C:/msys64/ucrt64/include/c++/13.2.0/pstl/glue_algorithm_defs.h \
  C:/msys64/ucrt64/include/c++/13.2.0/pstl/execution_defs.h \
- C:/C++Projects/d20Game/include/Components/Armor.h \
- C:/C++Projects/d20Game/include/Components/Weapon.h \
- C:/C++Projects/d20Game/include/Components/Character.h \
- C:/C++Projects/d20Game/include/Static/Dice.h \
- C:/C++Projects/d20Game/include/Components/ItemBag.h \
- C:/C++Projects/d20Game/include/Components/Equipment.h \
- C:/C++Projects/d20Game/include/Components/Potion.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Armor.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Weapon.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Character.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Static/Dice.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/ItemBag.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Equipment.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Potion.h \
  C:/msys64/ucrt64/include/c++/13.2.0/cmath \
  C:/msys64/ucrt64/include/math.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/specfun.h \
@@ -195,11 +195,11 @@ CMakeFiles/d20Game.dir/src/Components/MapEditor.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/tr1/poly_hermite.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/tr1/poly_laguerre.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/tr1/riemann_zeta.tcc \
- C:/C++Projects/d20Game/include/Components/MapGeneration.h \
- C:/C++Projects/d20Game/include/Components/MapBuilder.h \
- C:/C++Projects/d20Game/include/Components/MapDirector.h \
- C:/C++Projects/d20Game/include/Components/MapBuilder.h \
- C:/C++Projects/d20Game/include/Components/MapConcreteBuilder.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/MapGeneration.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/MapBuilder.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/MapDirector.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/MapBuilder.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/MapConcreteBuilder.h \
  C:/msys64/ucrt64/include/c++/13.2.0/filesystem \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/fs_fwd.h \
  C:/msys64/ucrt64/include/c++/13.2.0/cstdint \

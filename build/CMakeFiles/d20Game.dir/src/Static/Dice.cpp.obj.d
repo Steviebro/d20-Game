@@ -1,6 +1,6 @@
 CMakeFiles/d20Game.dir/src/Static/Dice.cpp.obj: \
- C:\C++Projects\d20Game\src\Static\Dice.cpp \
- C:/C++Projects/d20Game/include/Static/Dice.h \
+ C:\CPPProjects\CPPWorkspace\d20Game\src\Static\Dice.cpp \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Static/Dice.h \
  C:/msys64/ucrt64/include/c++/13.2.0/string \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/requires_hosted.h \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \

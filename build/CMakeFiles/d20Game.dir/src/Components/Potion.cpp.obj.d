@@ -1,7 +1,7 @@
 CMakeFiles/d20Game.dir/src/Components/Potion.cpp.obj: \
- C:\C++Projects\d20Game\src\Components\Potion.cpp \
- C:/C++Projects/d20Game/include/Components/Potion.h \
- C:/C++Projects/d20Game/include/Components/Item.h \
+ C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Potion.cpp \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Potion.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Item.h \
  C:/msys64/ucrt64/include/c++/13.2.0/string \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/requires_hosted.h \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -148,7 +148,7 @@ CMakeFiles/d20Game.dir/src/Components/Potion.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/basic_file.h \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++io.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc \
- C:/C++Projects/d20Game/include/Static/Functions.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Static/Functions.h \
  C:/msys64/ucrt64/include/c++/13.2.0/algorithm \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_algo.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/algorithmfwd.h \
@@ -157,4 +157,4 @@ CMakeFiles/d20Game.dir/src/Components/Potion.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_tempbuf.h \
  C:/msys64/ucrt64/include/c++/13.2.0/pstl/glue_algorithm_defs.h \
  C:/msys64/ucrt64/include/c++/13.2.0/pstl/execution_defs.h \
- C:/C++Projects/d20Game/include/Static/Dice.h
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Static/Dice.h

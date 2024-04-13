@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\C++Projects\d20Game
+CMAKE_SOURCE_DIR = C:\CPPProjects\CPPWorkspace\d20Game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\C++Projects\d20Game\build
+CMAKE_BINARY_DIR = C:\CPPProjects\CPPWorkspace\d20Game\build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/d20Game.dir/depend.make
@@ -70,273 +70,273 @@ include CMakeFiles/d20Game.dir/flags.make
 
 CMakeFiles/d20Game.dir/src/main.cpp.obj: CMakeFiles/d20Game.dir/flags.make
 CMakeFiles/d20Game.dir/src/main.cpp.obj: CMakeFiles/d20Game.dir/includes_CXX.rsp
-CMakeFiles/d20Game.dir/src/main.cpp.obj: C:/C++Projects/d20Game/src/main.cpp
+CMakeFiles/d20Game.dir/src/main.cpp.obj: C:/CPPProjects/CPPWorkspace/d20Game/src/main.cpp
 CMakeFiles/d20Game.dir/src/main.cpp.obj: CMakeFiles/d20Game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\C++Projects\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/d20Game.dir/src/main.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/main.cpp.obj -MF CMakeFiles\d20Game.dir\src\main.cpp.obj.d -o CMakeFiles\d20Game.dir\src\main.cpp.obj -c C:\C++Projects\d20Game\src\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CPPProjects\CPPWorkspace\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/d20Game.dir/src/main.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/main.cpp.obj -MF CMakeFiles\d20Game.dir\src\main.cpp.obj.d -o CMakeFiles\d20Game.dir\src\main.cpp.obj -c C:\CPPProjects\CPPWorkspace\d20Game\src\main.cpp
 
 CMakeFiles/d20Game.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/d20Game.dir/src/main.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\C++Projects\d20Game\src\main.cpp > CMakeFiles\d20Game.dir\src\main.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\CPPProjects\CPPWorkspace\d20Game\src\main.cpp > CMakeFiles\d20Game.dir\src\main.cpp.i
 
 CMakeFiles/d20Game.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/d20Game.dir/src/main.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\C++Projects\d20Game\src\main.cpp -o CMakeFiles\d20Game.dir\src\main.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\CPPProjects\CPPWorkspace\d20Game\src\main.cpp -o CMakeFiles\d20Game.dir\src\main.cpp.s
 
 CMakeFiles/d20Game.dir/src/Static/Functions.cpp.obj: CMakeFiles/d20Game.dir/flags.make
 CMakeFiles/d20Game.dir/src/Static/Functions.cpp.obj: CMakeFiles/d20Game.dir/includes_CXX.rsp
-CMakeFiles/d20Game.dir/src/Static/Functions.cpp.obj: C:/C++Projects/d20Game/src/Static/Functions.cpp
+CMakeFiles/d20Game.dir/src/Static/Functions.cpp.obj: C:/CPPProjects/CPPWorkspace/d20Game/src/Static/Functions.cpp
 CMakeFiles/d20Game.dir/src/Static/Functions.cpp.obj: CMakeFiles/d20Game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\C++Projects\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/d20Game.dir/src/Static/Functions.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Static/Functions.cpp.obj -MF CMakeFiles\d20Game.dir\src\Static\Functions.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Static\Functions.cpp.obj -c C:\C++Projects\d20Game\src\Static\Functions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CPPProjects\CPPWorkspace\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/d20Game.dir/src/Static/Functions.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Static/Functions.cpp.obj -MF CMakeFiles\d20Game.dir\src\Static\Functions.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Static\Functions.cpp.obj -c C:\CPPProjects\CPPWorkspace\d20Game\src\Static\Functions.cpp
 
 CMakeFiles/d20Game.dir/src/Static/Functions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/d20Game.dir/src/Static/Functions.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\C++Projects\d20Game\src\Static\Functions.cpp > CMakeFiles\d20Game.dir\src\Static\Functions.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\CPPProjects\CPPWorkspace\d20Game\src\Static\Functions.cpp > CMakeFiles\d20Game.dir\src\Static\Functions.cpp.i
 
 CMakeFiles/d20Game.dir/src/Static/Functions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/d20Game.dir/src/Static/Functions.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\C++Projects\d20Game\src\Static\Functions.cpp -o CMakeFiles\d20Game.dir\src\Static\Functions.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\CPPProjects\CPPWorkspace\d20Game\src\Static\Functions.cpp -o CMakeFiles\d20Game.dir\src\Static\Functions.cpp.s
 
 CMakeFiles/d20Game.dir/src/Static/Dice.cpp.obj: CMakeFiles/d20Game.dir/flags.make
 CMakeFiles/d20Game.dir/src/Static/Dice.cpp.obj: CMakeFiles/d20Game.dir/includes_CXX.rsp
-CMakeFiles/d20Game.dir/src/Static/Dice.cpp.obj: C:/C++Projects/d20Game/src/Static/Dice.cpp
+CMakeFiles/d20Game.dir/src/Static/Dice.cpp.obj: C:/CPPProjects/CPPWorkspace/d20Game/src/Static/Dice.cpp
 CMakeFiles/d20Game.dir/src/Static/Dice.cpp.obj: CMakeFiles/d20Game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\C++Projects\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/d20Game.dir/src/Static/Dice.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Static/Dice.cpp.obj -MF CMakeFiles\d20Game.dir\src\Static\Dice.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Static\Dice.cpp.obj -c C:\C++Projects\d20Game\src\Static\Dice.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CPPProjects\CPPWorkspace\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/d20Game.dir/src/Static/Dice.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Static/Dice.cpp.obj -MF CMakeFiles\d20Game.dir\src\Static\Dice.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Static\Dice.cpp.obj -c C:\CPPProjects\CPPWorkspace\d20Game\src\Static\Dice.cpp
 
 CMakeFiles/d20Game.dir/src/Static/Dice.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/d20Game.dir/src/Static/Dice.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\C++Projects\d20Game\src\Static\Dice.cpp > CMakeFiles\d20Game.dir\src\Static\Dice.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\CPPProjects\CPPWorkspace\d20Game\src\Static\Dice.cpp > CMakeFiles\d20Game.dir\src\Static\Dice.cpp.i
 
 CMakeFiles/d20Game.dir/src/Static/Dice.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/d20Game.dir/src/Static/Dice.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\C++Projects\d20Game\src\Static\Dice.cpp -o CMakeFiles\d20Game.dir\src\Static\Dice.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\CPPProjects\CPPWorkspace\d20Game\src\Static\Dice.cpp -o CMakeFiles\d20Game.dir\src\Static\Dice.cpp.s
 
 CMakeFiles/d20Game.dir/src/Controller/GameManager.cpp.obj: CMakeFiles/d20Game.dir/flags.make
 CMakeFiles/d20Game.dir/src/Controller/GameManager.cpp.obj: CMakeFiles/d20Game.dir/includes_CXX.rsp
-CMakeFiles/d20Game.dir/src/Controller/GameManager.cpp.obj: C:/C++Projects/d20Game/src/Controller/GameManager.cpp
+CMakeFiles/d20Game.dir/src/Controller/GameManager.cpp.obj: C:/CPPProjects/CPPWorkspace/d20Game/src/Controller/GameManager.cpp
 CMakeFiles/d20Game.dir/src/Controller/GameManager.cpp.obj: CMakeFiles/d20Game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\C++Projects\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/d20Game.dir/src/Controller/GameManager.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Controller/GameManager.cpp.obj -MF CMakeFiles\d20Game.dir\src\Controller\GameManager.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Controller\GameManager.cpp.obj -c C:\C++Projects\d20Game\src\Controller\GameManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CPPProjects\CPPWorkspace\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/d20Game.dir/src/Controller/GameManager.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Controller/GameManager.cpp.obj -MF CMakeFiles\d20Game.dir\src\Controller\GameManager.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Controller\GameManager.cpp.obj -c C:\CPPProjects\CPPWorkspace\d20Game\src\Controller\GameManager.cpp
 
 CMakeFiles/d20Game.dir/src/Controller/GameManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/d20Game.dir/src/Controller/GameManager.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\C++Projects\d20Game\src\Controller\GameManager.cpp > CMakeFiles\d20Game.dir\src\Controller\GameManager.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\CPPProjects\CPPWorkspace\d20Game\src\Controller\GameManager.cpp > CMakeFiles\d20Game.dir\src\Controller\GameManager.cpp.i
 
 CMakeFiles/d20Game.dir/src/Controller/GameManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/d20Game.dir/src/Controller/GameManager.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\C++Projects\d20Game\src\Controller\GameManager.cpp -o CMakeFiles\d20Game.dir\src\Controller\GameManager.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\CPPProjects\CPPWorkspace\d20Game\src\Controller\GameManager.cpp -o CMakeFiles\d20Game.dir\src\Controller\GameManager.cpp.s
 
 CMakeFiles/d20Game.dir/src/Controller/GameEngine.cpp.obj: CMakeFiles/d20Game.dir/flags.make
 CMakeFiles/d20Game.dir/src/Controller/GameEngine.cpp.obj: CMakeFiles/d20Game.dir/includes_CXX.rsp
-CMakeFiles/d20Game.dir/src/Controller/GameEngine.cpp.obj: C:/C++Projects/d20Game/src/Controller/GameEngine.cpp
+CMakeFiles/d20Game.dir/src/Controller/GameEngine.cpp.obj: C:/CPPProjects/CPPWorkspace/d20Game/src/Controller/GameEngine.cpp
 CMakeFiles/d20Game.dir/src/Controller/GameEngine.cpp.obj: CMakeFiles/d20Game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\C++Projects\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/d20Game.dir/src/Controller/GameEngine.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Controller/GameEngine.cpp.obj -MF CMakeFiles\d20Game.dir\src\Controller\GameEngine.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Controller\GameEngine.cpp.obj -c C:\C++Projects\d20Game\src\Controller\GameEngine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CPPProjects\CPPWorkspace\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/d20Game.dir/src/Controller/GameEngine.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Controller/GameEngine.cpp.obj -MF CMakeFiles\d20Game.dir\src\Controller\GameEngine.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Controller\GameEngine.cpp.obj -c C:\CPPProjects\CPPWorkspace\d20Game\src\Controller\GameEngine.cpp
 
 CMakeFiles/d20Game.dir/src/Controller/GameEngine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/d20Game.dir/src/Controller/GameEngine.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\C++Projects\d20Game\src\Controller\GameEngine.cpp > CMakeFiles\d20Game.dir\src\Controller\GameEngine.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\CPPProjects\CPPWorkspace\d20Game\src\Controller\GameEngine.cpp > CMakeFiles\d20Game.dir\src\Controller\GameEngine.cpp.i
 
 CMakeFiles/d20Game.dir/src/Controller/GameEngine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/d20Game.dir/src/Controller/GameEngine.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\C++Projects\d20Game\src\Controller\GameEngine.cpp -o CMakeFiles\d20Game.dir\src\Controller\GameEngine.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\CPPProjects\CPPWorkspace\d20Game\src\Controller\GameEngine.cpp -o CMakeFiles\d20Game.dir\src\Controller\GameEngine.cpp.s
 
 CMakeFiles/d20Game.dir/src/Components/Character.cpp.obj: CMakeFiles/d20Game.dir/flags.make
 CMakeFiles/d20Game.dir/src/Components/Character.cpp.obj: CMakeFiles/d20Game.dir/includes_CXX.rsp
-CMakeFiles/d20Game.dir/src/Components/Character.cpp.obj: C:/C++Projects/d20Game/src/Components/Character.cpp
+CMakeFiles/d20Game.dir/src/Components/Character.cpp.obj: C:/CPPProjects/CPPWorkspace/d20Game/src/Components/Character.cpp
 CMakeFiles/d20Game.dir/src/Components/Character.cpp.obj: CMakeFiles/d20Game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\C++Projects\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/d20Game.dir/src/Components/Character.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Components/Character.cpp.obj -MF CMakeFiles\d20Game.dir\src\Components\Character.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Components\Character.cpp.obj -c C:\C++Projects\d20Game\src\Components\Character.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CPPProjects\CPPWorkspace\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/d20Game.dir/src/Components/Character.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Components/Character.cpp.obj -MF CMakeFiles\d20Game.dir\src\Components\Character.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Components\Character.cpp.obj -c C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Character.cpp
 
 CMakeFiles/d20Game.dir/src/Components/Character.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/d20Game.dir/src/Components/Character.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\C++Projects\d20Game\src\Components\Character.cpp > CMakeFiles\d20Game.dir\src\Components\Character.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Character.cpp > CMakeFiles\d20Game.dir\src\Components\Character.cpp.i
 
 CMakeFiles/d20Game.dir/src/Components/Character.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/d20Game.dir/src/Components/Character.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\C++Projects\d20Game\src\Components\Character.cpp -o CMakeFiles\d20Game.dir\src\Components\Character.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Character.cpp -o CMakeFiles\d20Game.dir\src\Components\Character.cpp.s
 
 CMakeFiles/d20Game.dir/src/Components/Item.cpp.obj: CMakeFiles/d20Game.dir/flags.make
 CMakeFiles/d20Game.dir/src/Components/Item.cpp.obj: CMakeFiles/d20Game.dir/includes_CXX.rsp
-CMakeFiles/d20Game.dir/src/Components/Item.cpp.obj: C:/C++Projects/d20Game/src/Components/Item.cpp
+CMakeFiles/d20Game.dir/src/Components/Item.cpp.obj: C:/CPPProjects/CPPWorkspace/d20Game/src/Components/Item.cpp
 CMakeFiles/d20Game.dir/src/Components/Item.cpp.obj: CMakeFiles/d20Game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\C++Projects\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/d20Game.dir/src/Components/Item.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Components/Item.cpp.obj -MF CMakeFiles\d20Game.dir\src\Components\Item.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Components\Item.cpp.obj -c C:\C++Projects\d20Game\src\Components\Item.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CPPProjects\CPPWorkspace\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/d20Game.dir/src/Components/Item.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Components/Item.cpp.obj -MF CMakeFiles\d20Game.dir\src\Components\Item.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Components\Item.cpp.obj -c C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Item.cpp
 
 CMakeFiles/d20Game.dir/src/Components/Item.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/d20Game.dir/src/Components/Item.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\C++Projects\d20Game\src\Components\Item.cpp > CMakeFiles\d20Game.dir\src\Components\Item.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Item.cpp > CMakeFiles\d20Game.dir\src\Components\Item.cpp.i
 
 CMakeFiles/d20Game.dir/src/Components/Item.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/d20Game.dir/src/Components/Item.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\C++Projects\d20Game\src\Components\Item.cpp -o CMakeFiles\d20Game.dir\src\Components\Item.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Item.cpp -o CMakeFiles\d20Game.dir\src\Components\Item.cpp.s
 
 CMakeFiles/d20Game.dir/src/Components/Weapon.cpp.obj: CMakeFiles/d20Game.dir/flags.make
 CMakeFiles/d20Game.dir/src/Components/Weapon.cpp.obj: CMakeFiles/d20Game.dir/includes_CXX.rsp
-CMakeFiles/d20Game.dir/src/Components/Weapon.cpp.obj: C:/C++Projects/d20Game/src/Components/Weapon.cpp
+CMakeFiles/d20Game.dir/src/Components/Weapon.cpp.obj: C:/CPPProjects/CPPWorkspace/d20Game/src/Components/Weapon.cpp
 CMakeFiles/d20Game.dir/src/Components/Weapon.cpp.obj: CMakeFiles/d20Game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\C++Projects\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/d20Game.dir/src/Components/Weapon.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Components/Weapon.cpp.obj -MF CMakeFiles\d20Game.dir\src\Components\Weapon.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Components\Weapon.cpp.obj -c C:\C++Projects\d20Game\src\Components\Weapon.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CPPProjects\CPPWorkspace\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/d20Game.dir/src/Components/Weapon.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Components/Weapon.cpp.obj -MF CMakeFiles\d20Game.dir\src\Components\Weapon.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Components\Weapon.cpp.obj -c C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Weapon.cpp
 
 CMakeFiles/d20Game.dir/src/Components/Weapon.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/d20Game.dir/src/Components/Weapon.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\C++Projects\d20Game\src\Components\Weapon.cpp > CMakeFiles\d20Game.dir\src\Components\Weapon.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Weapon.cpp > CMakeFiles\d20Game.dir\src\Components\Weapon.cpp.i
 
 CMakeFiles/d20Game.dir/src/Components/Weapon.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/d20Game.dir/src/Components/Weapon.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\C++Projects\d20Game\src\Components\Weapon.cpp -o CMakeFiles\d20Game.dir\src\Components\Weapon.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Weapon.cpp -o CMakeFiles\d20Game.dir\src\Components\Weapon.cpp.s
 
 CMakeFiles/d20Game.dir/src/Components/Armor.cpp.obj: CMakeFiles/d20Game.dir/flags.make
 CMakeFiles/d20Game.dir/src/Components/Armor.cpp.obj: CMakeFiles/d20Game.dir/includes_CXX.rsp
-CMakeFiles/d20Game.dir/src/Components/Armor.cpp.obj: C:/C++Projects/d20Game/src/Components/Armor.cpp
+CMakeFiles/d20Game.dir/src/Components/Armor.cpp.obj: C:/CPPProjects/CPPWorkspace/d20Game/src/Components/Armor.cpp
 CMakeFiles/d20Game.dir/src/Components/Armor.cpp.obj: CMakeFiles/d20Game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\C++Projects\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/d20Game.dir/src/Components/Armor.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Components/Armor.cpp.obj -MF CMakeFiles\d20Game.dir\src\Components\Armor.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Components\Armor.cpp.obj -c C:\C++Projects\d20Game\src\Components\Armor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CPPProjects\CPPWorkspace\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/d20Game.dir/src/Components/Armor.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Components/Armor.cpp.obj -MF CMakeFiles\d20Game.dir\src\Components\Armor.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Components\Armor.cpp.obj -c C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Armor.cpp
 
 CMakeFiles/d20Game.dir/src/Components/Armor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/d20Game.dir/src/Components/Armor.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\C++Projects\d20Game\src\Components\Armor.cpp > CMakeFiles\d20Game.dir\src\Components\Armor.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Armor.cpp > CMakeFiles\d20Game.dir\src\Components\Armor.cpp.i
 
 CMakeFiles/d20Game.dir/src/Components/Armor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/d20Game.dir/src/Components/Armor.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\C++Projects\d20Game\src\Components\Armor.cpp -o CMakeFiles\d20Game.dir\src\Components\Armor.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Armor.cpp -o CMakeFiles\d20Game.dir\src\Components\Armor.cpp.s
 
 CMakeFiles/d20Game.dir/src/Components/ItemBag.cpp.obj: CMakeFiles/d20Game.dir/flags.make
 CMakeFiles/d20Game.dir/src/Components/ItemBag.cpp.obj: CMakeFiles/d20Game.dir/includes_CXX.rsp
-CMakeFiles/d20Game.dir/src/Components/ItemBag.cpp.obj: C:/C++Projects/d20Game/src/Components/ItemBag.cpp
+CMakeFiles/d20Game.dir/src/Components/ItemBag.cpp.obj: C:/CPPProjects/CPPWorkspace/d20Game/src/Components/ItemBag.cpp
 CMakeFiles/d20Game.dir/src/Components/ItemBag.cpp.obj: CMakeFiles/d20Game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\C++Projects\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/d20Game.dir/src/Components/ItemBag.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Components/ItemBag.cpp.obj -MF CMakeFiles\d20Game.dir\src\Components\ItemBag.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Components\ItemBag.cpp.obj -c C:\C++Projects\d20Game\src\Components\ItemBag.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CPPProjects\CPPWorkspace\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/d20Game.dir/src/Components/ItemBag.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Components/ItemBag.cpp.obj -MF CMakeFiles\d20Game.dir\src\Components\ItemBag.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Components\ItemBag.cpp.obj -c C:\CPPProjects\CPPWorkspace\d20Game\src\Components\ItemBag.cpp
 
 CMakeFiles/d20Game.dir/src/Components/ItemBag.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/d20Game.dir/src/Components/ItemBag.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\C++Projects\d20Game\src\Components\ItemBag.cpp > CMakeFiles\d20Game.dir\src\Components\ItemBag.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\CPPProjects\CPPWorkspace\d20Game\src\Components\ItemBag.cpp > CMakeFiles\d20Game.dir\src\Components\ItemBag.cpp.i
 
 CMakeFiles/d20Game.dir/src/Components/ItemBag.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/d20Game.dir/src/Components/ItemBag.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\C++Projects\d20Game\src\Components\ItemBag.cpp -o CMakeFiles\d20Game.dir\src\Components\ItemBag.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\CPPProjects\CPPWorkspace\d20Game\src\Components\ItemBag.cpp -o CMakeFiles\d20Game.dir\src\Components\ItemBag.cpp.s
 
 CMakeFiles/d20Game.dir/src/Components/Equipment.cpp.obj: CMakeFiles/d20Game.dir/flags.make
 CMakeFiles/d20Game.dir/src/Components/Equipment.cpp.obj: CMakeFiles/d20Game.dir/includes_CXX.rsp
-CMakeFiles/d20Game.dir/src/Components/Equipment.cpp.obj: C:/C++Projects/d20Game/src/Components/Equipment.cpp
+CMakeFiles/d20Game.dir/src/Components/Equipment.cpp.obj: C:/CPPProjects/CPPWorkspace/d20Game/src/Components/Equipment.cpp
 CMakeFiles/d20Game.dir/src/Components/Equipment.cpp.obj: CMakeFiles/d20Game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\C++Projects\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/d20Game.dir/src/Components/Equipment.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Components/Equipment.cpp.obj -MF CMakeFiles\d20Game.dir\src\Components\Equipment.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Components\Equipment.cpp.obj -c C:\C++Projects\d20Game\src\Components\Equipment.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CPPProjects\CPPWorkspace\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/d20Game.dir/src/Components/Equipment.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Components/Equipment.cpp.obj -MF CMakeFiles\d20Game.dir\src\Components\Equipment.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Components\Equipment.cpp.obj -c C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Equipment.cpp
 
 CMakeFiles/d20Game.dir/src/Components/Equipment.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/d20Game.dir/src/Components/Equipment.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\C++Projects\d20Game\src\Components\Equipment.cpp > CMakeFiles\d20Game.dir\src\Components\Equipment.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Equipment.cpp > CMakeFiles\d20Game.dir\src\Components\Equipment.cpp.i
 
 CMakeFiles/d20Game.dir/src/Components/Equipment.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/d20Game.dir/src/Components/Equipment.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\C++Projects\d20Game\src\Components\Equipment.cpp -o CMakeFiles\d20Game.dir\src\Components\Equipment.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Equipment.cpp -o CMakeFiles\d20Game.dir\src\Components\Equipment.cpp.s
 
 CMakeFiles/d20Game.dir/src/Components/MapGeneration.cpp.obj: CMakeFiles/d20Game.dir/flags.make
 CMakeFiles/d20Game.dir/src/Components/MapGeneration.cpp.obj: CMakeFiles/d20Game.dir/includes_CXX.rsp
-CMakeFiles/d20Game.dir/src/Components/MapGeneration.cpp.obj: C:/C++Projects/d20Game/src/Components/MapGeneration.cpp
+CMakeFiles/d20Game.dir/src/Components/MapGeneration.cpp.obj: C:/CPPProjects/CPPWorkspace/d20Game/src/Components/MapGeneration.cpp
 CMakeFiles/d20Game.dir/src/Components/MapGeneration.cpp.obj: CMakeFiles/d20Game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\C++Projects\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/d20Game.dir/src/Components/MapGeneration.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Components/MapGeneration.cpp.obj -MF CMakeFiles\d20Game.dir\src\Components\MapGeneration.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Components\MapGeneration.cpp.obj -c C:\C++Projects\d20Game\src\Components\MapGeneration.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CPPProjects\CPPWorkspace\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/d20Game.dir/src/Components/MapGeneration.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Components/MapGeneration.cpp.obj -MF CMakeFiles\d20Game.dir\src\Components\MapGeneration.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Components\MapGeneration.cpp.obj -c C:\CPPProjects\CPPWorkspace\d20Game\src\Components\MapGeneration.cpp
 
 CMakeFiles/d20Game.dir/src/Components/MapGeneration.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/d20Game.dir/src/Components/MapGeneration.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\C++Projects\d20Game\src\Components\MapGeneration.cpp > CMakeFiles\d20Game.dir\src\Components\MapGeneration.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\CPPProjects\CPPWorkspace\d20Game\src\Components\MapGeneration.cpp > CMakeFiles\d20Game.dir\src\Components\MapGeneration.cpp.i
 
 CMakeFiles/d20Game.dir/src/Components/MapGeneration.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/d20Game.dir/src/Components/MapGeneration.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\C++Projects\d20Game\src\Components\MapGeneration.cpp -o CMakeFiles\d20Game.dir\src\Components\MapGeneration.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\CPPProjects\CPPWorkspace\d20Game\src\Components\MapGeneration.cpp -o CMakeFiles\d20Game.dir\src\Components\MapGeneration.cpp.s
 
 CMakeFiles/d20Game.dir/src/Components/MapEditor.cpp.obj: CMakeFiles/d20Game.dir/flags.make
 CMakeFiles/d20Game.dir/src/Components/MapEditor.cpp.obj: CMakeFiles/d20Game.dir/includes_CXX.rsp
-CMakeFiles/d20Game.dir/src/Components/MapEditor.cpp.obj: C:/C++Projects/d20Game/src/Components/MapEditor.cpp
+CMakeFiles/d20Game.dir/src/Components/MapEditor.cpp.obj: C:/CPPProjects/CPPWorkspace/d20Game/src/Components/MapEditor.cpp
 CMakeFiles/d20Game.dir/src/Components/MapEditor.cpp.obj: CMakeFiles/d20Game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\C++Projects\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/d20Game.dir/src/Components/MapEditor.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Components/MapEditor.cpp.obj -MF CMakeFiles\d20Game.dir\src\Components\MapEditor.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Components\MapEditor.cpp.obj -c C:\C++Projects\d20Game\src\Components\MapEditor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CPPProjects\CPPWorkspace\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/d20Game.dir/src/Components/MapEditor.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Components/MapEditor.cpp.obj -MF CMakeFiles\d20Game.dir\src\Components\MapEditor.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Components\MapEditor.cpp.obj -c C:\CPPProjects\CPPWorkspace\d20Game\src\Components\MapEditor.cpp
 
 CMakeFiles/d20Game.dir/src/Components/MapEditor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/d20Game.dir/src/Components/MapEditor.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\C++Projects\d20Game\src\Components\MapEditor.cpp > CMakeFiles\d20Game.dir\src\Components\MapEditor.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\CPPProjects\CPPWorkspace\d20Game\src\Components\MapEditor.cpp > CMakeFiles\d20Game.dir\src\Components\MapEditor.cpp.i
 
 CMakeFiles/d20Game.dir/src/Components/MapEditor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/d20Game.dir/src/Components/MapEditor.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\C++Projects\d20Game\src\Components\MapEditor.cpp -o CMakeFiles\d20Game.dir\src\Components\MapEditor.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\CPPProjects\CPPWorkspace\d20Game\src\Components\MapEditor.cpp -o CMakeFiles\d20Game.dir\src\Components\MapEditor.cpp.s
 
 CMakeFiles/d20Game.dir/src/Components/Subject.cpp.obj: CMakeFiles/d20Game.dir/flags.make
 CMakeFiles/d20Game.dir/src/Components/Subject.cpp.obj: CMakeFiles/d20Game.dir/includes_CXX.rsp
-CMakeFiles/d20Game.dir/src/Components/Subject.cpp.obj: C:/C++Projects/d20Game/src/Components/Subject.cpp
+CMakeFiles/d20Game.dir/src/Components/Subject.cpp.obj: C:/CPPProjects/CPPWorkspace/d20Game/src/Components/Subject.cpp
 CMakeFiles/d20Game.dir/src/Components/Subject.cpp.obj: CMakeFiles/d20Game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\C++Projects\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/d20Game.dir/src/Components/Subject.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Components/Subject.cpp.obj -MF CMakeFiles\d20Game.dir\src\Components\Subject.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Components\Subject.cpp.obj -c C:\C++Projects\d20Game\src\Components\Subject.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CPPProjects\CPPWorkspace\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/d20Game.dir/src/Components/Subject.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Components/Subject.cpp.obj -MF CMakeFiles\d20Game.dir\src\Components\Subject.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Components\Subject.cpp.obj -c C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Subject.cpp
 
 CMakeFiles/d20Game.dir/src/Components/Subject.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/d20Game.dir/src/Components/Subject.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\C++Projects\d20Game\src\Components\Subject.cpp > CMakeFiles\d20Game.dir\src\Components\Subject.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Subject.cpp > CMakeFiles\d20Game.dir\src\Components\Subject.cpp.i
 
 CMakeFiles/d20Game.dir/src/Components/Subject.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/d20Game.dir/src/Components/Subject.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\C++Projects\d20Game\src\Components\Subject.cpp -o CMakeFiles\d20Game.dir\src\Components\Subject.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Subject.cpp -o CMakeFiles\d20Game.dir\src\Components\Subject.cpp.s
 
 CMakeFiles/d20Game.dir/src/Components/Observer.cpp.obj: CMakeFiles/d20Game.dir/flags.make
 CMakeFiles/d20Game.dir/src/Components/Observer.cpp.obj: CMakeFiles/d20Game.dir/includes_CXX.rsp
-CMakeFiles/d20Game.dir/src/Components/Observer.cpp.obj: C:/C++Projects/d20Game/src/Components/Observer.cpp
+CMakeFiles/d20Game.dir/src/Components/Observer.cpp.obj: C:/CPPProjects/CPPWorkspace/d20Game/src/Components/Observer.cpp
 CMakeFiles/d20Game.dir/src/Components/Observer.cpp.obj: CMakeFiles/d20Game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\C++Projects\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/d20Game.dir/src/Components/Observer.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Components/Observer.cpp.obj -MF CMakeFiles\d20Game.dir\src\Components\Observer.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Components\Observer.cpp.obj -c C:\C++Projects\d20Game\src\Components\Observer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CPPProjects\CPPWorkspace\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/d20Game.dir/src/Components/Observer.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Components/Observer.cpp.obj -MF CMakeFiles\d20Game.dir\src\Components\Observer.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Components\Observer.cpp.obj -c C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Observer.cpp
 
 CMakeFiles/d20Game.dir/src/Components/Observer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/d20Game.dir/src/Components/Observer.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\C++Projects\d20Game\src\Components\Observer.cpp > CMakeFiles\d20Game.dir\src\Components\Observer.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Observer.cpp > CMakeFiles\d20Game.dir\src\Components\Observer.cpp.i
 
 CMakeFiles/d20Game.dir/src/Components/Observer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/d20Game.dir/src/Components/Observer.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\C++Projects\d20Game\src\Components\Observer.cpp -o CMakeFiles\d20Game.dir\src\Components\Observer.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Observer.cpp -o CMakeFiles\d20Game.dir\src\Components\Observer.cpp.s
 
 CMakeFiles/d20Game.dir/src/Controller/Combat.cpp.obj: CMakeFiles/d20Game.dir/flags.make
 CMakeFiles/d20Game.dir/src/Controller/Combat.cpp.obj: CMakeFiles/d20Game.dir/includes_CXX.rsp
-CMakeFiles/d20Game.dir/src/Controller/Combat.cpp.obj: C:/C++Projects/d20Game/src/Controller/Combat.cpp
+CMakeFiles/d20Game.dir/src/Controller/Combat.cpp.obj: C:/CPPProjects/CPPWorkspace/d20Game/src/Controller/Combat.cpp
 CMakeFiles/d20Game.dir/src/Controller/Combat.cpp.obj: CMakeFiles/d20Game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\C++Projects\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/d20Game.dir/src/Controller/Combat.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Controller/Combat.cpp.obj -MF CMakeFiles\d20Game.dir\src\Controller\Combat.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Controller\Combat.cpp.obj -c C:\C++Projects\d20Game\src\Controller\Combat.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CPPProjects\CPPWorkspace\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/d20Game.dir/src/Controller/Combat.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Controller/Combat.cpp.obj -MF CMakeFiles\d20Game.dir\src\Controller\Combat.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Controller\Combat.cpp.obj -c C:\CPPProjects\CPPWorkspace\d20Game\src\Controller\Combat.cpp
 
 CMakeFiles/d20Game.dir/src/Controller/Combat.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/d20Game.dir/src/Controller/Combat.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\C++Projects\d20Game\src\Controller\Combat.cpp > CMakeFiles\d20Game.dir\src\Controller\Combat.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\CPPProjects\CPPWorkspace\d20Game\src\Controller\Combat.cpp > CMakeFiles\d20Game.dir\src\Controller\Combat.cpp.i
 
 CMakeFiles/d20Game.dir/src/Controller/Combat.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/d20Game.dir/src/Controller/Combat.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\C++Projects\d20Game\src\Controller\Combat.cpp -o CMakeFiles\d20Game.dir\src\Controller\Combat.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\CPPProjects\CPPWorkspace\d20Game\src\Controller\Combat.cpp -o CMakeFiles\d20Game.dir\src\Controller\Combat.cpp.s
 
 CMakeFiles/d20Game.dir/src/Components/Potion.cpp.obj: CMakeFiles/d20Game.dir/flags.make
 CMakeFiles/d20Game.dir/src/Components/Potion.cpp.obj: CMakeFiles/d20Game.dir/includes_CXX.rsp
-CMakeFiles/d20Game.dir/src/Components/Potion.cpp.obj: C:/C++Projects/d20Game/src/Components/Potion.cpp
+CMakeFiles/d20Game.dir/src/Components/Potion.cpp.obj: C:/CPPProjects/CPPWorkspace/d20Game/src/Components/Potion.cpp
 CMakeFiles/d20Game.dir/src/Components/Potion.cpp.obj: CMakeFiles/d20Game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\C++Projects\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/d20Game.dir/src/Components/Potion.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Components/Potion.cpp.obj -MF CMakeFiles\d20Game.dir\src\Components\Potion.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Components\Potion.cpp.obj -c C:\C++Projects\d20Game\src\Components\Potion.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CPPProjects\CPPWorkspace\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/d20Game.dir/src/Components/Potion.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Components/Potion.cpp.obj -MF CMakeFiles\d20Game.dir\src\Components\Potion.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Components\Potion.cpp.obj -c C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Potion.cpp
 
 CMakeFiles/d20Game.dir/src/Components/Potion.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/d20Game.dir/src/Components/Potion.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\C++Projects\d20Game\src\Components\Potion.cpp > CMakeFiles\d20Game.dir\src\Components\Potion.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Potion.cpp > CMakeFiles\d20Game.dir\src\Components\Potion.cpp.i
 
 CMakeFiles/d20Game.dir/src/Components/Potion.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/d20Game.dir/src/Components/Potion.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\C++Projects\d20Game\src\Components\Potion.cpp -o CMakeFiles\d20Game.dir\src\Components\Potion.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Potion.cpp -o CMakeFiles\d20Game.dir\src\Components\Potion.cpp.s
 
 CMakeFiles/d20Game.dir/src/Controller/ObjectEditor.cpp.obj: CMakeFiles/d20Game.dir/flags.make
 CMakeFiles/d20Game.dir/src/Controller/ObjectEditor.cpp.obj: CMakeFiles/d20Game.dir/includes_CXX.rsp
-CMakeFiles/d20Game.dir/src/Controller/ObjectEditor.cpp.obj: C:/C++Projects/d20Game/src/Controller/ObjectEditor.cpp
+CMakeFiles/d20Game.dir/src/Controller/ObjectEditor.cpp.obj: C:/CPPProjects/CPPWorkspace/d20Game/src/Controller/ObjectEditor.cpp
 CMakeFiles/d20Game.dir/src/Controller/ObjectEditor.cpp.obj: CMakeFiles/d20Game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\C++Projects\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/d20Game.dir/src/Controller/ObjectEditor.cpp.obj"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Controller/ObjectEditor.cpp.obj -MF CMakeFiles\d20Game.dir\src\Controller\ObjectEditor.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Controller\ObjectEditor.cpp.obj -c C:\C++Projects\d20Game\src\Controller\ObjectEditor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\CPPProjects\CPPWorkspace\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/d20Game.dir/src/Controller/ObjectEditor.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/d20Game.dir/src/Controller/ObjectEditor.cpp.obj -MF CMakeFiles\d20Game.dir\src\Controller\ObjectEditor.cpp.obj.d -o CMakeFiles\d20Game.dir\src\Controller\ObjectEditor.cpp.obj -c C:\CPPProjects\CPPWorkspace\d20Game\src\Controller\ObjectEditor.cpp
 
 CMakeFiles/d20Game.dir/src/Controller/ObjectEditor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/d20Game.dir/src/Controller/ObjectEditor.cpp.i"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\C++Projects\d20Game\src\Controller\ObjectEditor.cpp > CMakeFiles\d20Game.dir\src\Controller\ObjectEditor.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\CPPProjects\CPPWorkspace\d20Game\src\Controller\ObjectEditor.cpp > CMakeFiles\d20Game.dir\src\Controller\ObjectEditor.cpp.i
 
 CMakeFiles/d20Game.dir/src/Controller/ObjectEditor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/d20Game.dir/src/Controller/ObjectEditor.cpp.s"
-	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\C++Projects\d20Game\src\Controller\ObjectEditor.cpp -o CMakeFiles\d20Game.dir\src\Controller\ObjectEditor.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\CPPProjects\CPPWorkspace\d20Game\src\Controller\ObjectEditor.cpp -o CMakeFiles\d20Game.dir\src\Controller\ObjectEditor.cpp.s
 
 # Object files for target d20Game
 d20Game_OBJECTS = \
@@ -384,7 +384,7 @@ d20Game.exe: CMakeFiles/d20Game.dir/build.make
 d20Game.exe: CMakeFiles/d20Game.dir/linkLibs.rsp
 d20Game.exe: CMakeFiles/d20Game.dir/objects1.rsp
 d20Game.exe: CMakeFiles/d20Game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\C++Projects\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable d20Game.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\CPPProjects\CPPWorkspace\d20Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable d20Game.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\d20Game.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -396,6 +396,6 @@ CMakeFiles/d20Game.dir/clean:
 .PHONY : CMakeFiles/d20Game.dir/clean
 
 CMakeFiles/d20Game.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\C++Projects\d20Game C:\C++Projects\d20Game C:\C++Projects\d20Game\build C:\C++Projects\d20Game\build C:\C++Projects\d20Game\build\CMakeFiles\d20Game.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\CPPProjects\CPPWorkspace\d20Game C:\CPPProjects\CPPWorkspace\d20Game C:\CPPProjects\CPPWorkspace\d20Game\build C:\CPPProjects\CPPWorkspace\d20Game\build C:\CPPProjects\CPPWorkspace\d20Game\build\CMakeFiles\d20Game.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/d20Game.dir/depend
 

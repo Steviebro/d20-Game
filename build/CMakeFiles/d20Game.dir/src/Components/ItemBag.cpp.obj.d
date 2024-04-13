@@ -1,6 +1,6 @@
 CMakeFiles/d20Game.dir/src/Components/ItemBag.cpp.obj: \
- C:\C++Projects\d20Game\src\Components\ItemBag.cpp \
- C:/C++Projects/d20Game/include/Components/ItemBag.h \
+ C:\CPPProjects\CPPWorkspace\d20Game\src\Components\ItemBag.cpp \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/ItemBag.h \
  C:/msys64/ucrt64/include/c++/13.2.0/iostream \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/requires_hosted.h \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -142,13 +142,13 @@ CMakeFiles/d20Game.dir/src/Components/ItemBag.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/sstream \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/sstream.tcc \
- C:/C++Projects/d20Game/include/Components/Item.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Item.h \
  C:/msys64/ucrt64/include/c++/13.2.0/vector \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_uninitialized.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_vector.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_bvector.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/vector.tcc \
- C:/C++Projects/d20Game/include/Static/Functions.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Static/Functions.h \
  C:/msys64/ucrt64/include/c++/13.2.0/algorithm \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_algo.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/algorithmfwd.h \
@@ -157,5 +157,5 @@ CMakeFiles/d20Game.dir/src/Components/ItemBag.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_tempbuf.h \
  C:/msys64/ucrt64/include/c++/13.2.0/pstl/glue_algorithm_defs.h \
  C:/msys64/ucrt64/include/c++/13.2.0/pstl/execution_defs.h \
- C:/C++Projects/d20Game/include/Components/Armor.h \
- C:/C++Projects/d20Game/include/Components/Weapon.h
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Armor.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Weapon.h

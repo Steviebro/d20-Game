@@ -1,6 +1,6 @@
 CMakeFiles/d20Game.dir/src/Static/Functions.cpp.obj: \
- C:\C++Projects\d20Game\src\Static\Functions.cpp \
- C:/C++Projects/d20Game/include/Static/Functions.h \
+ C:\CPPProjects\CPPWorkspace\d20Game\src\Static\Functions.cpp \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Static/Functions.h \
  C:/msys64/ucrt64/include/c++/13.2.0/algorithm \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_algobase.h \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \

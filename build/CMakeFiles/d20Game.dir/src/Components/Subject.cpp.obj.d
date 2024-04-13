@@ -1,7 +1,7 @@
 CMakeFiles/d20Game.dir/src/Components/Subject.cpp.obj: \
- C:\C++Projects\d20Game\src\Components\Subject.cpp \
- C:/C++Projects/d20Game/include/Components/Subject.h \
- C:/C++Projects/d20Game/include/Components/Observable.h \
+ C:\CPPProjects\CPPWorkspace\d20Game\src\Components\Subject.cpp \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Subject.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Observable.h \
  C:/msys64/ucrt64/include/c++/13.2.0/list \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/requires_hosted.h \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -55,4 +55,4 @@ CMakeFiles/d20Game.dir/src/Components/Subject.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/uses_allocator_args.h \
  C:/msys64/ucrt64/include/c++/13.2.0/tuple \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/invoke.h \
- C:/C++Projects/d20Game/include/Components/Observer.h
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Observer.h

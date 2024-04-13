@@ -1,8 +1,8 @@
 CMakeFiles/d20Game.dir/src/Controller/GameManager.cpp.obj: \
- C:\C++Projects\d20Game\src\Controller\GameManager.cpp \
- C:/C++Projects/d20Game/include/Controller/GameManager.h \
- C:/C++Projects/d20Game/include/Components/Character.h \
- C:/C++Projects/d20Game/include/Static/Functions.h \
+ C:\CPPProjects\CPPWorkspace\d20Game\src\Controller\GameManager.cpp \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Controller/GameManager.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Character.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Static/Functions.h \
  C:/msys64/ucrt64/include/c++/13.2.0/algorithm \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_algobase.h \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -104,8 +104,8 @@ CMakeFiles/d20Game.dir/src/Controller/GameManager.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/uses_allocator.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/uses_allocator_args.h \
  C:/msys64/ucrt64/include/c++/13.2.0/tuple \
- C:/C++Projects/d20Game/include/Static/Dice.h \
- C:/C++Projects/d20Game/include/Components/ItemBag.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Static/Dice.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/ItemBag.h \
  C:/msys64/ucrt64/include/c++/13.2.0/iostream \
  C:/msys64/ucrt64/include/c++/13.2.0/ostream \
  C:/msys64/ucrt64/include/c++/13.2.0/ios \
@@ -156,16 +156,16 @@ CMakeFiles/d20Game.dir/src/Controller/GameManager.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/sstream \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/sstream.tcc \
- C:/C++Projects/d20Game/include/Components/Item.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Item.h \
  C:/msys64/ucrt64/include/c++/13.2.0/vector \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_uninitialized.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_vector.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_bvector.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/vector.tcc \
- C:/C++Projects/d20Game/include/Components/Armor.h \
- C:/C++Projects/d20Game/include/Components/Weapon.h \
- C:/C++Projects/d20Game/include/Components/Equipment.h \
- C:/C++Projects/d20Game/include/Components/Potion.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Armor.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Weapon.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Equipment.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Potion.h \
  C:/msys64/ucrt64/include/c++/13.2.0/cmath \
  C:/msys64/ucrt64/include/math.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/specfun.h \
@@ -182,18 +182,18 @@ CMakeFiles/d20Game.dir/src/Controller/GameManager.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/tr1/poly_hermite.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/tr1/poly_laguerre.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/tr1/riemann_zeta.tcc \
- C:/C++Projects/d20Game/include/Components/MapGeneration.h \
- C:/C++Projects/d20Game/include/Components/Subject.h \
- C:/C++Projects/d20Game/include/Components/Observable.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/MapGeneration.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Subject.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Observable.h \
  C:/msys64/ucrt64/include/c++/13.2.0/list \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_list.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/allocated_ptr.h \
  C:/msys64/ucrt64/include/c++/13.2.0/ext/aligned_buffer.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/list.tcc \
- C:/C++Projects/d20Game/include/Components/Position.h \
- C:/C++Projects/d20Game/include/Components/ItemBag.h \
- C:/C++Projects/d20Game/include/Components/Character.h \
- C:/C++Projects/d20Game/include/Controller/GameEngine.h \
- C:/C++Projects/d20Game/include/Static/Dice.h \
- C:/C++Projects/d20Game/include/Components/Potion.h \
- C:/C++Projects/d20Game/include/Controller/Combat.h
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Position.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/ItemBag.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Character.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Controller/GameEngine.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Static/Dice.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Components/Potion.h \
+ C:/CPPProjects/CPPWorkspace/d20Game/include/Controller/Combat.h
