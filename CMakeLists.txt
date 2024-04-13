@@ -8,7 +8,7 @@ include_directories(src)
 include_directories(catchTests)
 
 #cpp files only
-add_executable(345Project
+add_executable(d20Game
         src/main.cpp
         src/Static/Functions.cpp
         src/Static/Dice.cpp
