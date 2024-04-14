@@ -10,8 +10,7 @@
 #define INC_345ASSIGNMENT1_MAPGENERATION_H
 #include <vector>
 #include <string>
-#include "../include/Components/Subject.h"
-#include "../include/Components/Position.h"
+#include <list>
 #include "../include/Components/ItemBag.h"
 #include "../include/Components/Character.h"
 
@@ -19,7 +18,7 @@
  * @brief GridMap class
  * hash map for characters and chests
  */
-class GridMap : public Subject{
+class GridMap{
 private:
   int width;
   int height;
